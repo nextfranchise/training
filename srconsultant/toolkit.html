@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Toolkit &amp; Templates B1–B9 · Next Franchise Sr Training</title>
+  
+  <link rel="icon" type="image/png" href="https://nextfranchise.github.io/nextfranchise/assets/NF%20ICON.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .toolkit-form-card {
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-xl);
+      margin-bottom: var(--space-xl);
+      box-shadow: var(--shadow-sm);
+    }
+    .form-field-group {
+      margin-bottom: var(--space-md);
+    }
+    .form-field-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--nf-navy);
+      display: block;
+      margin-bottom: 4px;
+    }
+    .form-text-input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-md);
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+    }
+    .search-filter-input {
+      width: 100%;
+      max-width: 420px;
+      padding: 10px 14px;
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-full);
+      font-size: var(--text-sm);
+      margin-bottom: var(--space-lg);
+    }
+    .reference-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: var(--space-md);
+    }
+    .ref-card {
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      border-top: 3px solid var(--nf-gold);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-shell">
+    <main class="main-content">
+
+      <!-- HERO -->
+      <section class="hero-band bg-navy-pattern">
+        <div class="container">
+          <div class="hero-eyebrow">RESOURCES &amp; FIELD UTILITIES</div>
+          <h1 class="hero-headline">The Sr Consultant Toolkit</h1>
+          <p class="hero-subline">
+            Templates B1–B9, searchable Meta Skills reference cards, and the complete evaluation rubric. Fill, copy, and print directly inside your browser.
+          </p>
+        </div>
+      </section>
+
+      <!-- MAIN TABS CONTAINER -->
+      <section class="content-section white">
+        <div class="container">
+          <div class="tabs-container">
+            <div class="tab-nav">
+              <button class="tab-btn active" id="tabBtn1">Templates B1–B9</button>
+              <button class="tab-btn" id="tabBtn2">Meta Skills Reference</button>
+              <button class="tab-btn" id="tabBtn3">Evaluation Rubric</button>
+            </div>
+
+            <!-- TAB 1: TEMPLATES B1-B9 -->
+            <div class="tab-content active" id="tabContent1">
+              
+              <!-- B1: Problem Card -->
+              <div class="toolkit-form-card" id="formB1">
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:var(--space-md);">
+                  <div>
+                    <h3 style="font-size:var(--text-xl); color:var(--nf-navy);">Template B1 · Problem Card</h3>
+                    <p style="font-size:var(--text-xs); color:var(--nf-muted);">Lands in Blueprint 5.1 Foundation Upgrade or 5.2 Risks.</p>
+                  </div>
+                  <button class="btn btn-sm btn-navy" onclick="copyFormText('formB1')">Copy Text</button>
+                </div>
+
+                <div class="form-field-group">
+                  <label class="form-field-label">1. In Their Voice (First-person, no solution)</label>
+                  <input type="text" class="form-text-input" placeholder="&quot;I am a Dino Crew franchisee and the problem is...&quot;">
+                </div>
+
+                <div class="form-field-group">
+                  <label class="form-field-label">2. Causal Chain (A &rarr; B &rarr; C &rarr; Loss)</label>
+                  <textarea class="form-text-input" rows="2" placeholder="Working cap underestimated &rarr; staff hours cut &rarr; service slips &rarr; loss"></textarea>
+                </div>
+
+                <div class="form-field-group">
+                  <label class="form-field-label">3. The One Link (Power Law: Attack vs. Not Yet)</label>
+                  <input type="text" class="form-text-input" placeholder="Attack: Embed 3-mo working cap. Not yet: Marketing campaign.">
+                </div>
+
+                <div class="form-field-group">
+                  <label class="form-field-label">4. Next Proof (Proof · Owner · Date)</label>
+                  <input type="text" class="form-text-input" placeholder="Three prospect calls at new fee · Sales Lead · This Friday">
+                </div>
+
+                <div class="form-field-group">
+                  <label class="form-field-label">5. What's Weak Here (Radical Candor)</label>
+                  <input type="text" class="form-text-input" placeholder="We have not shadowed the rush hour shift at branch 2 yet.">
+                </div>
+              </div>
+
+              <!-- B6: Learning Dividend -->
+              <div class="toolkit-form-card" id="formB6">
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:var(--space-md);">
+                  <div>
+                    <h3 style="font-size:var(--text-xl); color:var(--nf-navy);">Template B6 · Learning Dividend</h3>
+                    <p style="font-size:var(--text-xs); color:var(--nf-muted);">Document what reality taught us after every milestone.</p>
+                  </div>
+                  <button class="btn btn-sm btn-navy" onclick="copyFormText('formB6')">Copy Text</button>
+                </div>
+
+                <div class="form-field-group">
+                  <label class="form-field-label">What We Learned</label>
+                  <textarea class="form-text-input" rows="2" placeholder="Territory population rules fail in mall kiosks..."></textarea>
+                </div>
+                <div class="form-field-group">
+                  <label class="form-field-label">What It Cost (Time, Money, Trust)</label>
+                  <input type="text" class="form-text-input" placeholder="Two weeks of revisions and ₱15,000 extra site visits">
+                </div>
+                <div class="form-field-group">
+                  <label class="form-field-label">What We Will Do Differently</label>
+                  <input type="text" class="form-text-input" placeholder="Use Required Sales = Rent ÷ 0.12 for mall counters">
+                </div>
+              </div>
+
+              <!-- B7: "In My Life" Line -->
+              <div class="toolkit-form-card" id="formB7">
+                <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:var(--space-md);">
+                  <div>
+                    <h3 style="font-size:var(--text-xl); color:var(--nf-navy);">Template B7 · 'In My Life' Line</h3>
+                    <p style="font-size:var(--text-xs); color:var(--nf-muted);">Whole Person perspective for prospective franchisees.</p>
+                  </div>
+                  <button class="btn btn-sm btn-navy" onclick="copyFormText('formB7')">Copy Text</button>
+                </div>
+
+                <div class="form-field-group">
+                  <label class="form-field-label">What keeps me busy</label>
+                  <input type="text" class="form-text-input" placeholder="12-hour shifts abroad and sending monthly remittances">
+                </div>
+                <div class="form-field-group">
+                  <label class="form-field-label">My biggest worry</label>
+                  <input type="text" class="form-text-input" placeholder="Losing savings that took eight years of separation to build">
+                </div>
+                <div class="form-field-group">
+                  <label class="form-field-label">Would I recommend this franchise if Next Franchise earned nothing?</label>
+                  <input type="text" class="form-text-input" placeholder="Yes, provided the founder certifies the crew on site.">
+                </div>
+              </div>
+
+            </div>
+
+            <!-- TAB 2: META SKILLS SEARCHABLE REFERENCE -->
+            <div class="tab-content" id="tabContent2">
+              <input type="text" id="skillSearchInput" class="search-filter-input" placeholder="Filter skills (e.g. 'Candor', 'direction', 'evidence')...">
+              <div class="reference-grid" id="refSkillsGrid"></div>
+            </div>
+
+            <!-- TAB 3: RUBRIC MATRIX -->
+            <div class="tab-content" id="tabContent3">
+              <div class="nf-card">
+                <h3 style="font-size:var(--text-xl); margin-bottom:var(--space-sm);">Appendix C: Evidence Matrix</h3>
+                <p style="font-size:var(--text-sm); color:var(--nf-muted); margin-bottom:var(--space-md);">
+                  Where to locate behavioral evidence during monthly evaluation reviews:
+                </p>
+
+                <table class="split-table" style="margin:0;">
+                  <thead>
+                    <tr>
+                      <th>Meta Skill</th>
+                      <th>Primary Evidence Artifact</th>
+                      <th>Standard Passing Proof</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>Customer Obsession</strong></td>
+                      <td>Cards 1.1 &amp; 3.1</td>
+                      <td>First-person Taglish customer voice; crew quotes.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>First Principles</strong></td>
+                      <td>Assumptions Table &amp; Appendix A</td>
+                      <td>Numbers traced to POS/contracts; status stamps applied.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Power Law</strong></td>
+                      <td>Card 3.4 &amp; Problem Cards</td>
+                      <td>Single priority link attacked; 'not yet' list present.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Systems Thinking</strong></td>
+                      <td>Cards 3.4 &amp; 4.2</td>
+                      <td>Causal feedback loops drawn; fee stress-tested at break-even.</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Radical Candor</strong></td>
+                      <td>Foundation Upgrades &amp; Checklists</td>
+                      <td>Honest 'What's weak here' lines; hard truths delivered.</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/modules.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/layout.js"></script>
+
+  <script>
+    const REF_SKILLS = [
+      { name: "Customer Obsession", group: "Set Direction", q: "Whose life changes, and how would they describe it in their own words?" },
+      { name: "First Principles", group: "Set Direction", q: "Why do we believe this? What have we actually seen?" },
+      { name: "Radical Outcomes", group: "The Bar", q: "What would make this 10X better for them, not just faster or cheaper?" },
+      { name: "Systems Thinking", group: "Sharpen Focus", q: "Why does this keep happening? What does a change ripple into?" },
+      { name: "Power Law", group: "Sharpen Focus", q: "If we could do only one thing, which moves the most?" },
+      { name: "Radical Candor", group: "Keep It Honest", q: "What am I not saying because it's uncomfortable?" },
+      { name: "Ground Commando", group: "Turn Into Evidence", q: "Have I seen or heard this myself on the branch floor?" },
+      { name: "Relentless Execution", group: "Turn Into Evidence", q: "What is the next proof, by when, and who owns it?" },
+      { name: "Learning Acuity", group: "Turn Into Evidence", q: "What did reality teach us, and what will we now do differently?" },
+      { name: "AI Integration", group: "Speed It Up", q: "What did AI draft, and what did a human actually verify?" },
+      { name: "Follow the Good", group: "Keep It Human", q: "Is this good for the franchisee, or only for our fee?" },
+      { name: "Whole Person", group: "Keep It Human", q: "What else in this person's life shapes this decision?" },
+      { name: "Deeply Personal Leadership", group: "Keep It Human", q: "Why do I care about this problem personally?" }
+    ];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      // Tab switcher
+      const tabs = [1, 2, 3].map(i => ({ btn: document.getElementById(`tabBtn${i}`), content: document.getElementById(`tabContent${i}`) }));
+      tabs.forEach((t, idx) => {
+        t.btn.addEventListener("click", () => {
+          tabs.forEach(o => { o.btn.classList.remove("active"); o.content.classList.remove("active"); });
+          t.btn.classList.add("active");
+          t.content.classList.add("active");
+        });
+      });
+
+      // Render reference skills
+      const grid = document.getElementById("refSkillsGrid");
+      function renderCards(list) {
+        grid.innerHTML = list.map(s => `
+          <div class="ref-card">
+            <span style="font-size:0.65rem; font-weight:800; text-transform:uppercase; color:var(--nf-gold-dark);">${s.group}</span>
+            <h4 style="font-size:1.05rem; margin:2px 0 6px; color:var(--nf-navy);">${s.name}</h4>
+            <p style="font-size:0.75rem; color:var(--nf-muted); line-height:1.5;">${s.q}</p>
+          </div>
+        `).join('');
+      }
+      renderCards(REF_SKILLS);
+
+      // Search filter
+      const search = document.getElementById("skillSearchInput");
+      search.addEventListener("input", () => {
+        const term = search.value.toLowerCase();
+        renderCards(REF_SKILLS.filter(s => s.name.toLowerCase().includes(term) || s.group.toLowerCase().includes(term) || s.q.toLowerCase().includes(term)));
+      });
+    });
+
+    function copyFormText(containerId) {
+      const el = document.getElementById(containerId);
+      const inputs = el.querySelectorAll("input, textarea");
+      let text = `${el.querySelector('h3').innerText}\n${'-'.repeat(40)}\n`;
+      inputs.forEach(inp => {
+        const label = inp.previousElementSibling ? inp.previousElementSibling.innerText : "Field";
+        text += `${label}: ${inp.value || '(Empty)'}\n`;
+      });
+      navigator.clipboard.writeText(text).then(() => {
+        alert("Template copied to clipboard as text!");
+      });
+    }
+  </script>
+</body>
+</html>

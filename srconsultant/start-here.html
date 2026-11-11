@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>M0: Start Here · Next Franchise Sr Training</title>
+  
+  <link rel="icon" type="image/png" href="https://nextfranchise.github.io/nextfranchise/assets/NF%20ICON.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .roadmap-scroller {
+      display: flex;
+      gap: var(--space-md);
+      overflow-x: auto;
+      padding: var(--space-md) 0 var(--space-lg);
+      scrollbar-width: thin;
+    }
+    .roadmap-stage-card {
+      min-width: 200px;
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      flex: 1;
+      border-top: 4px solid var(--nf-navy);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .roadmap-stage-card.accent {
+      border-top-color: var(--nf-gold);
+    }
+    .session-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 12px;
+      margin: var(--space-lg) 0;
+    }
+    .session-tile {
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-md);
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100px;
+    }
+    .session-tile.extended {
+      border-color: var(--nf-gold);
+      background: #FDFBF7;
+    }
+    .session-badge-extended {
+      background: var(--nf-gold-light);
+      color: var(--nf-gold-dark);
+      font-size: 0.65rem;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-top: 4px;
+    }
+    .rule-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-lg);
+      margin: var(--space-lg) 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-shell">
+    <div class="app-body">
+      <main class="main-content">
+
+        <!-- MODULE HERO -->
+        <section class="hero-band bg-navy-pattern">
+          <div class="container">
+            <div class="hero-eyebrow">MODULE 0 · FOUNDATION &amp; SCOPE</div>
+            <h1 class="hero-headline">Program at a Glance, Ground Rules &amp; Week 0</h1>
+            <p class="hero-subline">
+              How Next Franchise builds consultants who solve the real problem rather than just fill in templates.
+            </p>
+            
+            <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:var(--space-md);">
+              <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+                Taught in: Week 0 Pre-Work
+              </span>
+              <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+                Est. Read Time: 15 mins
+              </span>
+              <div style="display:flex; gap:6px;">
+                <span class="chip" onclick="NFModal.open('First Principles', 'Strip defaults and inherited assumptions, and rebuild from what is actually true.')">First Principles</span>
+                <span class="chip" onclick="NFModal.open('Customer Obsession', 'Everything starts and ends with the customer\'s real life, not our product or convenience.')">Customer Obsession</span>
+                <span class="chip" onclick="NFModal.open('Radical Candor', 'Say the hard thing plainly, to the team, the client and yourself, because you care.')">Radical Candor</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- BY THE END YOU CAN -->
+        <section class="content-section white" style="padding:var(--space-2xl) 0;">
+          <div class="container">
+            <div class="nf-card gold-edge">
+              <h3 style="font-size:var(--text-xl); margin-bottom:var(--space-md); color:var(--nf-navy);">
+                By the end of this module, you can:
+              </h3>
+              <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:var(--space-md);">
+                <div style="display:flex; gap:10px; align-items:flex-start;">
+                  <div style="color:var(--nf-success); flex-shrink:0; margin-top:3px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <p style="font-size:var(--text-sm); margin:0;">
+                    Map the entire 4-week roadmap and schedule (9 sessions, including the three 4-hour sessions).
+                  </p>
+                </div>
+                <div style="display:flex; gap:10px; align-items:flex-start;">
+                  <div style="color:var(--nf-success); flex-shrink:0; margin-top:3px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <p style="font-size:var(--text-sm); margin:0;">
+                    Apply the 6 Ground Rules on live client communications and homework deliverables.
+                  </p>
+                </div>
+                <div style="display:flex; gap:10px; align-items:flex-start;">
+                  <div style="color:var(--nf-success); flex-shrink:0; margin-top:3px;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <p style="font-size:var(--text-sm); margin:0;">
+                    Complete the Week 0 baseline: your stuck problem, least-sure Blueprint card, and best-advisor note.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- LEARN IT: ROADMAP & CALENDAR -->
+        <section class="content-section cream" id="structure">
+          <div class="container">
+            <div class="section-head">
+              <div class="section-eyebrow">Program Architecture</div>
+              <h2 class="section-title">The 6-Stage Journey</h2>
+              <p class="section-lead">
+                A 1-month intensive curriculum followed by 3 months of live implementation.
+              </p>
+            </div>
+
+            <div class="roadmap-scroller">
+              <div class="roadmap-stage-card">
+                <div>
+                  <div style="font-size:0.7rem; font-weight:800; text-transform:uppercase; color:var(--nf-muted);">Stage 1</div>
+                  <h4 style="margin:4px 0 8px; font-size:var(--text-base);">Week 1: Meta Skills</h4>
+                  <p style="font-size:var(--text-xs); color:var(--nf-muted);">
+                    Sessions 1 &amp; 2 (150m each). Master all 13 Meta Skills. Dino Crew case and assumptions audit.
+                  </p>
+                </div>
+                <div style="font-size:0.75rem; font-weight:700; color:var(--nf-gold-dark); margin-top:8px;">2 Sessions</div>
+              </div>
+
+              <div class="roadmap-stage-card accent">
+                <div>
+                  <div style="font-size:0.7rem; font-weight:800; text-transform:uppercase; color:var(--nf-gold-dark);">Stage 2</div>
+                  <h4 style="margin:4px 0 8px; font-size:var(--text-base);">Week 2: Goals &amp; Blueprint</h4>
+                  <p style="font-size:var(--text-xs); color:var(--nf-muted);">
+                    Sessions 3, 4, 5 (4 hours each). Financial Goals workbook, break-even math, and all 6 Blueprint parts.
+                  </p>
+                </div>
+                <div style="font-size:0.75rem; font-weight:700; color:var(--nf-gold-dark); margin-top:8px;">3 Extended Sessions</div>
+              </div>
+
+              <div class="roadmap-stage-card">
+                <div>
+                  <div style="font-size:0.7rem; font-weight:800; text-transform:uppercase; color:var(--nf-muted);">Stage 3</div>
+                  <h4 style="margin:4px 0 8px; font-size:var(--text-base);">Week 3: Mixed Together</h4>
+                  <p style="font-size:var(--text-xs); color:var(--nf-muted);">
+                    Sessions 6 &amp; 7 (150m each). The 60-min Problem-Solving Loop and facilitating hard owner conversations.
+                  </p>
+                </div>
+                <div style="font-size:0.75rem; font-weight:700; color:var(--nf-gold-dark); margin-top:8px;">2 Sessions</div>
+              </div>
+
+              <div class="roadmap-stage-card">
+                <div>
+                  <div style="font-size:0.7rem; font-weight:800; text-transform:uppercase; color:var(--nf-muted);">Stage 4</div>
+                  <h4 style="margin:4px 0 8px; font-size:var(--text-base);">Week 4: Capstone</h4>
+                  <p style="font-size:var(--text-xs); color:var(--nf-muted);">
+                    Sessions 8 &amp; 9. Part 5 Advisory pitch to owner, real-time fix until 100% pass, and 90-day plan.
+                  </p>
+                </div>
+                <div style="font-size:0.75rem; font-weight:700; color:var(--nf-gold-dark); margin-top:8px;">2 Sessions</div>
+              </div>
+
+              <div class="roadmap-stage-card">
+                <div>
+                  <div style="font-size:0.7rem; font-weight:800; text-transform:uppercase; color:var(--nf-muted);">Stage 5</div>
+                  <h4 style="margin:4px 0 8px; font-size:var(--text-base);">Months 2–4</h4>
+                  <p style="font-size:var(--text-xs); color:var(--nf-muted);">
+                    Live implementation on client accounts. Weekly peer checks, reflection logs, and monthly rubric scoring.
+                  </p>
+                </div>
+                <div style="font-size:0.75rem; font-weight:700; color:var(--nf-gold-dark); margin-top:8px;">90 Days Execution</div>
+              </div>
+
+              <div class="roadmap-stage-card accent">
+                <div>
+                  <div style="font-size:0.7rem; font-weight:800; text-transform:uppercase; color:var(--nf-gold-dark);">Stage 6</div>
+                  <h4 style="margin:4px 0 8px; font-size:var(--text-base);">The Gate</h4>
+                  <p style="font-size:var(--text-xs); color:var(--nf-muted);">
+                    Formal Sr Certification Review. Granted only when all 6 gate items have documented written evidence.
+                  </p>
+                </div>
+                <div style="font-size:0.75rem; font-weight:700; color:var(--nf-gold-dark); margin-top:8px;">Final Gate</div>
+              </div>
+            </div>
+
+            <!-- Session Calendar Visual -->
+            <div style="margin-top:var(--space-2xl);">
+              <h4 style="font-size:var(--text-lg); margin-bottom:8px;">The 9 Cohort Sessions</h4>
+              <p style="font-size:var(--text-sm); color:var(--nf-muted);">
+                Sessions run 150 minutes, except <strong>Sessions 3, 4, and 5 which run 4 hours</strong> because every workbook tab and Blueprint card is built live.
+              </p>
+
+              <div class="session-grid">
+                <div class="session-tile">
+                  <span style="font-size:0.7rem; font-weight:800; color:var(--nf-muted);">S1 · 150m</span>
+                  <strong style="font-size:0.85rem; color:var(--nf-navy);">Why Meta Skills Matter</strong>
+                  <span style="font-size:0.7rem; color:var(--nf-muted);">Week 1</span>
+                </div>
+                <div class="session-tile">
+                  <span style="font-size:0.7rem; font-weight:800; color:var(--nf-muted);">S2 · 150m</span>
+                  <strong style="font-size:0.85rem; color:var(--nf-navy);">All 13 at Work</strong>
+                  <span style="font-size:0.7rem; color:var(--nf-muted);">Week 1</span>
+                </div>
+                <div class="session-tile extended">
+                  <span style="font-size:0.7rem; font-weight:800; color:var(--nf-gold-dark);">S3 · 4 HOURS</span>
+                  <strong style="font-size:0.85rem; color:var(--nf-navy);">Financial Goals</strong>
+                  <span class="session-badge-extended">Live Workbook</span>
+                </div>
+                <div class="session-tile extended">
+                  <span style="font-size:0.7rem; font-weight:800; color:var(--nf-gold-dark);">S4 · 4 HOURS</span>
+                  <strong style="font-size:0.85rem; color:var(--nf-navy);">Blueprint 1 to 3</strong>
+                  <span class="session-badge-extended">Cards Clinic</span>
+                </div>
+                <div class="session-tile extended">
+                  <span style="font-size:0.7rem; font-weight:800; color:var(--nf-gold-dark);">S5 · 4 HOURS</span>
+                  <strong style="font-size:0.85rem; color:var(--nf-navy);">Blueprint 4 to 6</strong>
+                  <span class="session-badge-extended">Offer &amp; Appendices</span>
+                </div>
+                <div class="session-tile">
+                  <span style="font-size:0.7rem; font-weight:800; color:var(--nf-muted);">S6 · 150m</span>
+                  <strong style="font-size:0.85rem; color:var(--nf-navy);">Problem Loop</strong>
+                  <span style="font-size:0.7rem; color:var(--nf-muted);">Week 3</span>
+                </div>
+                <div class="session-tile">
+                  <span style="font-size:0.7rem; font-weight:800; color:var(--nf-muted);">S7 · 150m</span>
+                  <strong style="font-size:0.85rem; color:var(--nf-navy);">Hard Conversation</strong>
+                  <span style="font-size:0.7rem; color:var(--nf-muted);">Week 3</span>
+                </div>
+                <div class="session-tile">
+                  <span style="font-size:0.7rem; font-weight:800; color:var(--nf-muted);">S8 · 150m</span>
+                  <strong style="font-size:0.85rem; color:var(--nf-navy);">Capstone Pitch</strong>
+                  <span style="font-size:0.7rem; color:var(--nf-muted);">Week 4</span>
+                </div>
+                <div class="session-tile">
+                  <span style="font-size:0.7rem; font-weight:800; color:var(--nf-muted);">S9 · 150m</span>
+                  <strong style="font-size:0.85rem; color:var(--nf-navy);">Scoring &amp; 90-Day Plan</strong>
+                  <span style="font-size:0.7rem; color:var(--nf-muted);">Week 4</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- LEARN IT: GROUND RULES (Working 3D Flip Cards) -->
+        <section class="content-section white" id="ground-rules">
+          <div class="container">
+            <div class="section-head">
+              <div class="section-eyebrow">Operating Principles</div>
+              <h2 class="section-title">The 6 Ground Rules</h2>
+              <p class="section-lead">
+                Read aloud in Session 1 and held visible across every engagement. Tap or hover any card to flip and view the full rule.
+              </p>
+            </div>
+
+            <div class="rule-grid">
+              <!-- Rule 1 -->
+              <div class="flip-card-container" tabindex="0">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div>
+                      <div style="color:var(--nf-gold); margin-bottom:12px;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>
+                      </div>
+                      <h4 style="font-size:var(--text-lg); margin-bottom:4px; color:var(--nf-navy);">1. Customer First</h4>
+                      <p style="font-size:var(--text-xs); color:var(--nf-muted);">Where every engagement begins.</p>
+                    </div>
+                    <div style="font-size:0.75rem; font-weight:700; color:var(--nf-gold-dark);">↻ Tap to view rule</div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div>
+                      <h4>Customer First</h4>
+                      <p style="font-size:var(--text-xs); margin-top:8px; line-height:1.6; color:#E1E7EF;">
+                        We start from the end customer's and franchisee's life, never from the client's deck, menu, or revenue goals.
+                      </p>
+                    </div>
+                    <div style="font-size:0.7rem; color:var(--nf-gold-light); font-weight:600;">Ground Rule #1</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Rule 2 -->
+              <div class="flip-card-container" tabindex="0">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div>
+                      <div style="color:var(--nf-gold); margin-bottom:12px;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                      </div>
+                      <h4 style="font-size:var(--text-lg); margin-bottom:4px; color:var(--nf-navy);">2. Their Words, Not Ours</h4>
+                      <p style="font-size:var(--text-xs); color:var(--nf-muted);">Exact client phrasing.</p>
+                    </div>
+                    <div style="font-size:0.75rem; font-weight:700; color:var(--nf-gold-dark);">↻ Tap to view rule</div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div>
+                      <h4>Their Words, Not Ours</h4>
+                      <p style="font-size:var(--text-xs); margin-top:8px; line-height:1.6; color:#E1E7EF;">
+                        Keep the customer's and owner's exact words, Taglish included. A section in our consulting vocabulary is one the owner cannot defend to franchisees.
+                      </p>
+                    </div>
+                    <div style="font-size:0.7rem; color:var(--nf-gold-light); font-weight:600;">Ground Rule #2</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Rule 3 -->
+              <div class="flip-card-container" tabindex="0">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div>
+                      <div style="color:var(--nf-gold); margin-bottom:12px;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                      </div>
+                      <h4 style="font-size:var(--text-lg); margin-bottom:4px; color:var(--nf-navy);">3. No Invented Facts</h4>
+                      <p style="font-size:var(--text-xs); color:var(--nf-muted);">Labeling evidence rigorously.</p>
+                    </div>
+                    <div style="font-size:0.75rem; font-weight:700; color:var(--nf-gold-dark);">↻ Tap to view rule</div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div>
+                      <h4>No Invented Facts</h4>
+                      <p style="font-size:var(--text-xs); margin-top:8px; line-height:1.6; color:#E1E7EF;">
+                        A fact we did not see or hear directly is marked Inferred until confirmed. A claim from the owner remains Client-said until verified.
+                      </p>
+                    </div>
+                    <div style="font-size:0.7rem; color:var(--nf-gold-light); font-weight:600;">Ground Rule #3</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Rule 4 -->
+              <div class="flip-card-container" tabindex="0">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div>
+                      <div style="color:var(--nf-gold); margin-bottom:12px;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                      </div>
+                      <h4 style="font-size:var(--text-lg); margin-bottom:4px; color:var(--nf-navy);">4. Say What's Weak, With Care</h4>
+                      <p style="font-size:var(--text-xs); color:var(--nf-muted);">Radical Candor discipline.</p>
+                    </div>
+                    <div style="font-size:0.75rem; font-weight:700; color:var(--nf-gold-dark);">↻ Tap to view rule</div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div>
+                      <h4>Say What's Weak</h4>
+                      <p style="font-size:var(--text-xs); margin-top:8px; line-height:1.6; color:#E1E7EF;">
+                        Criticism of the work is never criticism of the person. Everyone's work is reviewed, including the lead Sr's. Candor starts with leadership.
+                      </p>
+                    </div>
+                    <div style="font-size:0.7rem; color:var(--nf-gold-light); font-weight:600;">Ground Rule #4</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Rule 5 -->
+              <div class="flip-card-container" tabindex="0">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div>
+                      <div style="color:var(--nf-gold); margin-bottom:12px;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                      </div>
+                      <h4 style="font-size:var(--text-lg); margin-bottom:4px; color:var(--nf-navy);">5. Ends in Action</h4>
+                      <p style="font-size:var(--text-xs); color:var(--nf-muted);">Proof, owner, date.</p>
+                    </div>
+                    <div style="font-size:0.75rem; font-weight:700; color:var(--nf-gold-dark);">↻ Tap to view rule</div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div>
+                      <h4>Ends in Action</h4>
+                      <p style="font-size:var(--text-xs); margin-top:8px; line-height:1.6; color:#E1E7EF;">
+                        Never leave with "Next steps: TBD". Every single session closes with one concrete next proof, one named owner, and one definite date.
+                      </p>
+                    </div>
+                    <div style="font-size:0.7rem; color:var(--nf-gold-light); font-weight:600;">Ground Rule #5</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Rule 6 -->
+              <div class="flip-card-container" tabindex="0">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <div>
+                      <div style="color:var(--nf-gold); margin-bottom:12px;">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                      </div>
+                      <h4 style="font-size:var(--text-lg); margin-bottom:4px; color:var(--nf-navy);">6. Info Stays in the Room</h4>
+                      <p style="font-size:var(--text-xs); color:var(--nf-muted);">Absolute confidentiality.</p>
+                    </div>
+                    <div style="font-size:0.75rem; font-weight:700; color:var(--nf-gold-dark);">↻ Tap to view rule</div>
+                  </div>
+                  <div class="flip-card-back">
+                    <div>
+                      <h4>Confidentiality</h4>
+                      <p style="font-size:var(--text-xs); margin-top:8px; line-height:1.6; color:#E1E7EF;">
+                        Client information stays in the room. Client numbers belong to those clients and are never disclosed or reused for another brand.
+                      </p>
+                    </div>
+                    <div style="font-size:0.7rem; color:var(--nf-gold-light); font-weight:600;">Ground Rule #6</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SEE IT: WEEK 0 PRE-WORK -->
+        <section class="content-section cream" id="prework">
+          <div class="container">
+            <div class="section-head">
+              <div class="section-eyebrow">Practical Baseline</div>
+              <h2 class="section-title">Week 0 Trainee Deliverables</h2>
+              <p class="section-lead">
+                Sent 3 days before Session 1 so month-long progress is measured with tangible evidence.
+              </p>
+            </div>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:var(--space-lg);">
+              <div class="nf-card">
+                <h4 style="margin-bottom:8px; color:var(--nf-navy);">Item 1: One Stuck Problem</h4>
+                <p style="font-size:var(--text-xs); color:var(--nf-muted); margin-bottom:12px;">
+                  Written in two or three sentences. What client challenge are you currently unable to solve?
+                </p>
+                <div class="callout amber" style="margin:0; font-size:var(--text-xs);">
+                  <strong>Example:</strong> "The client wants 20 units in year one, but the main branch took 14 months to break even and supply deliveries arrive 3 days late."
+                </div>
+              </div>
+
+              <div class="nf-card">
+                <h4 style="margin-bottom:8px; color:var(--nf-navy);">Item 2: Least-Sure Section</h4>
+                <p style="font-size:var(--text-xs); color:var(--nf-muted); margin-bottom:12px;">
+                  Your most recent Blueprint draft section that feels weak or unconvincing.
+                </p>
+                <div class="callout amber" style="margin:0; font-size:var(--text-xs);">
+                  <strong>Example:</strong> "Card 1.3 Territory: I used the owner's rule of 50,000 population without calculating penetration or checking actual daily volume."
+                </div>
+              </div>
+
+              <div class="nf-card">
+                <h4 style="margin-bottom:8px; color:var(--nf-navy);">Item 3: Best Advisor Note</h4>
+                <p style="font-size:var(--text-xs); color:var(--nf-muted); margin-bottom:12px;">
+                  Two or three sentences on the best consultant or advisor you ever worked with.
+                </p>
+                <div class="callout green" style="margin:0; font-size:var(--text-xs);">
+                  <strong>What they did differently:</strong> Almost every behavior listed traces directly to one of the 13 Meta Skills.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- KEY TAKEAWAYS -->
+        <section class="content-section white">
+          <div class="container">
+            <div class="nf-card gold-edge" style="background:#FDFBF7;">
+              <h4 style="font-size:var(--text-lg); margin-bottom:var(--space-sm); color:var(--nf-navy);">
+                Key Takeaways for Module 0
+              </h4>
+              <ul style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
+                <li><strong>1. Teach, Show, Practice:</strong> A definition is never taught alone; every concept is applied directly to a franchise case and a live client.</li>
+                <li><strong>2. Extended Sessions:</strong> Sessions 3, 4, and 5 run 4 hours each because financial models and Blueprint cards are built, not just discussed.</li>
+                <li><strong>3. Action at the Close:</strong> Every session ends with one next proof, one owner, and one date. "Next steps: TBD" is strictly prohibited.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- BRAIN TRAIN -->
+        <section class="content-section cream" id="quiz-block">
+          <div class="container">
+            <div id="quizContainer"></div>
+          </div>
+        </section>
+
+        <!-- MODULE COMPLETION & NAVIGATION -->
+        <section class="content-section white" style="border-top:1px solid var(--nf-border);">
+          <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+            <button class="btn btn-navy" id="markCompleteBtn" onclick="markCurrentComplete()">
+              Mark Module 0 as Complete
+            </button>
+            <div style="display:flex; gap:12px;">
+              <a href="why-meta-skills.html" class="btn btn-primary">
+                Next: M1 · Why the Meta Skills Matter &rarr;
+              </a>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- QUIZ DATA JSON -->
+  <script type="application/json" id="brain-train-data">
+  [
+    {
+      "type": "mcq",
+      "q": "Which sessions run for 4 hours instead of the standard 150 minutes?",
+      "options": ["Sessions 1 and 2", "Sessions 3 to 5", "Sessions 6 and 7", "Sessions 8 and 9"],
+      "answer": 1,
+      "why": "Sessions 3 to 5 cover the Financial Goals workbook and the Blueprint cards in depth, where every tab and card is built and challenged live."
+    },
+    {
+      "type": "sort",
+      "q": "Sort the writing style into the proper bucket based on Ground Rule #2 (Their words, not ours):",
+      "buckets": ["Correct (Our Standard)", "Incorrect (Avoid)"],
+      "items": [
+        { "t": "Taglish phrasing kept as heard", "b": 0 },
+        { "t": "Reworded into corporate vocabulary", "b": 1 },
+        { "t": "Direct quotes from store crew", "b": 0 },
+        { "t": "Generic demographic personas", "b": 1 }
+      ],
+      "why": "Ground Rule 2 states we keep the customer's and owner's exact words, Taglish included. Sections in our vocabulary cannot be defended to franchisees."
+    },
+    {
+      "type": "order",
+      "q": "Put the 6 roadmap stages in their correct sequence:",
+      "items": [
+        "Week 1: Meta Skills",
+        "Week 2: Goals + Blueprint",
+        "Week 3: Mixed together",
+        "Week 4: Capstone",
+        "Months 2 to 4: Implementation",
+        "Gate: Sr certified"
+      ],
+      "why": "The roadmap starts with habits of thought (W1), applies them to documents (W2), combines them under pressure (W3), evaluates through capstone (W4), proves them live (M2-4), and ends at certification."
+    },
+    {
+      "type": "truefalse",
+      "q": "A fact we did not see or hear is treated as Confirmed once the client explicitly states it in the interview.",
+      "answer": false,
+      "why": "A client statement is marked Client-said until independently verified. It only becomes Confirmed once verified with primary records or on-site evidence."
+    },
+    {
+      "type": "mcq",
+      "q": "Under Ground Rule 5, what must every consulting session end with?",
+      "options": [
+        "A revised PowerPoint deck",
+        "A follow-up meeting scheduled TBD",
+        "One next proof, one owner, one date",
+        "A signed invoice from the client"
+      ],
+      "answer": 2,
+      "why": "Insight is worthless without proof. Ground Rule 5 demands that every session closes with one concrete next proof, one owner, and one date."
+    }
+  ]
+  </script>
+
+  <!-- SCRIPTS -->
+  <script src="js/modules.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/layout.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      new BrainTrain("quizContainer", "brain-train-data", "M0");
+      checkReadStatus();
+    });
+
+    function markCurrentComplete() {
+      NFStore.markRead("M0");
+      const btn = document.getElementById("markCompleteBtn");
+      btn.innerText = "Module 0 Completed ✓";
+      btn.style.background = "var(--nf-success)";
+      btn.disabled = true;
+    }
+
+    function checkReadStatus() {
+      const state = NFStore.get();
+      if (state.read && state.read["M0"]) {
+        const btn = document.getElementById("markCompleteBtn");
+        btn.innerText = "Module 0 Completed ✓";
+        btn.style.background = "var(--nf-success)";
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>M4: How the Blueprint Works · Next Franchise Sr Training</title>
+  
+  <link rel="icon" type="image/png" href="https://nextfranchise.github.io/nextfranchise/assets/NF%20ICON.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .flow-chain {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      overflow-x: auto;
+      padding: var(--space-md) 0;
+    }
+    .flow-step {
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-md);
+      padding: 12px 16px;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      white-space: nowrap;
+      transition: all var(--transition-fast);
+    }
+    .flow-step.error {
+      border-color: var(--nf-danger);
+      background: var(--nf-danger-bg);
+      color: var(--nf-danger);
+    }
+    .flow-arrow {
+      color: var(--nf-gold);
+      font-weight: 800;
+    }
+    .split-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-md) 0;
+      background: var(--nf-surface);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--nf-border);
+    }
+    .split-table th, .split-table td {
+      padding: 12px 16px;
+      font-size: var(--text-sm);
+      border-bottom: 1px solid var(--nf-border);
+      text-align: left;
+    }
+    .split-table th {
+      background: #EFECE1;
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-shell">
+    <main class="main-content">
+
+      <!-- HERO -->
+      <section class="hero-band bg-navy-pattern">
+        <div class="container">
+          <div class="hero-eyebrow">WEEK 2 · SESSION 4 OPENING</div>
+          <h1 class="hero-headline">How the Franchise Blueprint Works</h1>
+          <p class="hero-subline">
+            The internal single source of truth. Understand the card chain, the two customers, the trace test, and the 5 reference Blueprints.
+          </p>
+          
+          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:var(--space-md);">
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Taught in: Session 4 Opening
+            </span>
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Est. Read Time: 25 mins
+            </span>
+            <div style="display:flex; gap:6px;">
+              <span class="chip" onclick="NFModal.open('Customer Obsession', 'Part 1 is the end customer. Part 3 is the franchisee. Two distinct customers.')">Customer Obsession</span>
+              <span class="chip" onclick="NFModal.open('Systems Thinking', 'A flaw in Card 1 ripples into pricing, territory scarcity, and guarantees.')">Systems Thinking</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUTCOMES -->
+      <section class="content-section white" style="padding:var(--space-2xl) 0;">
+        <div class="container">
+          <div class="nf-card gold-edge">
+            <h3 style="font-size:var(--text-xl); margin-bottom:var(--space-md); color:var(--nf-navy);">
+              By the end of this module, you can:
+            </h3>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:var(--space-md);">
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Explain why franchisees never see the Blueprint and how all sales decks trace to it.
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Execute the Trace Test: follow any pitch deck promise to card, workbook, and evidence.
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Contrast Part 1 (End Customer) with Part 3 (Franchisee) across 5 mirrored questions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LEARN IT: TWO CUSTOMERS -->
+      <section class="content-section cream" id="two-customers">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">The Dual Perspective</div>
+            <h2 class="section-title">Two Customers, Five Mirrored Questions</h2>
+            <p class="section-lead">
+              The end customer decides whether a unit sells. The franchisee decides whether a unit is bought and operated well.
+            </p>
+          </div>
+
+          <table class="split-table">
+            <thead>
+              <tr>
+                <th>Question</th>
+                <th>End Customer (Part 1)</th>
+                <th>Franchisee (Part 3)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Who are they?</strong></td>
+                <td>1.1 Power Customer</td>
+                <td>3.1 Power Franchisee</td>
+              </tr>
+              <tr>
+                <td><strong>What do they do instead?</strong></td>
+                <td>1.2 Power Substitutes</td>
+                <td>3.3 Power Alternatives</td>
+              </tr>
+              <tr>
+                <td><strong>What do they want?</strong></td>
+                <td>1.1 Why they return</td>
+                <td>3.2 Power Outcome (4 boxes)</td>
+              </tr>
+              <tr>
+                <td><strong>Where do they fit?</strong></td>
+                <td>1.3 Power Territory</td>
+                <td>3.7 Readiness Check</td>
+              </tr>
+              <tr>
+                <td><strong>What does it cost them?</strong></td>
+                <td>Price Band &amp; Ticket (1.2)</td>
+                <td>3.9 &amp; 3.10 Power Economics</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- TRY IT: ERROR INJECTION & TRACE TEST -->
+      <section class="content-section white" id="card-chain">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">Systems Thinking Simulation</div>
+            <h2 class="section-title">The Card Chain &amp; Error Cascade</h2>
+            <p class="section-lead">
+              The cards are an interdependent sequence. Toggle error injection to see how an unchecked mistake in Card 1.1 corrupts the downstream system.
+            </p>
+          </div>
+
+          <div class="nf-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:var(--space-md);">
+              <h4 style="font-size:var(--text-base); margin:0;">The 6 Card Chain Links</h4>
+              <button class="btn btn-sm btn-navy" id="injectErrorBtn">
+                Inject Mistake at Card 1.1
+              </button>
+            </div>
+
+            <div class="flow-chain" id="flowChainWrapper">
+              <div class="flow-step" id="step1">1. Power Customer</div>
+              <span class="flow-arrow">&rarr;</span>
+              <div class="flow-step" id="step2">2. Substitutes (Price Ceiling)</div>
+              <span class="flow-arrow">&rarr;</span>
+              <div class="flow-step" id="step3">3. Territory &amp; Scarcity</div>
+              <span class="flow-arrow">&rarr;</span>
+              <div class="flow-step" id="step4">4. Pain &amp; Solution DNA</div>
+              <span class="flow-arrow">&rarr;</span>
+              <div class="flow-step" id="step5">5. Power Economics</div>
+              <span class="flow-arrow">&rarr;</span>
+              <div class="flow-step" id="step6">6. Offer &amp; Guarantees</div>
+            </div>
+
+            <div id="errorExplanation" class="callout amber" style="display:none; margin-top:var(--space-md);">
+              <strong>Cascade Effect:</strong> An unverified persona (e.g. assuming middle-class mall shoppers instead of local commuters) causes the territory rule to count the wrong catchment, which skews Conservative volume, renders break-even math invalid, and generates false guarantee liabilities in the Offer.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KEY TAKEAWAYS -->
+      <section class="content-section cream">
+        <div class="container">
+          <div class="nf-card gold-edge" style="background:#FDFBF7;">
+            <h4 style="font-size:var(--text-lg); margin-bottom:var(--space-sm); color:var(--nf-navy);">
+              Key Takeaways for Module 4
+            </h4>
+            <ul style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
+              <li><strong>1. Internal Single Source:</strong> Franchisees never see the Blueprint. It is the architectural engine that generates pitch decks, operations manuals, and franchise agreements.</li>
+              <li><strong>2. Research Never Overwrites the Workbook:</strong> If market research challenges a number, bring it back to the client, update the workbook, and then re-align the Blueprint.</li>
+              <li><strong>3. The Trace Test:</strong> Any number on a marketing slide that cannot be traced to a Blueprint card and workbook cell is deemed invalid.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- BRAIN TRAIN -->
+      <section class="content-section white" id="quiz-block">
+        <div class="container">
+          <div id="quizContainer"></div>
+        </div>
+      </section>
+
+      <!-- NAVIGATION -->
+      <section class="content-section cream" style="border-top:1px solid var(--nf-border);">
+        <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+          <a href="financial-goals.html" class="btn btn-secondary" style="color:var(--nf-navy); border-color:var(--nf-border);">
+            &larr; Prev: M3 · Financial Goals
+          </a>
+          <button class="btn btn-navy" id="markCompleteBtn" onclick="markCurrentComplete()">
+            Mark Module 4 as Complete
+          </button>
+          <a href="part1-customer.html" class="btn btn-primary">
+            Next: M5 · Part 1: The Customer &rarr;
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- QUIZ DATA JSON -->
+  <script type="application/json" id="brain-train-data">
+  [
+    {
+      "type": "order",
+      "q": "Place the consulting process steps in their exact sequence:",
+      "items": [
+        "Client documents & intake",
+        "Interviews & questionnaires",
+        "Financial Goals workbook",
+        "Clarify with client",
+        "Build Blueprint",
+        "Discuss and update"
+      ],
+      "why": "The Blueprint is built only after the Financial Goals workbook is approved and clarified with primary evidence."
+    },
+    {
+      "type": "match",
+      "q": "Match the Part 1 End Customer card to its mirrored Part 3 Franchisee card:",
+      "pairs": [
+        ["1.1 Power Customer", "3.1 Power Franchisee"],
+        ["1.2 Power Substitutes", "3.3 Power Alternatives"],
+        ["1.3 Power Territory", "3.7 Readiness Check"],
+        ["Price Band / Ticket", "3.9 & 3.10 Power Economics"]
+      ],
+      "why": "The Blueprint mirrors the same five strategic questions across both customer groups."
+    },
+    {
+      "type": "mcq",
+      "q": "What happens when secondary research findings disagree with the client's approved Financial Goals workbook?",
+      "options": [
+        "The research automatically overwrites the workbook cells",
+        "The consultant conceals the discrepancy to prevent client friction",
+        "The Sr takes it to the client, updates and versions the workbook, and the Blueprint follows",
+        "The Blueprint keeps both conflicting figures side-by-side"
+      ],
+      "answer": 2,
+      "why": "Research never quietly overwrites the workbook. The Sr discusses it with the client, issues a new workbook version, and updates the Blueprint accordingly."
+    },
+    {
+      "type": "mcq",
+      "q": "A territory demand score below what numerical threshold indicates that the territory rule is structurally flawed?",
+      "options": ["5 out of 10", "6 out of 10", "7 out of 10", "8 out of 10"],
+      "answer": 2,
+      "why": "A demand score below 7 out of 10 means the territory rule is wrong and should not be used to qualify franchise locations."
+    },
+    {
+      "type": "truefalse",
+      "q": "The franchisor's specific attorney or law firm must be named explicitly inside the Blueprint body text.",
+      "answer": false,
+      "why": "The manual mandates that legal advisors are referred to strictly as 'Legal Counsel' to maintain document validity should counsel change."
+    }
+  ]
+  </script>
+
+  <!-- SCRIPTS -->
+  <script src="js/modules.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/layout.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      new BrainTrain("quizContainer", "brain-train-data", "M4");
+      checkReadStatus();
+
+      let errorInjected = false;
+      const btn = document.getElementById("injectErrorBtn");
+      const explanation = document.getElementById("errorExplanation");
+      const steps = [1, 2, 3, 4, 5, 6].map(i => document.getElementById(`step${i}`));
+
+      btn.addEventListener("click", () => {
+        errorInjected = !errorInjected;
+        btn.innerText = errorInjected ? "Reset Chain" : "Inject Mistake at Card 1.1";
+        explanation.style.display = errorInjected ? "block" : "none";
+        steps.forEach((el, idx) => {
+          if (errorInjected) {
+            setTimeout(() => el.classList.add("error"), idx * 120);
+          } else {
+            el.classList.remove("error");
+          }
+        });
+      });
+    });
+
+    function markCurrentComplete() {
+      NFStore.markRead("M4");
+      const btn = document.getElementById("markCompleteBtn");
+      btn.innerText = "Module 4 Completed ✓";
+      btn.style.background = "var(--nf-success)";
+      btn.disabled = true;
+    }
+
+    function checkReadStatus() {
+      const state = NFStore.get();
+      if (state.read && state.read["M4"]) {
+        const btn = document.getElementById("markCompleteBtn");
+        btn.innerText = "Module 4 Completed ✓";
+        btn.style.background = "var(--nf-success)";
+      }
+    }
+  </script>
+</body>
+</html>

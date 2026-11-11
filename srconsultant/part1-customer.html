@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>M5: Blueprint Part 1 · Next Franchise Sr Training</title>
+  
+  <link rel="icon" type="image/png" href="https://nextfranchise.github.io/nextfranchise/assets/NF%20ICON.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .gauge-wrapper {
+      display: flex;
+      gap: var(--space-xl);
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: var(--space-lg) 0;
+    }
+    .score-circle {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 6px solid var(--nf-border);
+      font-family: var(--font-heading);
+    }
+    .score-circle.pass {
+      border-color: var(--nf-success);
+      color: var(--nf-success);
+    }
+    .score-circle.fail {
+      border-color: var(--nf-danger);
+      color: var(--nf-danger);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-shell">
+    <main class="main-content">
+
+      <!-- HERO -->
+      <section class="hero-band bg-navy-pattern">
+        <div class="container">
+          <div class="hero-eyebrow">BLUEPRINT ARCHITECTURE · PART 1</div>
+          <h1 class="hero-headline">Part 1: The Customer</h1>
+          <p class="hero-subline">
+            Cards 1.1 to 1.4 plus The One Sentence. Prove that customer demand, penetration rates, and territory boundaries are mathematically grounded.
+          </p>
+          
+          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:var(--space-md);">
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Taught in: Session 4
+            </span>
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Est. Read Time: 30 mins
+            </span>
+            <div style="display:flex; gap:6px;">
+              <span class="chip" onclick="NFModal.open('Customer Obsession', '1.1 is written in first-person Taglish directly from store regulars.')">Customer Obsession</span>
+              <span class="chip" onclick="NFModal.open('Ground Commando', 'Talk to store crew to identify regular customer habits and peak dayparts.')">Ground Commando</span>
+              <span class="chip" onclick="NFModal.open('First Principles', 'The territory rule must rest on verified branch penetration.')">First Principles</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUTCOMES -->
+      <section class="content-section white" style="padding:var(--space-2xl) 0;">
+        <div class="container">
+          <div class="nf-card gold-edge">
+            <h3 style="font-size:var(--text-xl); margin-bottom:var(--space-md); color:var(--nf-navy);">
+              By the end of this module, you can:
+            </h3>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:var(--space-md);">
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Draft The Blueprint in One Sentence containing gap, proof, and franchisee gain.
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Calculate weekly penetration and determine minimum town catchment by formula.
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Evaluate Power Substitutes as behaviors (e.g. carinderia, milk tea) rather than just competitor brands.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRY IT: TERRITORY RULE CALCULATOR -->
+      <section class="content-section cream" id="territory-calc">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">Card 1.3 Territory Math</div>
+            <h2 class="section-title">Catchment &amp; Penetration Calculator</h2>
+            <p class="section-lead">
+              Snaxxville baseline: Catubig (32,688 population) yields 109 transactions/day (~2.3% weekly penetration). Minimum catchment is calculated by formula.
+            </p>
+          </div>
+
+          <div class="calc-box">
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:var(--space-xl);">
+              <div>
+                <div class="calc-control-group">
+                  <div class="calc-label-row">
+                    <span>Conservative Daily Transactions</span>
+                    <strong id="dailyVolLabel">100 / day</strong>
+                  </div>
+                  <input type="range" class="calc-slider" id="dailyVolInput" min="50" max="250" step="10" value="100">
+                </div>
+
+                <div class="calc-control-group">
+                  <div class="calc-label-row">
+                    <span>Conservative Weekly Penetration Rate</span>
+                    <strong id="penetrationRateLabel">3.0%</strong>
+                  </div>
+                  <input type="range" class="calc-slider" id="penetrationRateInput" min="0.5" max="6.0" step="0.1" value="3.0">
+                </div>
+
+                <div class="callout amber" style="margin-top:16px; font-size:var(--text-xs);">
+                  <strong>The Palapag Warning:</strong> Palapag has more people than Catubig, but generates only 26 transactions a day (one-fifth the penetration). Town size alone never guarantees sales.
+                </div>
+              </div>
+
+              <div style="display:flex; flex-direction:column; justify-content:center;">
+                <div class="nf-card" style="background:var(--nf-navy); color:#FFFFFF; padding:var(--space-lg);">
+                  <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--nf-gold); margin-bottom:4px;">
+                    Minimum Required Catchment Population
+                  </div>
+                  <div class="calc-result-num" id="requiredCatchmentDisplay">23,333</div>
+                  
+                  <div class="gold-line" style="margin:12px 0;"></div>
+                  
+                  <p style="font-size:0.75rem; color:#CFD6DF; margin:0;">
+                    Formula: (Daily Volume &times; 7 days) &divide; Weekly Penetration %<br>
+                    <strong>(100 &times; 7) &divide; 0.03 = ~23,333 residents</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEE IT: STRONG VS WEAK EXAMPLES -->
+      <section class="content-section white" id="examples">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">Quality Checks</div>
+            <h2 class="section-title">Strong vs. Weak Deliverables</h2>
+            <p class="section-lead">
+              Inspect Card 1.1 Power Customer and the Blueprint in One Sentence.
+            </p>
+          </div>
+
+          <!-- Card 1.1 Toggle -->
+          <h4 style="font-size:var(--text-lg); margin-bottom:var(--space-xs);">Card 1.1: Power Customer</h4>
+          <div class="toggle-sw-card">
+            <div class="toggle-sw-header">
+              <span style="font-weight:700; font-size:var(--text-xs); text-transform:uppercase; color:var(--nf-navy);">
+                Customer Voice Benchmark
+              </span>
+              <div class="toggle-sw-controls">
+                <button class="toggle-btn active weak">Weak Version</button>
+                <button class="toggle-btn strong">Strong Version</button>
+              </div>
+            </div>
+            
+            <div class="toggle-panel active weak">
+              <div class="callout red" style="margin:0 0 12px 0;">
+                <strong>What's Missing:</strong> Demographics without behavior. A crew member cannot point this person out on a weekday afternoon.
+              </div>
+              <p style="font-family:var(--font-mono); font-size:var(--text-sm); color:var(--nf-muted); margin:0;">
+                "Our target market is students and young professionals aged 18 to 35, middle income, who love affordable snacks and modern store ambiance."
+              </p>
+            </div>
+
+            <div class="toggle-panel strong">
+              <div class="callout green" style="margin:0 0 12px 0;">
+                <strong>Why It Passes:</strong> First-person customer voice, Taglish kept, exact daily rhythm and merienda spending behavior.
+              </div>
+              <p style="font-family:var(--font-mono); font-size:var(--text-sm); color:var(--nf-navy); margin:0;">
+                "I'm a college student at the local state university campus, or a young worker earning a little above ₱440 a day, in a town with no mall. You'll recognise me because I come after class or after work in the afternoon, usually with two or three friends..."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KEY TAKEAWAYS -->
+      <section class="content-section cream">
+        <div class="container">
+          <div class="nf-card gold-edge" style="background:#FDFBF7;">
+            <h4 style="font-size:var(--text-lg); margin-bottom:var(--space-sm); color:var(--nf-navy);">
+              Key Takeaways for Module 5
+            </h4>
+            <ul style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
+              <li><strong>1. The Blueprint in One Sentence:</strong> Written last, placed first. Must balance market gap, proof metric, and franchisee gain.</li>
+              <li><strong>2. Substitutes are Behaviors:</strong> Customers substitute with habits (carinderia, street cart, skipping merienda), not just competing franchise logos.</li>
+              <li><strong>3. Demand Score Threshold:</strong> A demand score below 7/10 means the territory model is invalid.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- BRAIN TRAIN -->
+      <section class="content-section white" id="quiz-block">
+        <div class="container">
+          <div id="quizContainer"></div>
+        </div>
+      </section>
+
+      <!-- NAVIGATION -->
+      <section class="content-section cream" style="border-top:1px solid var(--nf-border);">
+        <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+          <a href="blueprint-system.html" class="btn btn-secondary" style="color:var(--nf-navy); border-color:var(--nf-border);">
+            &larr; Prev: M4 · How Blueprint Works
+          </a>
+          <button class="btn btn-navy" id="markCompleteBtn" onclick="markCurrentComplete()">
+            Mark Module 5 as Complete
+          </button>
+          <a href="part2-brand.html" class="btn btn-primary">
+            Next: M6 · Part 2: The Brand &rarr;
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- QUIZ DATA JSON -->
+  <script type="application/json" id="brain-train-data">
+  [
+    {
+      "type": "spot",
+      "q": "Which Card 1.1 Power Customer draft passes the Next Franchise quality check?",
+      "strong": "'I am a college student at the campus or a local worker earning ₱440 a day. You will recognize me because I arrive after 3pm with two friends to share a combo.'",
+      "weak": "'Our primary target market is young middle-income Gen Z students and upwardly mobile professionals aged 18 to 35 who enjoy fast-casual food.'",
+      "why": "The strong draft uses first-person voice, observable behavioral habits, and real economic constraints instead of generic demographic brackets."
+    },
+    {
+      "type": "calc",
+      "q": "Calculate the minimum town catchment population needed to support 100 transactions/day at a conservative 3% weekly penetration rate:",
+      "answer": 23333,
+      "tolerance": 0.05,
+      "unit": "people",
+      "why": "100 transactions a day × 7 days = 700 transactions/week. 700 ÷ 0.03 = 23,333 minimum catchment population."
+    },
+    {
+      "type": "mcq",
+      "q": "What did Next Franchise's research reveal as K-Street's true primary substitute?",
+      "options": [
+        "Major national fast-food chicken chains",
+        "Milk tea stalls (a ₱109 Korean snack bowl competes with a ₱120 milk tea for student allowance)",
+        "Traditional Korean barbecue dine-in restaurants",
+        "Convenience store ramen"
+      ],
+      "answer": 1,
+      "why": "K-Street was competing for student afternoon merienda allowances where a ₱109 bowl substitutes directly for a ₱120 milk tea."
+    },
+    {
+      "type": "mcq",
+      "q": "Why did K-Street abandon municipal population rules for store viability?",
+      "options": [
+        "Philippine census data was unavailable in urban malls",
+        "A mall counter serves the foot traffic inside the building; its rule is Required Sales = Rent ÷ 0.12",
+        "Korean food appeals equally across all town populations",
+        "The franchisor requested a simpler rule"
+      ],
+      "answer": 1,
+      "why": "A mall kiosk serves internal building footfall, not the wider municipal population; viability hinges on rent ratios (rent ÷ 0.12)."
+    },
+    {
+      "type": "truefalse",
+      "q": "An unverified market claim may remain in the body of the Blueprint if the consultant feels it is probably true.",
+      "answer": false,
+      "why": "False. Any unverified market claim is dropped from the body text and placed into Appendix A or B until primary verification."
+    }
+  ]
+  </script>
+
+  <!-- SCRIPTS -->
+  <script src="js/modules.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/layout.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      new BrainTrain("quizContainer", "brain-train-data", "M5");
+      initTerritoryCalculator();
+      checkReadStatus();
+    });
+
+    function initTerritoryCalculator() {
+      const volInput = document.getElementById("dailyVolInput");
+      const penInput = document.getElementById("penetrationRateInput");
+      const volLabel = document.getElementById("dailyVolLabel");
+      const penLabel = document.getElementById("penetrationRateLabel");
+      const display = document.getElementById("requiredCatchmentDisplay");
+
+      function update() {
+        const vol = parseInt(volInput.value, 10);
+        const pen = parseFloat(penInput.value) / 100;
+        volLabel.innerText = `${vol} / day`;
+        penLabel.innerText = `${penInput.value}%`;
+
+        const weeklyVol = vol * 7;
+        const catchment = Math.round(weeklyVol / pen);
+        display.innerText = catchment.toLocaleString();
+      }
+
+      volInput.addEventListener("input", update);
+      penInput.addEventListener("input", update);
+    }
+
+    function markCurrentComplete() {
+      NFStore.markRead("M5");
+      const btn = document.getElementById("markCompleteBtn");
+      btn.innerText = "Module 5 Completed ✓";
+      btn.style.background = "var(--nf-success)";
+      btn.disabled = true;
+    }
+
+    function checkReadStatus() {
+      const state = NFStore.get();
+      if (state.read && state.read["M5"]) {
+        const btn = document.getElementById("markCompleteBtn");
+        btn.innerText = "Module 5 Completed ✓";
+        btn.style.background = "var(--nf-success)";
+      }
+    }
+  </script>
+</body>
+</html>

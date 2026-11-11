@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>M8: Blueprint Part 4 · Next Franchise Sr Training</title>
+  
+  <link rel="icon" type="image/png" href="https://nextfranchise.github.io/nextfranchise/assets/NF%20ICON.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .fee-simulator-box {
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-xl);
+      margin: var(--space-lg) 0;
+    }
+    .fee-design-btn {
+      padding: 8px 16px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--nf-border);
+      background: var(--nf-surface);
+      font-size: 0.75rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .fee-design-btn.active {
+      background: var(--nf-navy);
+      color: #FFFFFF;
+      border-color: var(--nf-navy);
+    }
+    .fee-metric-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: var(--space-md);
+    }
+    .fee-metric-card {
+      background: var(--nf-cream);
+      padding: 12px;
+      border-radius: var(--radius-md);
+      text-align: center;
+    }
+    .fee-metric-pct {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--nf-navy);
+    }
+    .fee-metric-pct.danger {
+      color: var(--nf-danger);
+    }
+
+    /* Embedded Table Styling for guaranteed layout resilience */
+    .split-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-md) 0;
+      background: var(--nf-surface);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--nf-border);
+      box-shadow: var(--shadow-sm);
+    }
+    .split-table th, .split-table td {
+      padding: 14px 20px;
+      font-size: var(--text-sm);
+      border-bottom: 1px solid var(--nf-border);
+      text-align: left;
+      vertical-align: middle;
+      line-height: 1.5;
+    }
+    .split-table th {
+      background: #EFECE1;
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--nf-navy);
+    }
+    .split-table tr:last-child td {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-shell">
+    <main class="main-content">
+
+      <!-- HERO -->
+      <section class="hero-band bg-navy-pattern">
+        <div class="container">
+          <div class="hero-eyebrow">BLUEPRINT ARCHITECTURE · PART 4</div>
+          <h1 class="hero-headline">Part 4: Shared Value</h1>
+          <p class="hero-subline">
+            Cards 4.1 to 4.5. Designing systems that are fair at break-even, deliberately capturing zero from crew, and tracing terms directly to operational needs.
+          </p>
+          
+          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:var(--space-md);">
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Taught in: Session 5
+            </span>
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Est. Read Time: 25 mins
+            </span>
+            <div style="display:flex; gap:6px;">
+              <span class="chip" onclick="NFModal.open('Follow the Good', 'Check how the fee structure lands on the weakest store running near break-even.')">Follow the Good</span>
+              <span class="chip" onclick="NFModal.open('Systems Thinking', 'A royalty that extracts the entire profit at break-even guarantees network closures.')">Systems Thinking</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUTCOMES -->
+      <section class="content-section white" style="padding:var(--space-2xl) 0;">
+        <div class="container">
+          <div class="nf-card gold-edge">
+            <h3 style="font-size:var(--text-xl); margin-bottom:var(--space-md); color:var(--nf-navy);">
+              By the end of this module, you can:
+            </h3>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:var(--space-md);">
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Analyze fee incidence (% of sales) across Break-even, Conservative, Target, and Optimistic levels.
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Build Card 4.1 Value Map featuring rows where franchisor value capture is deliberately zero.
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Trace all Card 4.4 Franchise Agreement terms directly back to operational Blueprint cards.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRY IT: FAIR SHARE SIMULATOR -->
+      <section class="content-section cream" id="fair-share">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">Card 4.2 Stress Testing</div>
+            <h2 class="section-title">The Fair Share Fee Simulator</h2>
+            <p class="section-lead">
+              A fee structure that looks reasonable at Target can bankrupt a store during ramp-up. Toggle three real NF fee designs below:
+            </p>
+          </div>
+
+          <div class="fee-simulator-box">
+            <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:var(--space-md);">
+              <button class="fee-design-btn active" id="btnSnaxx">Snaxxville (₱30k Fixed Fee)</button>
+              <button class="fee-design-btn" id="btnTeam">Teamworks (₱100/session, 100 waived)</button>
+              <button class="fee-design-btn" id="btnBucket">The White Bucket (5% Royalty + 2% Fund)</button>
+            </div>
+
+            <div id="feeExplanationText" class="callout gold" style="margin-bottom:var(--space-md); font-size:var(--text-sm);">
+              <strong>Snaxxville Fixed Fee:</strong> ₱30,000 monthly system fee. Predictable overhead for high-performing stores (3.7% at Target), but climbs to 9.6% of sales at Break-even.
+            </div>
+
+            <div class="fee-metric-row">
+              <div class="fee-metric-card">
+                <span style="font-size:0.7rem; font-weight:800; text-transform:uppercase; color:var(--nf-muted);">Break-Even</span>
+                <div class="fee-metric-pct" id="beFee">9.6%</div>
+                <span style="font-size:0.7rem; color:var(--nf-muted);">of Sales</span>
+              </div>
+              <div class="fee-metric-card">
+                <span style="font-size:0.7rem; font-weight:800; text-transform:uppercase; color:var(--nf-muted);">Conservative</span>
+                <div class="fee-metric-pct" id="conFee">4.4%</div>
+                <span style="font-size:0.7rem; color:var(--nf-muted);">of Sales</span>
+              </div>
+              <div class="fee-metric-card">
+                <span style="font-size:0.7rem; font-weight:800; text-transform:uppercase; color:var(--nf-muted);">Target</span>
+                <div class="fee-metric-pct" id="tarFee">3.7%</div>
+                <span style="font-size:0.7rem; color:var(--nf-muted);">of Sales</span>
+              </div>
+              <div class="fee-metric-card">
+                <span style="font-size:0.7rem; font-weight:800; text-transform:uppercase; color:var(--nf-muted);">Optimistic</span>
+                <div class="fee-metric-pct" id="optFee">3.0%</div>
+                <span style="font-size:0.7rem; color:var(--nf-muted);">of Sales</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LEARN IT: DELIBERATE ZERO CAPTURE -->
+      <section class="content-section white" id="deliberate-zero">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">Card 4.1 Ecosystem Integrity</div>
+            <h2 class="section-title">The Deliberate Zero</h2>
+            <p class="section-lead">
+              A franchise network thrives when everyone gains. The Value Map explicitly documents where the franchisor deliberately captures nothing.
+            </p>
+          </div>
+
+          <div class="nf-card">
+            <table class="split-table" style="margin:0;">
+              <thead>
+                <tr>
+                  <th style="width:25%;">Stakeholder</th>
+                  <th style="width:45%;">Value Created by System</th>
+                  <th style="width:30%;">Franchisor Value Capture</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Franchisee</strong></td>
+                  <td>Turnkey business model, training, brand power</td>
+                  <td>Franchise fee, monthly system fee</td>
+                </tr>
+                <tr style="background:#FDFBF7;">
+                  <td><strong>Store Crew</strong></td>
+                  <td>Steady wages, certification path to lead/trainer</td>
+                  <td><strong style="color:var(--nf-gold-dark);">NONE (DELIBERATE)</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Local Suppliers</strong></td>
+                  <td>Consistent institutional weekly purchase orders</td>
+                  <td>None (Direct farmer/vendor trading)</td>
+                </tr>
+                <tr>
+                  <td><strong>Municipality / LGU</strong></td>
+                  <td>Local business taxes, reliable town merienda caterer</td>
+                  <td>None</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- KEY TAKEAWAYS -->
+      <section class="content-section cream">
+        <div class="container">
+          <div class="nf-card gold-edge" style="background:#FDFBF7;">
+            <h4 style="font-size:var(--text-lg); margin-bottom:var(--space-sm); color:var(--nf-navy);">
+              Key Takeaways for Module 8
+            </h4>
+            <ul style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
+              <li><strong>1. '5% Royalty' is Not an Answer:</strong> Always calculate the royalty at Break-even. If fees consume 100% of the franchisee's profit at break-even, the system fails.</li>
+              <li><strong>2. Protect Slow Starters:</strong> Teamworks waives the first 100 therapy sessions so new centers don't pay royalties while establishing a clinical caseload.</li>
+              <li><strong>3. Term Tracing:</strong> Every term in the Franchise Agreement must trace directly to a card. An unlinked term was copied blindly from another agreement.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- BRAIN TRAIN -->
+      <section class="content-section white" id="quiz-block">
+        <div class="container">
+          <div id="quizContainer"></div>
+        </div>
+      </section>
+
+      <!-- NAVIGATION -->
+      <section class="content-section cream" style="border-top:1px solid var(--nf-border);">
+        <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+          <a href="part3-franchisee.html" class="btn btn-secondary" style="color:var(--nf-navy); border-color:var(--nf-border);">
+            &larr; Prev: M7 · Part 3: Franchisee
+          </a>
+          <button class="btn btn-navy" id="markCompleteBtn" onclick="markCurrentComplete()">
+            Mark Module 8 as Complete
+          </button>
+          <a href="part5-advisory.html" class="btn btn-primary">
+            Next: M9 · Part 5: Advisory &rarr;
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- QUIZ DATA JSON -->
+  <script type="application/json" id="brain-train-data">
+  [
+    {
+      "type": "mcq",
+      "q": "Snaxxville's fixed ₱30,000 monthly fee represents what percentage share of sales at the monthly Break-Even level (₱314,099)?",
+      "options": ["3.7%", "5.0%", "9.6%", "12.5%"],
+      "answer": 2,
+      "why": "₱30,000 ÷ ₱314,099 = 9.6% of sales at break-even (compared to only 3.7% at Target volume)."
+    },
+    {
+      "type": "mcq",
+      "q": "Which franchise fee design specifically protects slow-starting franchisees during early ramp-up?",
+      "options": [
+        "A flat percentage royalty of 8% on all gross sales",
+        "Teamworks' per-session fee, where the first 100 sessions are completely waived",
+        "A 2% marketing fund added directly onto opening CapEx",
+        "An escalating annual royalty schedule"
+      ],
+      "answer": 1,
+      "why": "Teamworks waives the first 100 sessions per month because at low initial volume the fee would consume nearly 19% of center fixed costs."
+    },
+    {
+      "type": "truefalse",
+      "q": "Stating '5% royalty, standard industry practice' satisfies the Card 4.2 Fair Share quality check.",
+      "answer": false,
+      "why": "False. The consultant must stress-test how that 5% lands at Break-even, Conservative, Target, and Optimistic levels."
+    },
+    {
+      "type": "mcq",
+      "q": "In Snaxxville's Card 4.1 Value Map, what value does the franchisor deliberately capture from store crew?",
+      "options": [
+        "A 2% payroll administration fee",
+        "Deliberately zero; crew receive steady employment and certification training with zero fee extraction",
+        "Deductions for training uniforms and LMS access",
+        "A referral bonus on new crew hires"
+      ],
+      "answer": 1,
+      "why": "Snaxxville captures zero value from crew, deliberately. Value capture is restricted to the package fee and monthly operating system fee."
+    },
+    {
+      "type": "mcq",
+      "q": "If a term in a proposed Franchise Agreement traces back to no card in the Blueprint, it was likely...",
+      "options": [
+        "Mandated by the Philippine Department of Trade and Industry",
+        "Copied blindly from another brand's legal template without operational relevance",
+        "A tax optimization strategy",
+        "Created by the accounting department"
+      ],
+      "answer": 1,
+      "why": "Terms that do not trace back to an operational Blueprint card (such as territory, usage, or fee cards) are typically legacy clauses copied from other brands."
+    }
+  ]
+  </script>
+
+  <!-- SCRIPTS -->
+  <script src="js/modules.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/layout.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      new BrainTrain("quizContainer", "brain-train-data", "M8");
+      initFeeSimulator();
+      checkReadStatus();
+    });
+
+    function initFeeSimulator() {
+      const b1 = document.getElementById("btnSnaxx");
+      const b2 = document.getElementById("btnTeam");
+      const b3 = document.getElementById("btnBucket");
+      const text = document.getElementById("feeExplanationText");
+
+      const be = document.getElementById("beFee");
+      const con = document.getElementById("conFee");
+      const tar = document.getElementById("tarFee");
+      const opt = document.getElementById("optFee");
+
+      b1.addEventListener("click", () => {
+        [b1, b2, b3].forEach(b => b.classList.remove("active"));
+        b1.classList.add("active");
+        text.innerHTML = "<strong>Snaxxville Fixed Fee:</strong> Fixed ₱30,000 monthly fee. Highly efficient at Target (3.7%), but burdens break-even units at 9.6%.";
+        be.innerText = "9.6%"; be.className = "fee-metric-pct danger";
+        con.innerText = "4.4%"; con.className = "fee-metric-pct";
+        tar.innerText = "3.7%"; tar.className = "fee-metric-pct";
+        opt.innerText = "3.0%"; opt.className = "fee-metric-pct";
+      });
+
+      b2.addEventListener("click", () => {
+        [b1, b2, b3].forEach(b => b.classList.remove("active"));
+        b2.classList.add("active");
+        text.innerHTML = "<strong>Teamworks Therapy:</strong> ₱100 per session with first 100 sessions waived. Eliminates fee burdens on low-volume centers.";
+        be.innerText = "0.0%"; be.className = "fee-metric-pct";
+        con.innerText = "5.1%"; con.className = "fee-metric-pct";
+        tar.innerText = "7.4%"; tar.className = "fee-metric-pct";
+        opt.innerText = "7.4%"; opt.className = "fee-metric-pct";
+      });
+
+      b3.addEventListener("click", () => {
+        [b1, b2, b3].forEach(b => b.classList.remove("active"));
+        b3.classList.add("active");
+        text.innerHTML = "<strong>The White Bucket:</strong> 5% royalty + 2% Marketing Fund. At break-even, the combined 7% fee takes the entire unit profit.";
+        be.innerText = "7.0%"; be.className = "fee-metric-pct danger";
+        con.innerText = "7.0%"; con.className = "fee-metric-pct";
+        tar.innerText = "7.0%"; tar.className = "fee-metric-pct";
+        opt.innerText = "7.0%"; opt.className = "fee-metric-pct";
+      });
+    }
+
+    function markCurrentComplete() {
+      NFStore.markRead("M8");
+      const btn = document.getElementById("markCompleteBtn");
+      btn.innerText = "Module 8 Completed ✓";
+      btn.style.background = "var(--nf-success)";
+      btn.disabled = true;
+    }
+
+    function checkReadStatus() {
+      const state = NFStore.get();
+      if (state.read && state.read["M8"]) {
+        const btn = document.getElementById("markCompleteBtn");
+        btn.innerText = "Module 8 Completed ✓";
+        btn.style.background = "var(--nf-success)";
+      }
+    }
+  </script>
+</body>
+</html>

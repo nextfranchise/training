@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>M10: Blueprint Part 6 · Next Franchise Sr Training</title>
+  
+  <link rel="icon" type="image/png" href="https://nextfranchise.github.io/nextfranchise/assets/NF%20ICON.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .equation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--space-md);
+      margin: var(--space-lg) 0;
+    }
+    .equation-card {
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+    }
+    .equation-lever {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .lever-up { color: var(--nf-success); }
+    .lever-down { color: var(--nf-gold-dark); }
+    .audit-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-md) 0;
+      background: var(--nf-surface);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--nf-border);
+    }
+    .audit-table th, .audit-table td {
+      padding: 12px 14px;
+      font-size: var(--text-sm);
+      border-bottom: 1px solid var(--nf-border);
+    }
+    .audit-table th {
+      background: #EFECE1;
+      font-family: var(--font-heading);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-shell">
+    <main class="main-content">
+
+      <!-- HERO -->
+      <section class="hero-band bg-navy-pattern">
+        <div class="container">
+          <div class="hero-eyebrow">BLUEPRINT ARCHITECTURE · PART 6</div>
+          <h1 class="hero-headline">Part 6: The Offer</h1>
+          <p class="hero-subline">
+            Cards 6.1 to 6.9. Package the Blueprint into an honest, compelling commercial offer without false countdowns or unmanageable income guarantees.
+          </p>
+          
+          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:var(--space-md);">
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Taught in: Session 5
+            </span>
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Est. Read Time: 30 mins
+            </span>
+            <div style="display:flex; gap:6px;">
+              <span class="chip" onclick="NFModal.open('Follow the Good', 'Never guarantee sales, payback, or health/learning outcomes that the franchisor cannot control.')">Follow the Good</span>
+              <span class="chip" onclick="NFModal.open('Radical Candor', 'Scarcity and urgency must be true today. Fake timers destroy brand credibility.')">Radical Candor</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUTCOMES -->
+      <section class="content-section white" style="padding:var(--space-2xl) 0;">
+        <div class="container">
+          <div class="nf-card gold-edge">
+            <h3 style="font-size:var(--text-xl); margin-bottom:var(--space-md); color:var(--nf-navy);">
+              By the end of this module, you can:
+            </h3>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:var(--space-md);">
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Apply the 4 levers of the Value Equation to elevate perceived value without discounting the package.
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Differentiate controllable guarantees (e.g. Certification Guarantee) from illegal income promises.
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Conduct an Offer Audit with Template B8 to eradicate false scarcity and uncosted perks.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LEARN IT: VALUE EQUATION -->
+      <section class="content-section cream" id="value-equation">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">Card 6.2 Framework</div>
+            <h2 class="section-title">The Value Equation in Franchising</h2>
+            <p class="section-lead">
+              Price objections are almost always value objections. Elevate value through four operational levers without slashing fees:
+            </p>
+          </div>
+
+          <div class="equation-grid">
+            <div class="equation-card">
+              <div class="equation-lever lever-up">&uarr; Dream Outcome</div>
+              <h4 style="font-size:var(--text-base); margin-bottom:4px;">Dream Outcome</h4>
+              <p style="font-size:var(--text-xs); color:var(--nf-muted);">
+                A proven business in their hometown that allows returning OFWs to stay together.
+              </p>
+            </div>
+
+            <div class="equation-card">
+              <div class="equation-lever lever-up">&uarr; Perceived Likelihood</div>
+              <h4 style="font-size:var(--text-base); margin-bottom:4px;">Perceived Likelihood</h4>
+              <p style="font-size:var(--text-xs); color:var(--nf-muted);">
+                'It already works in a town like mine' (Catubig and Laoang ₱726k–₱862k proof).
+              </p>
+            </div>
+
+            <div class="equation-card">
+              <div class="equation-lever lever-down">&darr; Time Delay</div>
+              <h4 style="font-size:var(--text-base); margin-bottom:4px;">Time Delay</h4>
+              <p style="font-size:var(--text-xs); color:var(--nf-muted);">
+                Open in 60 days. Snaxxville HQ manages kitchen equipment fabrication and initial stock.
+              </p>
+            </div>
+
+            <div class="equation-card">
+              <div class="equation-lever lever-down">&darr; Effort &amp; Sacrifice</div>
+              <h4 style="font-size:var(--text-base); margin-bottom:4px;">Effort &amp; Sacrifice</h4>
+              <p style="font-size:var(--text-xs); color:var(--nf-muted);">
+                Snaxxville provides on-site opening trainers and turnkey POS setup.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRY IT: TEMPLATE B8 OFFER AUDIT -->
+      <section class="content-section white" id="offer-audit">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">Quality Audit Clinic</div>
+            <h2 class="section-title">Template B8: Live Offer Audit</h2>
+            <p class="section-lead">
+              Audit the five core offer items. Guarantees must cover only what franchisors control; perks must have calculated costs.
+            </p>
+          </div>
+
+          <div class="nf-card">
+            <table class="audit-table">
+              <thead>
+                <tr>
+                  <th>Offer Element</th>
+                  <th>Sample Claim</th>
+                  <th>Test Criteria</th>
+                  <th>Verdict</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Guarantee</strong></td>
+                  <td>'Certification Guarantee: trainer stays at our expense until crew certifies.'</td>
+                  <td>Does franchisor control it? Yes. (Never guarantee sales or income).</td>
+                  <td><span class="status-badge confirmed">Pass</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Guarantee</strong></td>
+                  <td>'Guaranteed 100% ROI in 12 months or money back.'</td>
+                  <td>Franchisor cannot control local market sales or store management.</td>
+                  <td><span class="status-badge" style="background:var(--nf-danger-bg); color:var(--nf-danger);">Revise (Illegal)</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Scarcity</strong></td>
+                  <td>'Only 11 territories qualify in Northern Samar; max 2 store openings/mo.'</td>
+                  <td>Is it true today? Yes. Grounded in certified trainer capacity.</td>
+                  <td><span class="status-badge confirmed">Pass</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Urgency</strong></td>
+                  <td>'Limited time: price rises in 5 days!' (Timer resets monthly).</td>
+                  <td>False urgency destroys credibility.</td>
+                  <td><span class="status-badge" style="background:var(--nf-danger-bg); color:var(--nf-danger);">Revise (Fake)</span></td>
+                </tr>
+                <tr>
+                  <td><strong>Perk Costing</strong></td>
+                  <td>'Waived renewal fee (₱118,750 value at Month 61).'</td>
+                  <td>Valued at ₱118k, but does zero for 13-month payback. Disclose both.</td>
+                  <td><span class="status-badge confirmed">Pass</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- KEY TAKEAWAYS -->
+      <section class="content-section cream">
+        <div class="container">
+          <div class="nf-card gold-edge" style="background:#FDFBF7;">
+            <h4 style="font-size:var(--text-lg); margin-bottom:var(--space-sm); color:var(--nf-navy);">
+              Key Takeaways for Module 10
+            </h4>
+            <ul style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
+              <li><strong>1. Guarantees Cover Franchisor Actions:</strong> Never guarantee sales, income, payback, or clinical/educational results. Guarantee operational support and crew certification.</li>
+              <li><strong>2. Perk Value vs. Payback:</strong> A perk that takes effect in Year 5 has real financial value but has zero effect on the initial 13-month payback. Disclose both honestly.</li>
+              <li><strong>3. Signed Side Letters:</strong> All founding offer terms, perks, and scarcity commitments must be incorporated into a side letter reviewed by Legal Counsel.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- BRAIN TRAIN -->
+      <section class="content-section white" id="quiz-block">
+        <div class="container">
+          <div id="quizContainer"></div>
+        </div>
+      </section>
+
+      <!-- NAVIGATION -->
+      <section class="content-section cream" style="border-top:1px solid var(--nf-border);">
+        <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+          <a href="part5-advisory.html" class="btn btn-secondary" style="color:var(--nf-navy); border-color:var(--nf-border);">
+            &larr; Prev: M9 · Part 5: Advisory
+          </a>
+          <button class="btn btn-navy" id="markCompleteBtn" onclick="markCurrentComplete()">
+            Mark Module 10 as Complete
+          </button>
+          <a href="problem-solving-loop.html" class="btn btn-primary">
+            Next: M11 · Problem-Solving Loop &rarr;
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- QUIZ DATA JSON -->
+  <script type="application/json" id="brain-train-data">
+  [
+    {
+      "type": "spot",
+      "q": "Which franchise offer guarantee satisfies Next Franchise quality standards?",
+      "strong": "Certification Guarantee: If the franchisee's crew has not passed certification by opening day, Snaxxville's head trainer stays on-site at Snaxxville's expense until they pass.",
+      "weak": "Payback Guarantee: We guarantee 100% return on your franchise investment within 12 months or we refund your franchise fee in full.",
+      "why": "The strong guarantee covers what the franchisor directly controls (trainer presence and certification). Sales and payback are subject to local market forces and store management."
+    },
+    {
+      "type": "mcq",
+      "q": "Which statement represents honest and authentic franchise scarcity?",
+      "options": [
+        "'Only 3 slots left this week!' (repeated on social media every month)",
+        "'Only 11 municipal territories qualify in Northern Samar, and only 2 store openings per month based on trainer certification capacity'",
+        "'Special founder discount if you sign before midnight tonight'",
+        "'Exclusive slots reserved for high-net-worth investors'"
+      ],
+      "answer": 1,
+      "why": "Honest scarcity traces directly to physical territory viability (Card 1.3) and verified operational training bandwidth."
+    },
+    {
+      "type": "truefalse",
+      "q": "A founding perk's cash value to a franchisee and its effect on payback time are the exact same thing.",
+      "answer": false,
+      "why": "False. For example, K-Street's waived renewal fee is worth ₱118,750, but because it occurs at Month 61, it has zero impact on initial 13-month payback."
+    },
+    {
+      "type": "mcq",
+      "q": "What makes franchise offer urgency genuinely credible to a discerning buyer?",
+      "options": [
+        "A countdown timer on the landing page that refreshes on page reload",
+        "The subsequent batch genuinely pays a higher fee or receives fewer founding inclusions",
+        "Telling the buyer that another prospect is looking at the same town",
+        "Offering an uncosted 50% discount"
+      ],
+      "answer": 1,
+      "why": "Urgency is only credible when the deadline is real and the next batch actually pays more or receives fewer perks."
+    },
+    {
+      "type": "match",
+      "q": "Match the Value Equation lever to its franchise implementation:",
+      "pairs": [
+        ["Perceived Likelihood Up", "'It already works in a provincial town like mine'"],
+        ["Time Delay Down", "Turnkey equipment fabrication and pre-opening store setup in 60 days"],
+        ["Effort & Sacrifice Down", "Dedicated HQ trainers manage opening week operations on site"],
+        ["Dream Outcome Up", "Building family independence so returning OFWs can stay home"]
+      ],
+      "why": "The four levers systematically elevate perceived value without reducing the package price."
+    }
+  ]
+  </script>
+
+  <!-- SCRIPTS -->
+  <script src="js/modules.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/layout.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      new BrainTrain("quizContainer", "brain-train-data", "M10");
+      checkReadStatus();
+    });
+
+    function markCurrentComplete() {
+      NFStore.markRead("M10");
+      const btn = document.getElementById("markCompleteBtn");
+      btn.innerText = "Module 10 Completed ✓";
+      btn.style.background = "var(--nf-success)";
+      btn.disabled = true;
+    }
+
+    function checkReadStatus() {
+      const state = NFStore.get();
+      if (state.read && state.read["M10"]) {
+        const btn = document.getElementById("markCompleteBtn");
+        btn.innerText = "Module 10 Completed ✓";
+        btn.style.background = "var(--nf-success)";
+      }
+    }
+  </script>
+</body>
+</html>

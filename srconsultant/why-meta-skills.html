@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>M1: Why Meta Skills Matter · Next Franchise Sr Training</title>
+  
+  <link rel="icon" type="image/png" href="https://nextfranchise.github.io/nextfranchise/assets/NF%20ICON.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .multiplying-diagram {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: var(--space-xl) 0;
+      flex-wrap: wrap;
+    }
+    .branch-node {
+      border: 1px solid var(--nf-border);
+      background: var(--nf-surface);
+      color: var(--nf-navy);
+      padding: 14px 18px;
+      border-radius: var(--radius-lg);
+      font-weight: 700;
+      font-size: var(--text-sm);
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+    }
+    .branch-node.origin {
+      border-color: var(--nf-gold);
+      background: #FDFBF7;
+    }
+    .branch-node.failure {
+      border-color: var(--nf-danger);
+      background: var(--nf-danger-bg);
+      color: var(--nf-danger);
+    }
+    .dino-simulation-box {
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-xl);
+      margin: var(--space-lg) 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-shell">
+    <div class="app-body">
+      <main class="main-content">
+
+        <!-- MODULE HERO -->
+        <section class="hero-band bg-navy-pattern">
+          <div class="container">
+            <div class="hero-eyebrow">WEEK 1 · SESSION 1</div>
+            <h1 class="hero-headline">Why the Meta Skills Matter</h1>
+            <p class="hero-subline">
+              Meta Skills are habits of thought, not techniques. Learn why franchising multiplies errors and study Dino Crew’s turnaround.
+            </p>
+            
+            <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:var(--space-md);">
+              <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+                Taught in: Session 1
+              </span>
+              <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+                Est. Read Time: 25 mins
+              </span>
+              <div style="display:flex; gap:6px;">
+                <span class="chip" onclick="NFModal.open('Customer Obsession', 'Start from the franchisee and end customer life.')">Customer Obsession</span>
+                <span class="chip" onclick="NFModal.open('Systems Thinking', 'See causes and loops, not isolated events.')">Systems Thinking</span>
+                <span class="chip" onclick="NFModal.open('Follow the Good', 'Build what makes people lives better; let value follow.')">Follow the Good</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- BY THE END -->
+        <section class="content-section white" style="padding:var(--space-2xl) 0;">
+          <div class="container">
+            <div class="nf-card gold-edge">
+              <h3 style="font-size:var(--text-xl); margin-bottom:var(--space-md); color:var(--nf-navy);">
+                By the end of this module, you can:
+              </h3>
+              <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:var(--space-md);">
+                <div style="display:flex; gap:10px;">
+                  <div style="color:var(--nf-success); flex-shrink:0;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <p style="font-size:var(--text-sm); margin:0;">
+                    Explain why mistakes in franchising carry a catastrophic multiplier effect for franchisees.
+                  </p>
+                </div>
+                <div style="display:flex; gap:10px;">
+                  <div style="color:var(--nf-success); flex-shrink:0;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <p style="font-size:var(--text-sm); margin:0;">
+                    Differentiate an NF consultant from a traditional consultant across all 13 core engagement moments.
+                  </p>
+                </div>
+                <div style="display:flex; gap:10px;">
+                  <div style="color:var(--nf-success); flex-shrink:0;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <p style="font-size:var(--text-sm); margin:0;">
+                    Solve the Dino Crew case using Ground Commando and First Principles rather than bureaucratic memos.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- LEARN IT: THE FRANCHISE MULTIPLIER -->
+        <section class="content-section cream" id="multiplier">
+          <div class="container">
+            <div class="section-head">
+              <div class="section-eyebrow">The Multiplier Effect</div>
+              <h2 class="section-title">Why Consulting Mistakes Cost More in Franchising</h2>
+              <p class="section-lead">
+                A mistake in a regular business hurts that single business. A mistake in a franchise system is copied into every branch sold.
+              </p>
+            </div>
+
+            <div class="nf-card">
+              <p style="font-size:var(--text-base); color:var(--nf-text); max-width:760px;">
+                Franchisees are frequently OFWs returning home, retirees, or families putting up their life savings. If a consultant copies an unchecked ticket price or an unproven break-even, the franchisor doesn't just fail — dozens of families lose everything.
+              </p>
+
+              <!-- Multiplying Diagram -->
+              <div class="multiplying-diagram">
+                <div class="branch-node origin">
+                  <div style="font-size:0.7rem; color:var(--nf-gold-dark); text-transform:uppercase;">Origin</div>
+                  1 Unchecked Flaw in Deck
+                </div>
+                <div style="font-size:1.5rem; font-weight:800; color:var(--nf-gold);">&rarr;</div>
+                <div class="branch-node">
+                  <div style="font-size:0.7rem; color:var(--nf-muted); text-transform:uppercase;">Duplication</div>
+                  Copied into Blueprint
+                </div>
+                <div style="font-size:1.5rem; font-weight:800; color:var(--nf-danger);">&rarr;</div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:8px;">
+                  <div class="branch-node failure" style="padding:8px 12px; font-size:0.75rem;">Branch 1 Closes</div>
+                  <div class="branch-node failure" style="padding:8px 12px; font-size:0.75rem;">Branch 2 Closes</div>
+                  <div class="branch-node failure" style="padding:8px 12px; font-size:0.75rem;">Branch 3 Closes</div>
+                  <div class="branch-node failure" style="padding:8px 12px; font-size:0.75rem;">Branch N Closes</div>
+                </div>
+              </div>
+
+              <div class="callout red" style="margin-bottom:0;">
+                <strong>The Sr Consultant's Burden:</strong> You are the last person standing between an unverified owner assumption and the life savings of an OFW family.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- LEARN IT: COMPLETE 13-ROW TRADITIONAL VS NF MATRIX -->
+        <section class="content-section white" id="comparison">
+          <div class="container">
+            <div class="section-head">
+              <div class="section-eyebrow">Habits of Thought</div>
+              <h2 class="section-title">Traditional Consultant vs. NF Consultant</h2>
+              <p class="section-lead">
+                Most traditional habits are not wrong. They are not enough when franchisees' savings depend on the result. Click any row to view the standard.
+              </p>
+            </div>
+
+            <div class="compare-container">
+              <div class="compare-row compare-header">
+                <div>Traditional Consultant</div>
+                <div style="padding-left:var(--space-lg);">NF Consultant (Meta Skill)</div>
+              </div>
+
+              <!-- Row 1 -->
+              <div class="compare-row" onclick="NFModal.open('Starting Point', 'Traditional consultants start from menus and pitch decks. NF consultants begin with the real lives of the customer and prospective franchisee.')">
+                <div class="compare-cell-traditional">
+                  <strong>Starting point:</strong> Starts from the owner's deck, menu and growth target
+                </div>
+                <div class="compare-cell-nf">
+                  <span class="compare-skill-tag">Customer Obsession</span>
+                  <span>Starts from the life of the end customer and the future franchisee</span>
+                </div>
+              </div>
+
+              <!-- Row 2 -->
+              <div class="compare-row" onclick="NFModal.open('The Owner Numbers', 'Never accept sales or ROI figures without establishing their status: Heard, Inferred, Client-said, or Confirmed.')">
+                <div class="compare-cell-traditional">
+                  <strong>The owner's numbers:</strong> Copies sales, ROI and payback figures into the package as given
+                </div>
+                <div class="compare-cell-nf">
+                  <span class="compare-skill-tag">First Principles</span>
+                  <span>Marks every figure Heard, Inferred, Client-said or Confirmed, and builds on the Confirmed ones</span>
+                </div>
+              </div>
+
+              <!-- Row 3 -->
+              <div class="compare-row" onclick="NFModal.open('Market Research', 'AI is a multiplier for structure, not an authority on ground reality.')">
+                <div class="compare-cell-traditional">
+                  <strong>Market research:</strong> Pastes AI or desk research into the report
+                </div>
+                <div class="compare-cell-nf">
+                  <span class="compare-skill-tag">AI Integration</span>
+                  <span>Uses AI to draft, then labels every line no one has verified</span>
+                </div>
+              </div>
+
+              <!-- Row 4 -->
+              <div class="compare-row" onclick="NFModal.open('Recurring Problems', 'Solving symptoms leaves root causes to infect every newly opened unit.')">
+                <div class="compare-cell-traditional">
+                  <strong>Recurring problems:</strong> Fixes the symptom at the branch that complained
+                </div>
+                <div class="compare-cell-nf">
+                  <span class="compare-skill-tag">Systems Thinking</span>
+                  <span>Draws the chain until it loops and fixes the link that keeps it going</span>
+                </div>
+              </div>
+
+              <!-- Row 5 -->
+              <div class="compare-row" onclick="NFModal.open('Advice', 'Owners can only execute 1 or 2 priorities per quarter. Find the vital 20%.')">
+                <div class="compare-cell-traditional">
+                  <strong>Advice:</strong> A long list of everything that could be better
+                </div>
+                <div class="compare-cell-nf">
+                  <span class="compare-skill-tag">Power Law</span>
+                  <span>One or two priorities and a 'not yet' list</span>
+                </div>
+              </div>
+
+              <!-- Row 6 -->
+              <div class="compare-row" onclick="NFModal.open('The Promise', 'Franchisees remember what changes in their life and family, not abstract percentage gains.')">
+                <div class="compare-cell-traditional">
+                  <strong>The promise:</strong> Faster ROI, lower costs, more branches
+                </div>
+                <div class="compare-cell-nf">
+                  <span class="compare-skill-tag">Radical Outcomes</span>
+                  <span>A change the franchisee would feel in their life, with payback as the proof</span>
+                </div>
+              </div>
+
+              <!-- Row 7 -->
+              <div class="compare-row" onclick="NFModal.open('Evidence', 'Primary contact with crew and customers reveals what executive decks omit.')">
+                <div class="compare-cell-traditional">
+                  <strong>Evidence:</strong> Desk research and an interview with the owner
+                </div>
+                <div class="compare-cell-nf">
+                  <span class="compare-skill-tag">Ground Commando</span>
+                  <span>Branch visits and conversations with crew, customers and franchisees</span>
+                </div>
+              </div>
+
+              <!-- Row 8 -->
+              <div class="compare-row" onclick="NFModal.open('Bad News', 'Owners pay us to tell them what their own employees are afraid to voice.')">
+                <div class="compare-cell-traditional">
+                  <strong>Bad news:</strong> Softened to keep the client happy
+                </div>
+                <div class="compare-cell-nf">
+                  <span class="compare-skill-tag">Radical Candor</span>
+                  <span>Said plainly, with the reason and a next step</span>
+                </div>
+              </div>
+
+              <!-- Row 9 -->
+              <div class="compare-row" onclick="NFModal.open('Selling', 'Franchise networks fail when sold to buyers who lack operational fitness.')">
+                <div class="compare-cell-traditional">
+                  <strong>Selling:</strong> The biggest package, to every interested buyer
+                </div>
+                <div class="compare-cell-nf">
+                  <span class="compare-skill-tag">Follow the Good</span>
+                  <span>What the client needs, and buyers who are not ready are turned away</span>
+                </div>
+              </div>
+
+              <!-- Row 10 -->
+              <div class="compare-row" onclick="NFModal.open('The Franchisee', 'A buyer puts their entire life savings and family future on the table.')">
+                <div class="compare-cell-traditional">
+                  <strong>The franchisee:</strong> 'A lead' or 'a slot sold'
+                </div>
+                <div class="compare-cell-nf">
+                  <span class="compare-skill-tag">Whole Person</span>
+                  <span>A person with a family, savings and fears behind the decision</span>
+                </div>
+              </div>
+
+              <!-- Row 11 -->
+              <div class="compare-row" onclick="NFModal.open('After the Meeting', 'Consulting reports solve nothing on their own. Concrete execution does.')">
+                <div class="compare-cell-traditional">
+                  <strong>After the meeting:</strong> Hands over the report
+                </div>
+                <div class="compare-cell-nf">
+                  <span class="compare-skill-tag">Relentless Execution</span>
+                  <span>Leaves one next proof, one owner and one date, and follows up</span>
+                </div>
+              </div>
+
+              <!-- Row 12 -->
+              <div class="compare-row" onclick="NFModal.open('The Next Client', 'Every engagement must produce an organizational Learning Dividend.')">
+                <div class="compare-cell-traditional">
+                  <strong>The next client:</strong> Reuses the same template
+                </div>
+                <div class="compare-cell-nf">
+                  <span class="compare-skill-tag">Learning Acuity</span>
+                  <span>Applies a written Learning Dividend from the last client</span>
+                </div>
+              </div>
+
+              <!-- Row 13 -->
+              <div class="compare-row" onclick="NFModal.open('Why They Do It', 'Conviction keeps consultants steady through pushback and difficult clients.')">
+                <div class="compare-cell-traditional">
+                  <strong>Why they do it:</strong> It is the job
+                </div>
+                <div class="compare-cell-nf">
+                  <span class="compare-skill-tag">Deeply Personal Leadership</span>
+                  <span>Can say why the work matters to them personally</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TRY IT: DINO CREW CASE SIMULATION -->
+        <section class="content-section cream" id="case-study">
+          <div class="container">
+            <div class="section-head">
+              <div class="section-eyebrow">Case Study in Action</div>
+              <h2 class="section-title">Dino Crew PH: The Training Standoff</h2>
+              <p class="section-lead">
+                A real Next Franchise engagement from November 2026. How would you solve it?
+              </p>
+            </div>
+
+            <div class="dino-simulation-box">
+              <h4 style="margin-bottom:8px; color:var(--nf-navy);">The Situation (Part 1)</h4>
+              <p style="font-size:var(--text-sm); color:var(--nf-text); margin-bottom:var(--space-md);">
+                Dino Crew PH runs dinosaur mascot shows, party entertainment, and claw/gachapon rentals. Its Franchise Agreement mandates that every new hire must complete online LMS modules and be certified before working any event. The platform was set up, and monthly royalties cover it. <strong>In November 2026, franchisee training had not started.</strong>
+              </p>
+
+              <div style="margin-bottom:var(--space-md);">
+                <label for="dinoUserAction" style="font-weight:700; font-size:var(--text-xs); text-transform:uppercase; color:var(--nf-muted); display:block; margin-bottom:6px;">
+                  What would you do to get franchisees and their teams training?
+                </label>
+                <textarea id="dinoUserAction" rows="3" style="width:100%; padding:10px; border:1px solid var(--nf-border); border-radius:var(--radius-md);" placeholder="Type your first move here..."></textarea>
+              </div>
+
+              <button class="btn btn-navy" id="revealDinoAnswersBtn">
+                Reveal Traditional vs. NF Solution
+              </button>
+
+              <!-- Reveal Container -->
+              <div id="dinoRevealArea" style="display:none; margin-top:var(--space-xl);">
+                <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:var(--space-lg);">
+                  
+                  <div class="nf-card" style="border-top:4px solid var(--nf-danger);">
+                    <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--nf-danger); margin-bottom:6px;">
+                      The Traditional Consultant Move
+                    </div>
+                    <h4 style="margin-bottom:8px;">Send a Legal Memo &amp; Penalty Schedule</h4>
+                    <p style="font-size:var(--text-xs); color:var(--nf-muted);">
+                      Issue a formal warning quoting training and audit clauses from the contract. The rule is legally correct, but nothing changes because no one asked why training had not started.
+                    </p>
+                  </div>
+
+                  <div class="nf-card" style="border-top:4px solid var(--nf-success);">
+                    <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--nf-success); margin-bottom:6px;">
+                      The Next Franchise Answer
+                    </div>
+                    <h4 style="margin-bottom:8px;">Ground Commando &amp; Root Blocker</h4>
+                    <p style="font-size:var(--text-xs); color:var(--nf-muted); margin-bottom:8px;">
+                      Meet franchisees on the ground first. Ask how they train teams today and what gets in the way. Treat "they are not interested" as an unverified assumption.
+                    </p>
+                    <p style="font-size:var(--text-xs); color:var(--nf-navy); font-weight:600;">
+                      The contract clause is kept as the floor, rather than the first move.
+                    </p>
+                  </div>
+
+                </div>
+
+                <div class="callout green" style="margin-top:var(--space-md);">
+                  <strong>Meta Skills at Work:</strong> Customer Obsession &amp; Ground Commando (start from franchisee's day), First Principles (every reason is an assumption), Power Law (fix the one blocker), Relentless Execution (one next proof, champion, date).
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- KEY TAKEAWAYS -->
+        <section class="content-section white">
+          <div class="container">
+            <div class="nf-card gold-edge" style="background:#FDFBF7;">
+              <h4 style="font-size:var(--text-lg); margin-bottom:var(--space-sm); color:var(--nf-navy);">
+                Key Takeaways for Module 1
+              </h4>
+              <ul style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
+                <li><strong>1. The Franchise Multiplier:</strong> In franchising, an uncorrected error is copied into every sold unit at the expense of family savings.</li>
+                <li><strong>2. Habits Over Documents:</strong> The traditional answer produces a memo that is ignored. The NF answer visits the ground and alters what happens at the next event.</li>
+                <li><strong>3. Contracts are Floors:</strong> Legal clauses protect the brand as a last resort, never as the primary tool of problem solving.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- BRAIN TRAIN -->
+        <section class="content-section cream" id="quiz-block">
+          <div class="container">
+            <div id="quizContainer"></div>
+          </div>
+        </section>
+
+        <!-- MODULE COMPLETION & NAVIGATION -->
+        <section class="content-section white" style="border-top:1px solid var(--nf-border);">
+          <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+            <a href="start-here.html" class="btn btn-secondary" style="color:var(--nf-navy); border-color:var(--nf-border);">
+              &larr; Prev: M0 · Start Here
+            </a>
+            <button class="btn btn-navy" id="markCompleteBtn" onclick="markCurrentComplete()">
+              Mark Module 1 as Complete
+            </button>
+            <a href="meta-skills-13.html" class="btn btn-primary">
+              Next: M2 · The 13 Meta Skills &rarr;
+            </a>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- QUIZ DATA JSON -->
+  <script type="application/json" id="brain-train-data">
+  [
+    {
+      "type": "match",
+      "q": "Match the consulting moment to its governing NF Meta Skill:",
+      "pairs": [
+        ["Starting Point", "Customer Obsession"],
+        ["The Owner's Numbers", "First Principles"],
+        ["Recurring Problems", "Systems Thinking"],
+        ["Prioritizing Advice", "Power Law"],
+        ["Delivering Bad News", "Radical Candor"]
+      ],
+      "why": "Each Meta Skill transforms a conventional consulting failure mode into an evidence-based, customer-centered habit of thought."
+    },
+    {
+      "type": "mcq",
+      "q": "Why does a consulting mistake cost significantly more in franchising than in a standalone business?",
+      "options": [
+        "Franchise consulting contracts carry larger legal penalties",
+        "It is copied into every branch sold and franchisees pay for it with their life savings",
+        "Franchisors are harder to consult than corporate CEOs",
+        "Franchise manuals require more pages than standard business plans"
+      ],
+      "answer": 1,
+      "why": "A mistake in a franchise system is duplicated across every single branch sold, putting at risk the life savings of OFWs and families."
+    },
+    {
+      "type": "spot",
+      "q": "Which consulting response represents the Next Franchise standard for Dino Crew PH?",
+      "strong": "Meet the franchisees first, ask how they train their teams today, identify the single root blocker, and agree on one next proof with a named champion.",
+      "weak": "Issue an immediate legal memo quoting Section 8.2 of the franchise agreement and attaching the full breach penalty schedule.",
+      "why": "The strong version applies Customer Obsession, Ground Commando, and Power Law to fix the root impediment, treating the contract as a floor rather than the first move."
+    },
+    {
+      "type": "mcq",
+      "q": "In the NF approach to Dino Crew, what role does the franchise contract clause play?",
+      "options": [
+        "It is completely discarded in favor of informal verbal agreements",
+        "It is used immediately to demand franchisee compliance under threat of termination",
+        "It remains firmly in place as the legal floor, rather than the first move",
+        "It is rewritten to lower operational training standards"
+      ],
+      "answer": 2,
+      "why": "The contract clause remains the foundation and floor of the system, but the consultant first uncovers why compliance failed in real life."
+    },
+    {
+      "type": "truefalse",
+      "q": "Most traditional consulting habits are inherently malicious or wrong.",
+      "answer": false,
+      "why": "The manual states: 'Most traditional habits are not wrong. They are not enough when franchisees' savings depend on the result.'"
+    }
+  ]
+  </script>
+
+  <!-- SCRIPTS -->
+  <script src="js/modules.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/layout.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      new BrainTrain("quizContainer", "brain-train-data", "M1");
+      checkReadStatus();
+
+      const revealBtn = document.getElementById("revealDinoAnswersBtn");
+      if (revealBtn) {
+        revealBtn.addEventListener("click", () => {
+          document.getElementById("dinoRevealArea").style.display = "block";
+          revealBtn.style.display = "none";
+        });
+      }
+    });
+
+    function markCurrentComplete() {
+      NFStore.markRead("M1");
+      const btn = document.getElementById("markCompleteBtn");
+      btn.innerText = "Module 1 Completed ✓";
+      btn.style.background = "var(--nf-success)";
+      btn.disabled = true;
+    }
+
+    function checkReadStatus() {
+      const state = NFStore.get();
+      if (state.read && state.read["M1"]) {
+        const btn = document.getElementById("markCompleteBtn");
+        btn.innerText = "Module 1 Completed ✓";
+        btn.style.background = "var(--nf-success)";
+      }
+    }
+  </script>
+</body>
+</html>

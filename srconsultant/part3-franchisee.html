@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>M7: Blueprint Part 3 · Next Franchise Sr Training</title>
+  
+  <link rel="icon" type="image/png" href="https://nextfranchise.github.io/nextfranchise/assets/NF%20ICON.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .four-box-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: var(--space-md);
+      margin: var(--space-lg) 0;
+    }
+    .outcome-box {
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      cursor: pointer;
+      transition: transform var(--transition-fast), border-color var(--transition-fast);
+    }
+    .outcome-box:hover {
+      transform: translateY(-2px);
+      border-color: var(--nf-gold);
+    }
+    .outcome-box-tag {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--nf-gold-dark);
+      margin-bottom: 6px;
+    }
+    .chain-builder {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      overflow-x: auto;
+      padding: var(--space-md) 0;
+    }
+    .chain-block {
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      font-size: var(--text-xs);
+      font-weight: 700;
+      min-width: 160px;
+      text-align: center;
+    }
+    .readiness-scorecard {
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-xl);
+      margin: var(--space-lg) 0;
+    }
+    .readiness-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--nf-border);
+    }
+    .readiness-item:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-shell">
+    <main class="main-content">
+
+      <!-- HERO -->
+      <section class="hero-band bg-navy-pattern">
+        <div class="container">
+          <div class="hero-eyebrow">BLUEPRINT ARCHITECTURE · PART 3</div>
+          <h1 class="hero-headline">Part 3: The Franchisee</h1>
+          <p class="hero-subline">
+            Cards 3.1 to 3.10. The franchisee is the franchisor’s customer. Master the 4-box outcome canvas, Pain DNA causal chains, and Readiness Check qualification.
+          </p>
+          
+          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:var(--space-md);">
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Taught in: Sessions 4 &amp; 5
+            </span>
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Est. Read Time: 35 mins
+            </span>
+            <div style="display:flex; gap:6px;">
+              <span class="chip" onclick="NFModal.open('Customer Obsession', 'Franchisees ask how many months to get their money back before asking about the menu.')">Customer Obsession</span>
+              <span class="chip" onclick="NFModal.open('Systems Thinking', 'Pain DNA is a causal sequence of events, not an unlinked list of complaints.')">Systems Thinking</span>
+              <span class="chip" onclick="NFModal.open('Follow the Good', 'Turn away buyers scoring below 7 on readiness, even if they have the cash.')">Follow the Good</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUTCOMES -->
+      <section class="content-section white" style="padding:var(--space-2xl) 0;">
+        <div class="container">
+          <div class="nf-card gold-edge">
+            <h3 style="font-size:var(--text-xl); margin-bottom:var(--space-md); color:var(--nf-navy);">
+              By the end of this module, you can:
+            </h3>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:var(--space-md);">
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Draft Card 3.1 Power Franchisee from actual inquiry records rather than demographic ideals.
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Construct Pain DNA as a four-part causal loop and link every element in Solution DNA directly to a pain.
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Apply the Card 3.7 Readiness Check behavior scorecard (below 7 = do not sign).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LEARN IT: CARD 3.2 4-BOX OUTCOME -->
+      <section class="content-section cream" id="outcome-canvas">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">Card 3.2 Framework</div>
+            <h2 class="section-title">The 4-Box Outcome Canvas</h2>
+            <p class="section-lead">
+              When asked what they want, buyers list features. The 4-box canvas uncovers what they want to happen in their actual life.
+            </p>
+          </div>
+
+          <div class="four-box-grid">
+            <div class="outcome-box" onclick="NFModal.open('Direct Needs', 'Operational tools: proven recipes, POS training, commissary delivery schedules, and certified crew checklists.')">
+              <div class="outcome-box-tag">Box 1</div>
+              <h4 style="font-size:var(--text-base); margin-bottom:6px;">Direct Needs</h4>
+              <p style="font-size:var(--text-xs); color:var(--nf-muted);">
+                A turnkey system that operates without guesswork.
+              </p>
+            </div>
+
+            <div class="outcome-box" onclick="NFModal.open('Psycho-Spiritual Driver', 'The emotional driver most consultants miss: Snaxxville OFW buyer wants to say: \'I came home and built something of my own; my family eats dinner together every night.\'')">
+              <div class="outcome-box-tag" style="color:var(--nf-gold-dark);">Box 2 · Key Driver</div>
+              <h4 style="font-size:var(--text-base); margin-bottom:6px;">Psycho-Spiritual</h4>
+              <p style="font-size:var(--text-xs); color:var(--nf-muted);">
+                Pride, dignity, and independence. Ending overseas separation.
+              </p>
+            </div>
+
+            <div class="outcome-box" onclick="NFModal.open('Social Standing', 'Respect in their hometown. Being a respected business owner rather than an employee.')">
+              <div class="outcome-box-tag">Box 3</div>
+              <h4 style="font-size:var(--text-base); margin-bottom:6px;">Social Dimension</h4>
+              <p style="font-size:var(--text-xs); color:var(--nf-muted);">
+                Reputation in the town or parish as a stable entrepreneur.
+              </p>
+            </div>
+
+            <div class="outcome-box" onclick="NFModal.open('Financial Reality', 'Recovering the investment base (₱1.15M to ₱1.58M) within 13 to 16 months from contract signing.')">
+              <div class="outcome-box-tag">Box 4</div>
+              <h4 style="font-size:var(--text-base); margin-bottom:6px;">Financial Target</h4>
+              <p style="font-size:var(--text-xs); color:var(--nf-muted);">
+                Capital recovery timeline grounded in the workbook.
+              </p>
+            </div>
+          </div>
+
+          <div class="callout gold">
+            <strong>In Sum Synthesis:</strong> Wants to stay home, earn a dependable living, and be their own boss. <em>Wants to avoid:</em> losing savings that took eight hard years abroad to accumulate. That fear is the real emotional hook of the pitch.
+          </div>
+        </div>
+      </section>
+
+      <!-- TRY IT: PAIN DNA CAUSAL LOOP -->
+      <section class="content-section white" id="pain-dna">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">Card 3.4 Rigor</div>
+            <h2 class="section-title">Pain DNA: Causal Chain vs. Friction List</h2>
+            <p class="section-lead">
+              Pains are never disconnected bullet points. They are recurring causal sequences that destroy capital.
+            </p>
+          </div>
+
+          <div class="nf-card">
+            <h4 style="margin-bottom:var(--space-sm); font-size:var(--text-base);">The 4-Link Anatomy of Failure</h4>
+            <div class="chain-builder">
+              <div class="chain-block">
+                <span style="font-size:0.65rem; color:var(--nf-gold-dark); text-transform:uppercase; font-weight:800; display:block;">Link 1</span>
+                <strong>What Happens</strong><br>
+                Working capital is underestimated
+              </div>
+              <span style="color:var(--nf-gold); font-weight:800;">&rarr;</span>
+              <div class="chain-block">
+                <span style="font-size:0.65rem; color:var(--nf-gold-dark); text-transform:uppercase; font-weight:800; display:block;">Link 2</span>
+                <strong>What it Causes</strong><br>
+                Staff shifts are cut, service slips
+              </div>
+              <span style="color:var(--nf-gold); font-weight:800;">&rarr;</span>
+              <div class="chain-block">
+                <span style="font-size:0.65rem; color:var(--nf-gold-dark); text-transform:uppercase; font-weight:800; display:block;">Link 3</span>
+                <strong>Why it Repeats</strong><br>
+                Regulars drift away; volume drops
+              </div>
+              <span style="color:var(--nf-gold); font-weight:800;">&rarr;</span>
+              <div class="chain-block" style="border-color:var(--nf-danger); background:var(--nf-danger-bg); color:var(--nf-danger);">
+                <span style="font-size:0.65rem; text-transform:uppercase; font-weight:800; display:block;">Link 4</span>
+                <strong>What is Lost</strong><br>
+                Unit defaults; capital gone
+              </div>
+            </div>
+
+            <div class="callout green" style="margin-top:var(--space-md);">
+              <strong>Card 3.5 Solution DNA Match:</strong> The system does not fix this with "marketing advice." It fixes Link 1 by embedding a mandatory 3-month fixed-cost revolving fund into Mode 1 CapEx before opening.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRY IT: READINESS SCORECARD -->
+      <section class="content-section cream" id="readiness-scorecard">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">Card 3.7 Qualification</div>
+            <h2 class="section-title">The Readiness Scorecard Simulator</h2>
+            <p class="section-lead">
+              Score prospects based purely on verified actions, not enthusiasm or verbal promises. Score below 7 = Do Not Sign.
+            </p>
+          </div>
+
+          <div class="readiness-scorecard">
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:var(--space-xl); align-items:center;">
+              <div>
+                <h4 style="font-size:var(--text-base); margin-bottom:var(--space-sm);">Prospect Action Verification</h4>
+                
+                <div class="readiness-item">
+                  <span style="font-size:var(--text-sm);">1. Proof of unencumbered funds shown (2.5 &times; package)</span>
+                  <input type="checkbox" class="readiness-chk" data-points="3" style="width:18px; height:18px; accent-color:var(--nf-gold);">
+                </div>
+
+                <div class="readiness-item">
+                  <span style="font-size:var(--text-sm);">2. Viable commercial site identified with lease terms</span>
+                  <input type="checkbox" class="readiness-chk" data-points="2" style="width:18px; height:18px; accent-color:var(--nf-gold);">
+                </div>
+
+                <div class="readiness-item">
+                  <span style="font-size:var(--text-sm);">3. Visited operating flagship and shadowed rush hour</span>
+                  <input type="checkbox" class="readiness-chk" data-points="2" style="width:18px; height:18px; accent-color:var(--nf-gold);">
+                </div>
+
+                <div class="readiness-item">
+                  <span style="font-size:var(--text-sm);">4. Committed to personal full-time owner involvement</span>
+                  <input type="checkbox" class="readiness-chk" data-points="2" style="width:18px; height:18px; accent-color:var(--nf-gold);">
+                </div>
+
+                <div class="readiness-item">
+                  <span style="font-size:var(--text-sm);">5. Paid ₱15,000 town reservation down payment</span>
+                  <input type="checkbox" class="readiness-chk" data-points="1" style="width:18px; height:18px; accent-color:var(--nf-gold);">
+                </div>
+              </div>
+
+              <div style="text-align:center;">
+                <div class="nf-card" style="background:var(--nf-navy); color:#FFFFFF; padding:var(--space-xl);">
+                  <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--nf-gold); margin-bottom:4px;">
+                    Readiness Score
+                  </div>
+                  <div style="font-family:var(--font-heading); font-size:3.5rem; font-weight:800; line-height:1; color:var(--nf-gold); margin-bottom:8px;" id="readinessScoreNum">
+                    0 / 10
+                  </div>
+                  <div id="readinessVerdict" style="display:inline-block; padding:4px 12px; border-radius:var(--radius-full); font-size:0.75rem; font-weight:800; text-transform:uppercase; background:var(--nf-danger); color:#FFFFFF;">
+                    NOT YET (DO NOT SIGN)
+                  </div>
+                  <p style="font-size:0.75rem; color:#8C96A5; margin-top:12px;">
+                    Threshold is 7 out of 10. Turning away unqualified buyers protects the brand and protects family savings.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KEY TAKEAWAYS -->
+      <section class="content-section white">
+        <div class="container">
+          <div class="nf-card gold-edge" style="background:#FDFBF7;">
+            <h4 style="font-size:var(--text-lg); margin-bottom:var(--space-sm); color:var(--nf-navy);">
+              Key Takeaways for Module 7
+            </h4>
+            <ul style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
+              <li><strong>1. The Absentee Investor Trap:</strong> The investor looking for "pure passive income" is the profile most likely to fail in early-stage franchising.</li>
+              <li><strong>2. Solution DNA Must Match Pain DNA:</strong> Every inclusion in the package must explicitly answer a failure mode documented in Card 3.4.</li>
+              <li><strong>3. Actions Over Talk:</strong> The Readiness Check scores concrete commitments (funds shown, site found, branch visited), never verbal enthusiasm.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- BRAIN TRAIN -->
+      <section class="content-section cream" id="quiz-block">
+        <div class="container">
+          <div id="quizContainer"></div>
+        </div>
+      </section>
+
+      <!-- NAVIGATION -->
+      <section class="content-section white" style="border-top:1px solid var(--nf-border);">
+        <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+          <a href="part2-brand.html" class="btn btn-secondary" style="color:var(--nf-navy); border-color:var(--nf-border);">
+            &larr; Prev: M6 · Part 2: Brand
+          </a>
+          <button class="btn btn-navy" id="markCompleteBtn" onclick="markCurrentComplete()">
+            Mark Module 7 as Complete
+          </button>
+          <a href="part4-shared-value.html" class="btn btn-primary">
+            Next: M8 · Part 4: Shared Value &rarr;
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- QUIZ DATA JSON -->
+  <script type="application/json" id="brain-train-data">
+  [
+    {
+      "type": "spot",
+      "q": "Which Card 3.1 Power Franchisee draft represents the Next Franchise standard?",
+      "strong": "'I am from this province, currently working abroad and planning to return home, with ₱1.5M in savings. I ask how many months to get my money back before I ask about the menu.'",
+      "weak": "'High-net-worth investors with ₱2.0M available liquid capital who want a passive income business that runs itself without active operational involvement.'",
+      "why": "The strong draft targets real inquiries with specific financial constraints and motivations. Absentee investors wanting passive income fail most frequently."
+    },
+    {
+      "type": "sort",
+      "q": "Sort the draft into either a Pain DNA causal chain or an unlinked friction list:",
+      "buckets": ["True Causal Chain", "Unlinked Friction List"],
+      "items": [
+        { "t": "Underestimated CapEx -> cuts hours -> service drops -> customers leave", "b": 0 },
+        { "t": "Rising ingredient costs, high rent, staff turnover, marketing competition", "b": 1 },
+        { "t": "Commissary delivery delay -> stock-out -> lost weekend sales floor", "b": 0 },
+        { "t": "Finding good crew, social media ads, BIR permits, inflation", "b": 1 }
+      ],
+      "why": "A true Pain DNA explains what happens, what it causes, why it repeats, and what capital is lost."
+    },
+    {
+      "type": "mcq",
+      "q": "The Card 3.7 Readiness Check score is strictly determined by...",
+      "options": [
+        "How well the prospect performed in their executive corporate career",
+        "What the prospect has actually done (funds shown, site found, branch visited)",
+        "The prospect's verbal passion for the brand's food or mission",
+        "The founder's personal gut impression of the prospect"
+      ],
+      "answer": 1,
+      "why": "Readiness scores are based on observable behavioral proofs (funds shown, site identified, branches visited), never on verbal promises."
+    },
+    {
+      "type": "order",
+      "q": "Put the 4 components of a proper Pain DNA sequence in order:",
+      "items": [
+        "What happens (The initiating breakdown)",
+        "What it causes (The operational friction)",
+        "Why it repeats (The reinforcing loop)",
+        "What is lost (The capital destruction)"
+      ],
+      "why": "Pain DNA sequences run from trigger to operational cause, feedback loop, and terminal loss."
+    },
+    {
+      "type": "mcq",
+      "q": "Which prospective buyer should be firmly placed on Snaxxville's 'Not Yet' list?",
+      "options": [
+        "A local former OFW with ₱1.6M liquid savings and family in town",
+        "An absentee investor who will not visit the store, or a buyer taking high-interest debt to pay the fee",
+        "A former restaurant supervisor managing their own store",
+        "A local family running an existing retail stall in the municipality"
+      ],
+      "answer": 1,
+      "why": "Snaxxville explicitly excludes absentee investors and those relying on debt to finance the initial franchise package."
+    }
+  ]
+  </script>
+
+  <!-- SCRIPTS -->
+  <script src="js/modules.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/layout.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      new BrainTrain("quizContainer", "brain-train-data", "M7");
+      initReadinessScorecard();
+      checkReadStatus();
+    });
+
+    function initReadinessScorecard() {
+      const checkboxes = document.querySelectorAll(".readiness-chk");
+      const scoreNum = document.getElementById("readinessScoreNum");
+      const verdict = document.getElementById("readinessVerdict");
+
+      function update() {
+        let total = 0;
+        checkboxes.forEach(cb => {
+          if (cb.checked) total += parseInt(cb.dataset.points, 10);
+        });
+
+        scoreNum.innerText = `${total} / 10`;
+        if (total >= 7) {
+          verdict.innerText = "QUALIFIED TO SIGN";
+          verdict.style.background = "var(--nf-success)";
+        } else {
+          verdict.innerText = "NOT YET (DO NOT SIGN)";
+          verdict.style.background = "var(--nf-danger)";
+        }
+      }
+
+      checkboxes.forEach(cb => cb.addEventListener("change", update));
+    }
+
+    function markCurrentComplete() {
+      NFStore.markRead("M7");
+      const btn = document.getElementById("markCompleteBtn");
+      btn.innerText = "Module 7 Completed ✓";
+      btn.style.background = "var(--nf-success)";
+      btn.disabled = true;
+    }
+
+    function checkReadStatus() {
+      const state = NFStore.get();
+      if (state.read && state.read["M7"]) {
+        const btn = document.getElementById("markCompleteBtn");
+        btn.innerText = "Module 7 Completed ✓";
+        btn.style.background = "var(--nf-success)";
+      }
+    }
+  </script>
+</body>
+</html>

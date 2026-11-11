@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>M6: Blueprint Part 2 · Next Franchise Sr Training</title>
+  
+  <link rel="icon" type="image/png" href="https://nextfranchise.github.io/nextfranchise/assets/NF%20ICON.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .proof-chart-box {
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-xl);
+      margin: var(--space-lg) 0;
+    }
+    .branch-bar-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    .branch-bar-label {
+      width: 140px;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--nf-navy);
+      flex-shrink: 0;
+    }
+    .branch-bar-track {
+      flex: 1;
+      height: 28px;
+      background: var(--nf-cream);
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      position: relative;
+    }
+    .branch-bar-fill {
+      height: 100%;
+      background: var(--nf-gold);
+      display: flex;
+      align-items: center;
+      padding-left: 10px;
+      color: var(--nf-navy-deep);
+      font-size: 0.75rem;
+      font-weight: 800;
+      transition: width 0.4s ease;
+    }
+    .branch-bar-fill.weak {
+      background: #7D8795;
+      color: #FFFFFF;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-shell">
+    <main class="main-content">
+
+      <!-- HERO -->
+      <section class="hero-band bg-navy-pattern">
+        <div class="container">
+          <div class="hero-eyebrow">BLUEPRINT ARCHITECTURE · PART 2</div>
+          <h1 class="hero-headline">Part 2: The Brand</h1>
+          <p class="hero-subline">
+            Cards 2.1 to 2.4. Prove the brand model is repeatable, document the hardest turnaround lesson, and present unit proof with weak branches included.
+          </p>
+          
+          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:var(--space-md);">
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Taught in: Session 4
+            </span>
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Est. Read Time: 20 mins
+            </span>
+            <div style="display:flex; gap:6px;">
+              <span class="chip" onclick="NFModal.open('Radical Candor', 'Weak stores must be included in Card 2.3 Proof tables. Never hide small units.')">Radical Candor</span>
+              <span class="chip" onclick="NFModal.open('Deeply Personal Leadership', '2.1 Founder Story must reveal real personal cost and turnaround lessons.')">Deeply Personal Leadership</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUTCOMES -->
+      <section class="content-section white" style="padding:var(--space-2xl) 0;">
+        <div class="container">
+          <div class="nf-card gold-edge">
+            <h3 style="font-size:var(--text-xl); margin-bottom:var(--space-md); color:var(--nf-navy);">
+              By the end of this module, you can:
+            </h3>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:var(--space-md);">
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Draft Card 2.1 Founder Story with origin, hardest part, and the turnaround lesson.
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Build Card 2.3 Unit Performance with all units included and franchise-equivalent views.
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Map revenue streams in Card 2.4 by functional roles and quantify recurring share.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LEARN IT: FOUNDER STORY & LAOANG -->
+      <section class="content-section cream" id="founder-story">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">Card 2.1 Standard</div>
+            <h2 class="section-title">The Turnaround Lesson</h2>
+            <p class="section-lead">
+              Franchisees buy the founder's proven judgment along with the operating manual. The hardest moment usually explains a core rule in the franchise agreement.
+            </p>
+          </div>
+
+          <div class="nf-card">
+            <h4 style="margin-bottom:8px; color:var(--nf-navy);">The Snaxxville Laoang Case</h4>
+            <p style="font-size:var(--text-sm); color:var(--nf-text); margin-bottom:12px;">
+              Two years ago, sales at Snaxxville’s Laoang branch collapsed to single digits. Instead of shutting down, the founders relocated to a prominent corner, added dine-in seating, and improved combo items. Today it generates 116 transactions a day (₱726,268/mo).
+            </p>
+            <div class="callout gold" style="margin:0;">
+              <strong>The Franchise Rule It Explains:</strong> The right site and store format matter more than town population. This turnaround is the direct reason Card 3.7 mandates physical site evaluation before signing.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRY IT: PROOF CLINIC (INCLUDE WEAK UNITS) -->
+      <section class="content-section white" id="proof-clinic">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">Card 2.3 Proof Clinic</div>
+            <h2 class="section-title">Transparent Unit Performance</h2>
+            <p class="section-lead">
+              Radical Candor requires displaying every operating unit. Toggle below to witness how excluding weak units creates a dangerous misrepresentation.
+            </p>
+          </div>
+
+          <div class="proof-chart-box">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:var(--space-lg);">
+              <h4 style="font-size:var(--text-base); margin:0;">Snaxxville Operating Branches (Monthly Volume)</h4>
+              <button class="btn btn-sm btn-navy" id="toggleWeakUnitsBtn">
+                Hide Weak Units (Misleading View)
+              </button>
+            </div>
+
+            <!-- Branch Bars -->
+            <div class="branch-bar-row">
+              <div class="branch-bar-label">Catubig Flagship</div>
+              <div class="branch-bar-track">
+                <div class="branch-bar-fill" style="width:100%;">₱861,607 (109 trans/day)</div>
+              </div>
+            </div>
+
+            <div class="branch-bar-row">
+              <div class="branch-bar-label">Laoang Dine-in</div>
+              <div class="branch-bar-track">
+                <div class="branch-bar-fill" style="width:84%;">₱726,268 (116 trans/day)</div>
+              </div>
+            </div>
+
+            <div class="branch-bar-row" id="weakRow1">
+              <div class="branch-bar-label">Palapag Small Unit</div>
+              <div class="branch-bar-track">
+                <div class="branch-bar-fill weak" style="width:24%;">26 trans/day</div>
+              </div>
+            </div>
+
+            <div class="branch-bar-row" id="weakRow2">
+              <div class="branch-bar-label">Campus Kiosk</div>
+              <div class="branch-bar-track">
+                <div class="branch-bar-fill weak" style="width:11%;">12 trans/day</div>
+              </div>
+            </div>
+
+            <div id="chartWarningCallout" class="callout amber" style="display:none; margin-top:var(--space-md);">
+              <strong>Traditional Consultant Distortion:</strong> Hiding Palapag and Campus Kiosk gives the false impression that every location effortlessly reaches ₱700k+. Revealing them proves that a poor site stays small, reinforcing the site rule.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KEY TAKEAWAYS -->
+      <section class="content-section cream">
+        <div class="container">
+          <div class="nf-card gold-edge" style="background:#FDFBF7;">
+            <h4 style="font-size:var(--text-lg); margin-bottom:var(--space-sm); color:var(--nf-navy);">
+              Key Takeaways for Module 6
+            </h4>
+            <ul style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
+              <li><strong>1. The Founder's Hardest Part:</strong> Always document the hardest year and turnaround. It provides authentic conviction and explains operational rules.</li>
+              <li><strong>2. Show the Weak Units:</strong> Including struggling units demonstrates intellectual honesty and protects future franchisees from selecting bad locations.</li>
+              <li><strong>3. Franchise-Equivalent P&amp;L:</strong> Company-owned P&amp;Ls must be restated with royalties and system fees before being compared to franchise projections.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- BRAIN TRAIN -->
+      <section class="content-section white" id="quiz-block">
+        <div class="container">
+          <div id="quizContainer"></div>
+        </div>
+      </section>
+
+      <!-- NAVIGATION -->
+      <section class="content-section cream" style="border-top:1px solid var(--nf-border);">
+        <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+          <a href="part1-customer.html" class="btn btn-secondary" style="color:var(--nf-navy); border-color:var(--nf-border);">
+            &larr; Prev: M5 · Part 1: Customer
+          </a>
+          <button class="btn btn-navy" id="markCompleteBtn" onclick="markCurrentComplete()">
+            Mark Module 6 as Complete
+          </button>
+          <a href="part3-franchisee.html" class="btn btn-primary">
+            Next: M7 · Part 3: Franchisee &rarr;
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- QUIZ DATA JSON -->
+  <script type="application/json" id="brain-train-data">
+  [
+    {
+      "type": "mcq",
+      "q": "What fundamental franchise rule does the Snaxxville Laoang turnaround illustrate?",
+      "options": [
+        "Lowering prices is always required during a sales dip",
+        "The right site and format matter more than the town's size",
+        "Food carts perform better than full dine-in units in provinces",
+        "Typhoon season requires shutting down operations"
+      ],
+      "answer": 1,
+      "why": "Laoang sales jumped from single digits to 116 transactions a day simply by moving to a prime site and adding dine-in, proving site and format beat town size."
+    },
+    {
+      "type": "truefalse",
+      "q": "Unit proof in Card 2.3 should present only the top-performing flagship to build buyer confidence.",
+      "answer": false,
+      "why": "False. Showing weak units (like Palapag at 26 transactions/day) is essential to prove where the model struggles and why strict territory rules exist."
+    },
+    {
+      "type": "spot",
+      "q": "Which Card 2.1 Founder Story draft passes Next Franchise quality standards?",
+      "strong": "Snaxxville started in 2017. In year 3, Laoang sales collapsed to single digits; the founders relocated to a corner, added dine-in, and reached 116 transactions/day, proving site beats town size.",
+      "weak": "Founded in 2017 by passionate entrepreneurs with a heartfelt dream to bring delicious, affordable comfort food to every Filipino family nationwide.",
+      "why": "The strong draft details the origin, the hardest crisis, the turnaround lesson, and links directly to operational standards."
+    },
+    {
+      "type": "mcq",
+      "q": "What must the Card 2.3.1 franchise-equivalent view add to an existing company-owned branch P&L?",
+      "options": [
+        "A 20% marketing contingency cushion",
+        "Every fee a franchisee will actually pay, such as the monthly system fee",
+        "The founder's personal management draw",
+        "Projected inflation for the next five years"
+      ],
+      "answer": 1,
+      "why": "A company-owned branch does not pay royalties to itself. The franchise-equivalent view must add system fees and franchisee expenses to show true bottom-line profitability."
+    },
+    {
+      "type": "mcq",
+      "q": "In Card 2.4 How a Unit Makes Money, every listed revenue stream must have a...",
+      "options": [
+        "50% gross margin target",
+        "Functional role and stated recurring share",
+        "Separate dedicated kitchen station",
+        "Third-party delivery app integration"
+      ],
+      "answer": 1,
+      "why": "Each stream needs an assigned strategic role (e.g. signature shakes drive return visits, group catering provides a weekday sales floor) and its recurring share quantified."
+    }
+  ]
+  </script>
+
+  <!-- SCRIPTS -->
+  <script src="js/modules.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/layout.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      new BrainTrain("quizContainer", "brain-train-data", "M6");
+      checkReadStatus();
+
+      let hidden = false;
+      const toggleBtn = document.getElementById("toggleWeakUnitsBtn");
+      const r1 = document.getElementById("weakRow1");
+      const r2 = document.getElementById("weakRow2");
+      const warning = document.getElementById("chartWarningCallout");
+
+      toggleBtn.addEventListener("click", () => {
+        hidden = !hidden;
+        toggleBtn.innerText = hidden ? "Show All Units (NF Standard)" : "Hide Weak Units (Misleading View)";
+        r1.style.display = hidden ? "none" : "flex";
+        r2.style.display = hidden ? "none" : "flex";
+        warning.style.display = hidden ? "block" : "none";
+      });
+    });
+
+    function markCurrentComplete() {
+      NFStore.markRead("M6");
+      const btn = document.getElementById("markCompleteBtn");
+      btn.innerText = "Module 6 Completed ✓";
+      btn.style.background = "var(--nf-success)";
+      btn.disabled = true;
+    }
+
+    function checkReadStatus() {
+      const state = NFStore.get();
+      if (state.read && state.read["M6"]) {
+        const btn = document.getElementById("markCompleteBtn");
+        btn.innerText = "Module 6 Completed ✓";
+        btn.style.background = "var(--nf-success)";
+      }
+    }
+  </script>
+</body>
+</html>

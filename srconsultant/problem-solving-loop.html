@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>M11: Problem-Solving Loop · Next Franchise Sr Training</title>
+  
+  <link rel="icon" type="image/png" href="https://nextfranchise.github.io/nextfranchise/assets/NF%20ICON.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .loop-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin: var(--space-lg) 0;
+    }
+    .loop-step-card {
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      position: relative;
+    }
+    .loop-step-card:hover, .loop-step-card.active {
+      border-color: var(--nf-gold);
+      background: #FDFBF7;
+      transform: translateY(-2px);
+    }
+    .loop-step-timer {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: var(--nf-gold-dark);
+      background: var(--nf-gold-light);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .chain-interactive {
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-xl);
+      margin: var(--space-lg) 0;
+    }
+    .loop-cycle {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+      margin: var(--space-md) 0;
+    }
+    .cycle-node {
+      padding: 10px 14px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--nf-border);
+      background: var(--nf-cream);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    .cycle-node.broken {
+      border-color: var(--nf-success);
+      background: var(--nf-success-bg);
+      color: var(--nf-success);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-shell">
+    <main class="main-content">
+
+      <!-- HERO -->
+      <section class="hero-band bg-navy-pattern">
+        <div class="container">
+          <div class="hero-eyebrow">WEEK 3 · SESSION 6</div>
+          <h1 class="hero-headline">The Problem-Solving Loop</h1>
+          <p class="hero-subline">
+            The 60-minute 8-step engine. Transform ambiguous client issues into verified, actionable Problem Cards that land in Blueprint Part 5 Advisory.
+          </p>
+          
+          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:var(--space-md);">
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Taught in: Session 6 (60-min live loop)
+            </span>
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Est. Read Time: 30 mins
+            </span>
+            <div style="display:flex; gap:6px;">
+              <span class="chip" onclick="NFModal.open('Systems Thinking', 'Step 3: Map the feedback loop until it repeats.')">Systems Thinking</span>
+              <span class="chip" onclick="NFModal.open('Power Law', 'Step 4: Fix only one link; move the rest to \'not yet\'.')">Power Law</span>
+              <span class="chip" onclick="NFModal.open('Relentless Execution', 'Step 7: One next proof, one owner, one date.')">Relentless Execution</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUTCOMES -->
+      <section class="content-section white" style="padding:var(--space-2xl) 0;">
+        <div class="container">
+          <div class="nf-card gold-edge">
+            <h3 style="font-size:var(--text-xl); margin-bottom:var(--space-md); color:var(--nf-navy);">
+              By the end of this module, you can:
+            </h3>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:var(--space-md);">
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Facilitate all 8 steps of the Loop within the strict 60-minute time constraint.
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Attack the single high-leverage link in a causal chain and file the rest under 'not yet'.
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Produce a completed Template B1 Problem Card ready for live client presentation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LEARN IT: 8-STEP LOOP ARCHITECTURE -->
+      <section class="content-section cream" id="loop-steps">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">The 60-Minute Rhythm</div>
+            <h2 class="section-title">The 8 Steps and Governed Meta Skills</h2>
+            <p class="section-lead">
+              Every client breakdown follows this exact sequence. Click any step to inspect its facilitator check:
+            </p>
+          </div>
+
+          <div class="loop-grid">
+            <div class="loop-step-card" onclick="NFModal.open('Step 1: Customer\'s Voice (5 mins)', 'Meta Skill: Customer Obsession. Must start with \'I am [the franchisee/customer]...\' with zero solutions suggested in the problem sentence.')">
+              <span class="loop-step-timer">5 MIN</span>
+              <strong style="color:var(--nf-navy); font-size:0.85rem;">1. Customer's Voice</strong>
+              <p style="font-size:0.75rem; color:var(--nf-muted); margin-top:4px;">Customer Obsession</p>
+            </div>
+
+            <div class="loop-step-card" onclick="NFModal.open('Step 2: Assumptions (10 mins)', 'Meta Skill: First Principles. List at least 8 assumptions. Mark each Heard, Inferred, Client-said, or Confirmed. Client statements stay Client-said.')">
+              <span class="loop-step-timer">10 MIN</span>
+              <strong style="color:var(--nf-navy); font-size:0.85rem;">2. Assumptions</strong>
+              <p style="font-size:0.75rem; color:var(--nf-muted); margin-top:4px;">First Principles</p>
+            </div>
+
+            <div class="loop-step-card" onclick="NFModal.open('Step 3: Causal Chain (15 mins)', 'Meta Skill: Systems Thinking. Draw A leads to B leads to C until it loops. Distinguish root causes from surface symptoms.')">
+              <span class="loop-step-timer">15 MIN</span>
+              <strong style="color:var(--nf-navy); font-size:0.85rem;">3. Causal Chain</strong>
+              <p style="font-size:0.75rem; color:var(--nf-muted); margin-top:4px;">Systems Thinking</p>
+            </div>
+
+            <div class="loop-step-card" onclick="NFModal.open('Step 4: One Link (5 mins)', 'Meta Skill: Power Law. Attack only one link to break the loop. Everything else is moved to an explicit \'not yet\' list.')">
+              <span class="loop-step-timer">5 MIN</span>
+              <strong style="color:var(--nf-navy); font-size:0.85rem;">4. One Link</strong>
+              <p style="font-size:0.75rem; color:var(--nf-muted); margin-top:4px;">Power Law</p>
+            </div>
+
+            <div class="loop-step-card" onclick="NFModal.open('Step 5: 10X Outcome (10 mins)', 'Meta Skill: Radical Outcomes. Draft the 2X version, then the 10X version. Name the tangible before/after and the emotional state.')">
+              <span class="loop-step-timer">10 MIN</span>
+              <strong style="color:var(--nf-navy); font-size:0.85rem;">5. 10X Outcome</strong>
+              <p style="font-size:0.75rem; color:var(--nf-muted); margin-top:4px;">Radical Outcomes</p>
+            </div>
+
+            <div class="loop-step-card" onclick="NFModal.open('Step 6: First-Hand Evidence (5 mins)', 'Meta Skill: Ground Commando. Specific named branches, crew members, or customers to shadow. Never \'conduct desk research\'.')">
+              <span class="loop-step-timer">5 MIN</span>
+              <strong style="color:var(--nf-navy); font-size:0.85rem;">6. First-Hand Evidence</strong>
+              <p style="font-size:0.75rem; color:var(--nf-muted); margin-top:4px;">Ground Commando</p>
+            </div>
+
+            <div class="loop-step-card" onclick="NFModal.open('Step 7: Next Proof (5 mins)', 'Meta Skill: Relentless Execution. One concrete proof, one named owner, and one definite date. No \'TBD\' allowed.')">
+              <span class="loop-step-timer">5 MIN</span>
+              <strong style="color:var(--nf-navy); font-size:0.85rem;">7. Next Proof</strong>
+              <p style="font-size:0.75rem; color:var(--nf-muted); margin-top:4px;">Relentless Execution</p>
+            </div>
+
+            <div class="loop-step-card" onclick="NFModal.open('Step 8: Meta Skills Check (5 mins)', 'Meta Skills: Radical Candor & Learning Acuity. Author writes an honest \'What\'s weak here\' line. Any unaddressed failure mandates a revision.')">
+              <span class="loop-step-timer">5 MIN</span>
+              <strong style="color:var(--nf-navy); font-size:0.85rem;">8. Meta Skills Check</strong>
+              <p style="font-size:0.75rem; color:var(--nf-muted); margin-top:4px;">Radical Candor</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRY IT: CAUSAL LOOP INTERACTIVE -->
+      <section class="content-section white" id="loop-break">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">Systems Thinking in Action</div>
+            <h2 class="section-title">Breaking Snaxxville's Working Capital Loop</h2>
+            <p class="section-lead">
+              A marketing push never fixes a systemic operating loop. Click below to see how attacking the root link breaks the feedback cycle:
+            </p>
+          </div>
+
+          <div class="chain-interactive">
+            <div class="loop-cycle" id="cycleContainer">
+              <div class="cycle-node" id="n1">1. Working Cap Underestimated</div>
+              <span style="color:var(--nf-gold);">&rarr;</span>
+              <div class="cycle-node" id="n2">2. Staff Hours Cut</div>
+              <span style="color:var(--nf-gold);">&rarr;</span>
+              <div class="cycle-node" id="n3">3. Service Slips &amp; Slows</div>
+              <span style="color:var(--nf-gold);">&rarr;</span>
+              <div class="cycle-node" id="n4">4. Regulars Drift Away</div>
+              <span style="color:var(--nf-gold);">&rarr;</span>
+              <div class="cycle-node" id="n5">5. Sales Fall Below Breakeven</div>
+              <span style="color:var(--nf-gold);">&rarr;</span>
+              <div class="cycle-node" id="n6">6. More Shifts Cut (Loop Repeats)</div>
+            </div>
+
+            <div style="text-align:center; margin-top:var(--space-md);">
+              <button class="btn btn-navy btn-sm" id="breakLoopBtn">
+                Attack Root Link (Apply Power Law)
+              </button>
+            </div>
+
+            <div id="breakResultCallout" class="callout green" style="display:none; margin-top:var(--space-md);">
+              <strong>Root Link Broken:</strong> By embedding a mandatory 3-month fixed overhead revolving fund into the initial package CapEx (Card 3.10), staff shifts are protected through ramp-up. Service remains rapid, regulars become loyal, and the negative feedback loop never initiates.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KEY TAKEAWAYS -->
+      <section class="content-section cream">
+        <div class="container">
+          <div class="nf-card gold-edge" style="background:#FDFBF7;">
+            <h4 style="font-size:var(--text-lg); margin-bottom:var(--space-sm); color:var(--nf-navy);">
+              Key Takeaways for Module 11
+            </h4>
+            <ul style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
+              <li><strong>1. Strict Time Discipline:</strong> The Loop runs in 60 minutes flat. Over-debating at Step 2 or 3 usually indicates a lack of primary field data.</li>
+              <li><strong>2. One Link Only:</strong> Trying to fix five links simultaneously dilutes focus and exhausts the client. Attack the single primary driver.</li>
+              <li><strong>3. Problem Card to Blueprint:</strong> Accepted Problem Cards directly populate Card 5.1 Foundation Upgrades or Card 5.2 Risks and Mitigations.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- BRAIN TRAIN -->
+      <section class="content-section white" id="quiz-block">
+        <div class="container">
+          <div id="quizContainer"></div>
+        </div>
+      </section>
+
+      <!-- NAVIGATION -->
+      <section class="content-section cream" style="border-top:1px solid var(--nf-border);">
+        <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+          <a href="part6-offer.html" class="btn btn-secondary" style="color:var(--nf-navy); border-color:var(--nf-border);">
+            &larr; Prev: M10 · Part 6: Offer
+          </a>
+          <button class="btn btn-navy" id="markCompleteBtn" onclick="markCurrentComplete()">
+            Mark Module 11 as Complete
+          </button>
+          <a href="hard-conversation.html" class="btn btn-primary">
+            Next: M12 · Hard Conversation &rarr;
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- QUIZ DATA JSON -->
+  <script type="application/json" id="brain-train-data">
+  [
+    {
+      "type": "order",
+      "q": "Place the 8 steps of the Problem-Solving Loop in their exact sequence:",
+      "items": [
+        "Customer's voice",
+        "Assumptions list & status stamps",
+        "Causal chain & feedback loop",
+        "One link (Power Law prioritization)",
+        "10X outcome definition",
+        "First-hand evidence plan",
+        "Next proof (proof, owner, date)",
+        "Meta Skills check & 'What's weak here'"
+      ],
+      "why": "The Loop proceeds from framing in the customer's voice, to auditing assumptions, mapping systems, picking one link, and ending with proof and candor."
+    },
+    {
+      "type": "match",
+      "q": "Match each Problem-Solving Loop step to its primary Meta Skill:",
+      "pairs": [
+        ["Step 1: Frame in their shoes", "Customer Obsession"],
+        ["Step 2: Stamping evidence status", "First Principles"],
+        ["Step 3: Drawing feedback loops", "Systems Thinking"],
+        ["Step 4: Picking single priority", "Power Law"],
+        ["Step 7: Naming proof, owner, date", "Relentless Execution"]
+      ],
+      "why": "Each step in the 60-minute loop is anchored in one of Next Franchise's core habits of thought."
+    },
+    {
+      "type": "mcq",
+      "q": "In Step 4 of the Loop, how many causal links do you actively recommend attacking?",
+      "options": [
+        "All of them simultaneously to ensure thoroughness",
+        "Only one link; the remainder is placed onto an explicit 'not yet' list",
+        "Three links prioritized by cost",
+        "None; you wait for quarterly branch audit results"
+      ],
+      "answer": 1,
+      "why": "Under Power Law, attack the single link that breaks the feedback loop. Listing ten priorities ensures the client accomplishes none."
+    },
+    {
+      "type": "mcq",
+      "q": "What three elements must Step 7 of the Loop contain without exception?",
+      "options": [
+        "A slide deck, a client budget, an invoice",
+        "One proof, one owner, one date",
+        "A follow-up meeting, a zoom link, an agenda",
+        "A legal clause, a penalty, a warning memo"
+      ],
+      "answer": 1,
+      "why": "Under Ground Rule 5 and Relentless Execution, every session closes with one concrete proof, one named owner, and one definite date."
+    },
+    {
+      "type": "sort",
+      "q": "Sort the client statements into their proper evidence status stamps:",
+      "buckets": ["Confirmed", "Client-Said"],
+      "items": [
+        { "t": "Audited register POS shows weighted ticket is ₱224", "b": 0 },
+        { "t": "Owner states foot traffic peaks at 2,000 passersby daily", "b": 1 },
+        { "t": "Registered lease contract specifies ₱45,000 monthly rent", "b": 0 },
+        { "t": "Owner claims customers love Korean corn dogs more than milk tea", "b": 1 }
+      ],
+      "why": "Unverified claims spoken by the founder remain Client-said. Only audited primary records or verified contracts are marked Confirmed."
+    }
+  ]
+  </script>
+
+  <!-- SCRIPTS -->
+  <script src="js/modules.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/layout.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      new BrainTrain("quizContainer", "brain-train-data", "M11");
+      checkReadStatus();
+
+      const breakBtn = document.getElementById("breakLoopBtn");
+      const callout = document.getElementById("breakResultCallout");
+      const n1 = document.getElementById("n1");
+
+      breakBtn.addEventListener("click", () => {
+        n1.classList.toggle("broken");
+        const isBroken = n1.classList.contains("broken");
+        n1.innerText = isBroken ? "1. Mandatory 3-Mo Working Cap Funded" : "1. Working Cap Underestimated";
+        callout.style.display = isBroken ? "block" : "none";
+        breakBtn.innerText = isBroken ? "Reset Loop" : "Attack Root Link (Apply Power Law)";
+      });
+    });
+
+    function markCurrentComplete() {
+      NFStore.markRead("M11");
+      const btn = document.getElementById("markCompleteBtn");
+      btn.innerText = "Module 11 Completed ✓";
+      btn.style.background = "var(--nf-success)";
+      btn.disabled = true;
+    }
+
+    function checkReadStatus() {
+      const state = NFStore.get();
+      if (state.read && state.read["M11"]) {
+        const btn = document.getElementById("markCompleteBtn");
+        btn.innerText = "Module 11 Completed ✓";
+        btn.style.background = "var(--nf-success)";
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Next Franchise · Sr Consultant Training Portal</title>
+  
+  <link rel="icon" type="image/png" href="https://nextfranchise.github.io/nextfranchise/assets/NF%20ICON.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  
+  <style>
+    /* Home-specific interactive visual styling */
+    .roadmap-container {
+      position: relative;
+      padding: var(--space-xl) 0;
+    }
+
+    .roadmap-svg-wrapper {
+      width: 100%;
+      overflow-x: auto;
+    }
+
+    .roadmap-node-group {
+      cursor: pointer;
+      transition: transform var(--transition-fast);
+    }
+
+    .roadmap-node-group:hover {
+      transform: translateY(-4px);
+    }
+
+    /* Founder 9-branch visual */
+    .branch-box-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      max-width: 180px;
+      margin: var(--space-md) auto;
+    }
+
+    .branch-box {
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-sm);
+      background: var(--nf-gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--nf-navy);
+      font-weight: 700;
+      font-size: var(--text-xs);
+      transition: background 0.8s ease, transform 0.4s ease;
+    }
+
+    .branch-box.closed {
+      background: #7D8795;
+      color: #FFFFFF;
+      opacity: 0.6;
+    }
+
+    .radial-wheel-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slab-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .slab-item {
+      background: var(--nf-navy);
+      color: #FFFFFF;
+      padding: 14px var(--space-lg);
+      border-radius: var(--radius-md);
+      border-left: 6px solid var(--nf-gold);
+      cursor: pointer;
+      font-family: var(--font-heading);
+      font-size: var(--text-sm);
+      font-weight: 700;
+      transition: transform var(--transition-fast), background var(--transition-fast);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .slab-item:hover {
+      transform: translateX(6px);
+      background: var(--nf-navy-soft);
+    }
+
+    .loop-circle-wrapper {
+      position: relative;
+      width: 320px;
+      height: 320px;
+      margin: 0 auto;
+    }
+
+    .loop-step-btn {
+      position: absolute;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--nf-surface);
+      border: 2px solid var(--nf-gold);
+      color: var(--nf-navy);
+      font-weight: 800;
+      font-size: var(--text-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: translate(-50%, -50%);
+      transition: transform var(--transition-fast), background var(--transition-fast);
+      cursor: pointer;
+    }
+
+    .loop-step-btn:hover {
+      background: var(--nf-navy);
+      color: var(--nf-gold);
+      transform: translate(-50%, -50%) scale(1.15);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-shell">
+    <div class="app-body">
+      <main class="main-content">
+
+        <!-- HERO SECTION -->
+        <section class="hero-band bg-navy-pattern">
+          <div class="container" style="position:relative; z-index:2;">
+            <div class="hero-eyebrow">
+              <span>OFFICIAL TRAINING · FRANCHISE ARCHITECT TEAM</span>
+            </div>
+            <h1 class="hero-headline">
+              Become the consultant who<br>solves the real problem.
+            </h1>
+            <p class="hero-subline">
+              A one-month program, then three months of proof on live clients. Master the 13 Meta Skills and the Next Franchise Blueprint system.
+            </p>
+            
+            <div style="display:flex; gap:16px; flex-wrap:wrap; margin-bottom:var(--space-2xl);">
+              <a href="start-here.html" class="btn btn-primary">
+                Start the journey &rarr;
+              </a>
+              <button class="btn btn-secondary" id="continueJourneyBtn">
+                Continue where I left off
+              </button>
+            </div>
+
+            <!-- Stat chips with live count-up -->
+            <div class="stat-grid">
+              <div class="stat-chip">
+                <div class="stat-number" data-count-to="9">0</div>
+                <div class="stat-label">Intensive Sessions</div>
+              </div>
+              <div class="stat-chip">
+                <div class="stat-number" data-count-to="13">0</div>
+                <div class="stat-label">Core Meta Skills</div>
+              </div>
+              <div class="stat-chip">
+                <div class="stat-number" data-count-to="6">0</div>
+                <div class="stat-label">Blueprint Parts</div>
+              </div>
+              <div class="stat-chip">
+                <div class="stat-number" data-count-to="1">0</div>
+                <div class="stat-label">Sr Certification Gate</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Animated gold growth polyline backdrop -->
+          <svg class="growth-line-svg" viewBox="0 0 500 300" fill="none" preserveAspectRatio="none">
+            <polyline class="growth-line-path" points="0,280 120,240 220,260 340,140 420,170 500,40" stroke="#BD9F4F" stroke-width="4"/>
+            <rect x="110" y="240" width="10" height="60" fill="#BD9F4F" opacity="0.3"/>
+            <rect x="330" y="140" width="10" height="160" fill="#BD9F4F" opacity="0.4"/>
+            <rect x="490" y="40" width="10" height="260" fill="#BD9F4F" opacity="0.5"/>
+          </svg>
+        </section>
+
+        <!-- WHY THIS EXISTS -->
+        <section class="content-section white" id="why-this-exists">
+          <div class="container">
+            <div style="display:flex; flex-direction:column; gap:var(--space-sm); max-width:720px; margin:0 auto; text-align:center;">
+              <div class="section-eyebrow">Where this program comes from</div>
+              <h2 class="section-title">The cost of missing the root cause</h2>
+              <p style="font-size:var(--text-lg); color:var(--nf-muted);">
+                Next Franchise’s founder built an F&B brand during the pandemic: from local delivery to nine branches in three years. In the next two years, six branches closed. A large franchise developer was brought in — but their fix never reached the root cause.
+              </p>
+              
+              <div class="branch-box-grid" id="branchSimGrid" title="Nine branches opened, six closed">
+                <div class="branch-box">B1</div>
+                <div class="branch-box">B2</div>
+                <div class="branch-box">B3</div>
+                <div class="branch-box">B4</div>
+                <div class="branch-box">B5</div>
+                <div class="branch-box">B6</div>
+                <div class="branch-box">B7</div>
+                <div class="branch-box">B8</div>
+                <div class="branch-box">B9</div>
+              </div>
+
+              <div>
+                <button class="btn btn-navy btn-sm" id="readFounderLessonBtn">
+                  Read the founder's lesson
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ROADMAP CENTERPIECE -->
+        <section class="content-section cream" id="journey-roadmap">
+          <div class="container">
+            <div class="section-head" style="text-align:center; max-width:720px; margin:0 auto var(--space-2xl) auto;">
+              <div class="section-eyebrow">The Master Path</div>
+              <h2 class="section-title">Your 4-Week Journey + 3 Months of Proof</h2>
+              <p class="section-lead" style="margin:0 auto;">
+                Hover or tap any station along the winding roadmap to see sessions, required hours, and key outcomes.
+              </p>
+            </div>
+
+            <div class="roadmap-container" id="roadmapBox">
+              
+              <!-- Floating Interactive Popover Card -->
+              <div class="station-popover" id="stationPopover">
+                <div class="popover-badge" id="popoverBadge">WEEK 1 · 2 SESSIONS (5 HRS)</div>
+                <div class="popover-title" id="popoverTitle">The Meta Skills</div>
+                <div class="popover-outcome" id="popoverOutcome">
+                  Master the 13 habits of thought, solve the Dino Crew case, and audit your live client assumptions.
+                </div>
+                <a href="why-meta-skills.html" class="btn btn-sm btn-primary" id="popoverLink">Open Module &rarr;</a>
+              </div>
+
+              <!-- Live User Avatar -->
+              <div class="avatar-dot" id="userAvatarDot" style="display:none;">
+                <div class="avatar-badge-pill">You are here</div>
+                <div class="avatar-pulse-ring"></div>
+              </div>
+
+              <div class="roadmap-svg-wrapper">
+                <svg id="roadmapSvg" viewBox="0 0 1000 280" style="width:100%; min-width:860px; height:auto; overflow:visible; display:block;">
+                  <!-- Background S-Curve Spine -->
+                  <path d="M 80,140 C 220,30 360,230 500,140 C 640,50 780,230 920,140" fill="none" stroke="#E3DFC8" stroke-width="8" stroke-linecap="round"/>
+                  <path d="M 80,140 C 220,30 360,230 500,140 C 640,50 780,230 920,140" fill="none" stroke="#BD9F4F" stroke-width="3" stroke-dasharray="8 6"/>
+
+                  <!-- Station 1: Week 1 -->
+                  <g class="roadmap-node-group" data-station="1" transform="translate(80, 140)">
+                    <circle r="36" fill="transparent" pointer-events="all"/>
+                    <circle class="station-circle" r="28" fill="#1F2733" stroke="#BD9F4F" stroke-width="4"/>
+                    <text y="5" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat" font-weight="800" font-size="12" pointer-events="none">W1</text>
+                    <text y="48" text-anchor="middle" fill="#1F2733" font-family="Montserrat" font-weight="800" font-size="12" pointer-events="none">Meta Skills</text>
+                  </g>
+
+                  <!-- Station 2: Week 2 -->
+                  <g class="roadmap-node-group" data-station="2" transform="translate(260, 85)">
+                    <circle r="36" fill="transparent" pointer-events="all"/>
+                    <circle class="station-circle" r="28" fill="#1F2733" stroke="#BD9F4F" stroke-width="4"/>
+                    <text y="5" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat" font-weight="800" font-size="12" pointer-events="none">W2</text>
+                    <text y="48" text-anchor="middle" fill="#1F2733" font-family="Montserrat" font-weight="800" font-size="12" pointer-events="none">Goals + Blueprint</text>
+                  </g>
+
+                  <!-- Station 3: Week 3 -->
+                  <g class="roadmap-node-group" data-station="3" transform="translate(480, 180)">
+                    <circle r="36" fill="transparent" pointer-events="all"/>
+                    <circle class="station-circle" r="28" fill="#1F2733" stroke="#BD9F4F" stroke-width="4"/>
+                    <text y="5" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat" font-weight="800" font-size="12" pointer-events="none">W3</text>
+                    <text y="48" text-anchor="middle" fill="#1F2733" font-family="Montserrat" font-weight="800" font-size="12" pointer-events="none">Problem Solving</text>
+                  </g>
+
+                  <!-- Station 4: Week 4 -->
+                  <g class="roadmap-node-group" data-station="4" transform="translate(670, 85)">
+                    <circle r="36" fill="transparent" pointer-events="all"/>
+                    <circle class="station-circle" r="28" fill="#1F2733" stroke="#BD9F4F" stroke-width="4"/>
+                    <text y="5" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat" font-weight="800" font-size="12" pointer-events="none">W4</text>
+                    <text y="48" text-anchor="middle" fill="#1F2733" font-family="Montserrat" font-weight="800" font-size="12" pointer-events="none">Capstone</text>
+                  </g>
+
+                  <!-- Station 5: Months 2-4 -->
+                  <g class="roadmap-node-group" data-station="5" transform="translate(810, 185)">
+                    <circle r="36" fill="transparent" pointer-events="all"/>
+                    <circle class="station-circle" r="28" fill="#1F2733" stroke="#BD9F4F" stroke-width="4"/>
+                    <text y="5" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat" font-weight="800" font-size="11" pointer-events="none">M2-4</text>
+                    <text y="48" text-anchor="middle" fill="#1F2733" font-family="Montserrat" font-weight="800" font-size="12" pointer-events="none">Live Proof</text>
+                  </g>
+
+                  <!-- Station 6: Gate -->
+                  <g class="roadmap-node-group" data-station="6" transform="translate(930, 140)">
+                    <circle r="40" fill="transparent" pointer-events="all"/>
+                    <circle class="station-circle" r="32" fill="#BD9F4F" stroke="#1F2733" stroke-width="3"/>
+                    <text y="5" text-anchor="middle" fill="#161D27" font-family="Montserrat" font-weight="800" font-size="10" pointer-events="none">GATE</text>
+                    <text y="52" text-anchor="middle" fill="#1F2733" font-family="Montserrat" font-weight="800" font-size="12" pointer-events="none">Sr Certified</text>
+                  </g>
+                </svg>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- TWO SKILLS, ONE DOCUMENT -->
+        <section class="content-section white" id="two-skills">
+          <div class="container">
+            <div class="section-head" style="text-align:center; max-width:700px; margin:0 auto var(--space-2xl) auto;">
+              <div class="section-eyebrow">The Architecture</div>
+              <h2 class="section-title">Two Skills, One Single Source of Truth</h2>
+              <p class="section-lead" style="margin:0 auto;">
+                The <strong>13 Meta Skills</strong> are how you think and write. The <strong>Franchise Blueprint</strong> is where you write it.
+              </p>
+            </div>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:var(--space-2xl); align-items:center;">
+              
+              <div class="nf-card" style="padding:var(--space-xl); text-align:center;">
+                <h4 style="margin-bottom:var(--space-xs);">The 13 Meta Skills</h4>
+                <p style="font-size:var(--text-xs); color:var(--nf-muted); margin-bottom:var(--space-md);">
+                  Six groups aiming at one glowing center: Radical Outcomes
+                </p>
+
+                <div class="radial-wheel-box">
+                  <svg viewBox="0 0 280 280" style="width:260px; height:260px;">
+                    <circle cx="140" cy="140" r="120" fill="none" stroke="#E8E4D8" stroke-width="28"/>
+                    <circle cx="140" cy="140" r="120" fill="none" stroke="#BD9F4F" stroke-width="28" stroke-dasharray="120 630" stroke-dashoffset="0"/>
+                    <circle cx="140" cy="140" r="120" fill="none" stroke="#2C3C49" stroke-width="28" stroke-dasharray="120 630" stroke-dashoffset="-125"/>
+                    <circle cx="140" cy="140" r="120" fill="none" stroke="#1E7B4F" stroke-width="28" stroke-dasharray="120 630" stroke-dashoffset="-250"/>
+                    <circle cx="140" cy="140" r="120" fill="none" stroke="#B42318" stroke-width="28" stroke-dasharray="120 630" stroke-dashoffset="-375"/>
+                    <circle cx="140" cy="140" r="120" fill="none" stroke="#155BCB" stroke-width="28" stroke-dasharray="120 630" stroke-dashoffset="-500"/>
+                    
+                    <circle cx="140" cy="140" r="54" fill="#1F2733" stroke="#BD9F4F" stroke-width="3"/>
+                    <text x="140" y="136" text-anchor="middle" fill="#BD9F4F" font-family="Montserrat" font-weight="800" font-size="11">RADICAL</text>
+                    <text x="140" y="152" text-anchor="middle" fill="#FFFFFF" font-family="Montserrat" font-weight="700" font-size="10">OUTCOMES</text>
+                  </svg>
+                </div>
+
+                <p style="font-size:var(--text-xs); color:var(--nf-muted); margin-top:var(--space-md);">
+                  "Better, faster, cheaper gets 2-3X. 10X needs the emotional layer."
+                </p>
+                <a href="meta-skills-13.html" class="btn btn-sm btn-navy" style="margin-top:var(--space-xs);">Explore All 13 Skills</a>
+              </div>
+
+              <div class="nf-card" style="padding:var(--space-xl);">
+                <h4 style="margin-bottom:var(--space-xs);">The Franchise Blueprint</h4>
+                <p style="font-size:var(--text-xs); color:var(--nf-muted); margin-bottom:var(--space-md);">
+                  Six core slabs. Franchisees never see it; everything they see is built from it.
+                </p>
+
+                <div class="slab-stack">
+                  <div class="slab-item" onclick="location.href='part1-customer.html'">
+                    <span>Part 1: The Customer</span>
+                    <span style="color:var(--nf-gold);">&rarr;</span>
+                  </div>
+                  <div class="slab-item" onclick="location.href='part2-brand.html'">
+                    <span>Part 2: The Brand</span>
+                    <span style="color:var(--nf-gold);">&rarr;</span>
+                  </div>
+                  <div class="slab-item" onclick="location.href='part3-franchisee.html'">
+                    <span>Part 3: The Franchisee</span>
+                    <span style="color:var(--nf-gold);">&rarr;</span>
+                  </div>
+                  <div class="slab-item" onclick="location.href='part4-shared-value.html'">
+                    <span>Part 4: Shared Value</span>
+                    <span style="color:var(--nf-gold);">&rarr;</span>
+                  </div>
+                  <div class="slab-item" onclick="location.href='part5-advisory.html'">
+                    <span>Part 5: Blueprint Advisory</span>
+                    <span style="color:var(--nf-gold);">&rarr;</span>
+                  </div>
+                  <div class="slab-item" onclick="location.href='part6-offer.html'">
+                    <span>Part 6: The Offer</span>
+                    <span style="color:var(--nf-gold);">&rarr;</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- THE 8-STEP LOOP -->
+        <section class="content-section cream" id="loop-teaser">
+          <div class="container text-center" style="text-align:center;">
+            <div class="section-eyebrow">Week 3 Core Rhythm</div>
+            <h2 class="section-title">The 8-Step Problem-Solving Loop</h2>
+            <p class="section-lead" style="margin:0 auto var(--space-2xl) auto;">
+              Every client problem runs through the exact same eight steps and lands as a signed Problem Card in Part 5 Advisory.
+            </p>
+
+            <div class="loop-circle-wrapper">
+              <svg viewBox="0 0 320 320" style="position:absolute; inset:0; width:100%; height:100%;">
+                <circle cx="160" cy="160" r="110" fill="none" stroke="#BD9F4F" stroke-width="3" stroke-dasharray="6 6"/>
+              </svg>
+
+              <button class="loop-step-btn" style="top:50px; left:160px;" title="Step 1: Customer's Voice (Customer Obsession)">1</button>
+              <button class="loop-step-btn" style="top:82px; left:238px;" title="Step 2: Assumptions (First Principles)">2</button>
+              <button class="loop-step-btn" style="top:160px; left:270px;" title="Step 3: Causal Chain (Systems Thinking)">3</button>
+              <button class="loop-step-btn" style="top:238px; left:238px;" title="Step 4: One Link (Power Law)">4</button>
+              <button class="loop-step-btn" style="top:270px; left:160px;" title="Step 5: 10X Outcome (Radical Outcomes)">5</button>
+              <button class="loop-step-btn" style="top:238px; left:82px;" title="Step 6: First-Hand Evidence (Ground Commando)">6</button>
+              <button class="loop-step-btn" style="top:160px; left:50px;" title="Step 7: Next Proof (Relentless Execution)">7</button>
+              <button class="loop-step-btn" style="top:82px; left:82px;" title="Step 8: Meta Skills Check (Radical Candor)">8</button>
+
+              <div style="position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:140px; text-align:center;">
+                <div style="font-family:var(--font-heading); font-weight:800; font-size:0.85rem; color:var(--nf-navy);">60 MINUTES</div>
+                <div style="font-size:0.7rem; color:var(--nf-muted);">Live Loop Timing</div>
+              </div>
+            </div>
+
+            <div style="margin-top:var(--space-2xl);">
+              <a href="problem-solving-loop.html" class="btn btn-navy">Open Problem-Solving Loop &rarr;</a>
+            </div>
+          </div>
+        </section>
+
+        <!-- THE PEDAGOGY: LEARN, SEE, TRY, BRAIN TRAIN -->
+        <section class="content-section white">
+          <div class="container">
+            <div class="section-head" style="text-align:center; max-width:640px; margin:0 auto var(--space-2xl) auto;">
+              <div class="section-eyebrow">The Pedagogy</div>
+              <h2 class="section-title">Teach it, Show it, Practice it</h2>
+              <p class="section-lead" style="margin:0 auto;">
+                Every single module adheres to the exact same rigorous consulting rhythm:
+              </p>
+            </div>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:var(--space-lg);">
+              <div class="nf-card gold-edge text-center" style="text-align:center;">
+                <div style="color:var(--nf-gold); margin-bottom:var(--space-xs); display:flex; justify-content:center;">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15z"/></svg>
+                </div>
+                <h4 style="font-size:var(--text-lg); margin-bottom:var(--space-2xs);">1. Learn It</h4>
+                <p style="font-size:var(--text-xs); color:var(--nf-muted);">Short text blocks paired with clean visual SVG models, tables, and rules.</p>
+              </div>
+
+              <div class="nf-card gold-edge text-center" style="text-align:center;">
+                <div style="color:var(--nf-gold); margin-bottom:var(--space-xs); display:flex; justify-content:center;">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2" fill="currentColor"/></svg>
+                </div>
+                <h4 style="font-size:var(--text-lg); margin-bottom:var(--space-2xs);">2. See It</h4>
+                <p style="font-size:var(--text-xs); color:var(--nf-muted);">Real cases from Snaxxville, K-Street, and Teamworks with Strong vs Weak toggles.</p>
+              </div>
+
+              <div class="nf-card gold-edge text-center" style="text-align:center;">
+                <div style="color:var(--nf-gold); margin-bottom:var(--space-xs); display:flex; justify-content:center;">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                </div>
+                <h4 style="font-size:var(--text-lg); margin-bottom:var(--space-2xs);">3. Try It</h4>
+                <p style="font-size:var(--text-xs); color:var(--nf-muted);">Break-even calculators, territory penetration tools, and causal chain builders.</p>
+              </div>
+
+              <div class="nf-card gold-edge text-center" style="text-align:center;">
+                <div style="color:var(--nf-gold); margin-bottom:var(--space-xs); display:flex; justify-content:center;">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9.5 2A4.5 4.5 0 0 0 5 6.5c0 .76.19 1.48.52 2.11A4.5 4.5 0 0 0 4 12.5a4.5 4.5 0 0 0 2.22 3.89A4.5 4.5 0 0 0 10 20.5h1V2h-1.5zM14.5 2A4.5 4.5 0 0 1 19 6.5c0 .76-.19 1.48-.52 2.11A4.5 4.5 0 0 1 20 12.5a4.5 4.5 0 0 1-2.22 3.89A4.5 4.5 0 0 1 14 20.5h-1V2h1.5z"/></svg>
+                </div>
+                <h4 style="font-size:var(--text-lg); margin-bottom:var(--space-2xs);">4. Brain Train</h4>
+                <p style="font-size:var(--text-xs); color:var(--nf-muted);">5-question mastery checks with instant non-judgmental explanations.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- MODULE MAP -->
+        <section class="content-section cream" id="module-map">
+          <div class="container">
+            <div class="section-head">
+              <div class="section-eyebrow">Curriculum Directory</div>
+              <h2 class="section-title">The Complete Module Map</h2>
+              <p class="section-lead">14 structured modules spanning Week 0 to the Sr Certification Gate.</p>
+            </div>
+
+            <div style="display:grid; grid-template-columns:repeat(auto-fill, minmax(320px, 1fr)); gap:var(--space-lg);" id="moduleCardsContainer"></div>
+          </div>
+        </section>
+
+        <!-- BRAIN TRAIN SCOREBOARD -->
+        <section class="content-section white" id="scoreboard">
+          <div class="container">
+            <div class="nf-card" style="background:var(--nf-navy); color:#FFFFFF; padding:var(--space-2xl);">
+              <div>
+                <div style="font-size:var(--text-xs); font-weight:800; text-transform:uppercase; letter-spacing:0.1em; color:var(--nf-gold); margin-bottom:var(--space-2xs);">
+                  Mastery Verification
+                </div>
+                <h2 style="color:#FFFFFF; font-size:var(--text-3xl); margin-bottom:var(--space-sm);">
+                  Brain Train Scoreboard
+                </h2>
+                <p style="color:#BAC2CC; max-width:600px; margin-bottom:var(--space-xl);">
+                  Pass each module quiz with 70% or higher to earn gold stars. Unlock the comprehensive 20-question Final Challenge once you have passed at least 8 modules.
+                </p>
+
+                <div id="scoreboardStatusRow" style="display:flex; gap:var(--space-xl); flex-wrap:wrap; margin-bottom:var(--space-xl);"></div>
+
+                <div style="display:flex; gap:14px; flex-wrap:wrap;">
+                  <a href="brain-train.html" class="btn btn-primary" id="finalChallengeBtn">
+                    Go to Brain Train Hub &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CERTIFICATION GATE -->
+        <section class="content-section cream" id="certification-gate">
+          <div class="container">
+            <div class="section-head">
+              <div class="section-eyebrow">The Standard</div>
+              <h2 class="section-title">The Sr Certification Gate</h2>
+              <p class="section-lead">
+                Certification comes when the evidence is there, not on a fixed date. All six gate items must have concrete written evidence.
+              </p>
+            </div>
+
+            <div class="nf-card" style="padding:var(--space-xl);">
+              <div style="display:flex; flex-direction:column; gap:12px;" id="gateChecklistContainer"></div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- CORE SCRIPTS -->
+  <script src="js/modules.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/layout.js"></script>
+
+  <script>
+    // Home Page Controller
+    document.addEventListener("DOMContentLoaded", () => {
+      const progress = NFStore.get();
+      const modules = window.NF_MODULES || [];
+
+      // 1. Module Cards Injection
+      const container = document.getElementById("moduleCardsContainer");
+      if (container && modules.length > 0) {
+        container.innerHTML = modules.map(mod => {
+          const isRead = !!(progress.read && progress.read[mod.id]);
+          const quiz = progress.quizzes && progress.quizzes[mod.id];
+          const isPassed = quiz && quiz.passed;
+
+          return `
+            <div class="nf-card hover-lift" onclick="location.href='${mod.file}'" style="cursor:pointer; display:flex; flex-direction:column; justify-content:space-between;">
+              <div>
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:var(--space-xs);">
+                  <span class="chip" style="font-size:0.7rem; font-weight:700;">${mod.week}</span>
+                  <div style="display:flex; gap:4px; align-items:center;">
+                    <span class="status-tick ${isRead ? 'completed' : ''}">${isRead ? window.getIcon('check', '', 10) : ''}</span>
+                    <span class="quiz-star ${isPassed ? 'passed' : ''}">${window.getIcon('star', '', 14)}</span>
+                  </div>
+                </div>
+                <h4 style="font-size:var(--text-lg); margin-bottom:var(--space-2xs); color:var(--nf-navy);">
+                  ${mod.id}: ${mod.title}
+                </h4>
+                <p style="font-size:var(--text-xs); color:var(--nf-muted); margin-bottom:var(--space-md);">
+                  ${mod.promise}
+                </p>
+              </div>
+              <div style="display:flex; justify-content:space-between; align-items:center; font-size:0.75rem; color:var(--nf-gold-dark); font-weight:700; border-top:1px solid var(--nf-border); padding-top:var(--space-xs);">
+                <span>${mod.duration}</span>
+                <span>Open &rarr;</span>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // 2. Scoreboard Stats
+      const passedCount = Object.values(progress.quizzes || {}).filter(q => q.passed).length;
+      const scoreRow = document.getElementById("scoreboardStatusRow");
+      if (scoreRow) {
+        scoreRow.innerHTML = `
+          <div>
+            <div style="font-size:var(--text-3xl); font-weight:800; color:var(--nf-gold);">${passedCount} / 14</div>
+            <div style="font-size:var(--text-xs); color:#8C96A5;">Quizzes Passed</div>
+          </div>
+          <div>
+            <div style="font-size:var(--text-3xl); font-weight:800; color:#FFFFFF;">${passedCount >= 8 ? 'UNLOCKED' : 'LOCKED'}</div>
+            <div style="font-size:var(--text-xs); color:#8C96A5;">Final Challenge Status</div>
+          </div>
+        `;
+      }
+
+      // 3. Continue journey button
+      const contBtn = document.getElementById("continueJourneyBtn");
+      if (contBtn) {
+        contBtn.addEventListener("click", () => {
+          const firstUnread = modules.find(m => !(progress.read && progress.read[m.id]));
+          window.location.href = firstUnread ? firstUnread.file : "start-here.html";
+        });
+      }
+
+      // 4. Founder case interactive modal
+      const founderBtn = document.getElementById("readFounderLessonBtn");
+      if (founderBtn) {
+        founderBtn.addEventListener("click", () => {
+          NFModal.open(
+            "The Founder's Case: Why Next Franchise Exists",
+            `<p>A Philippine F&B brand scaled from home delivery to 9 branches in 3 years. Over the subsequent 24 months, 6 branches closed.</p>
+             <p>A prominent franchise developer was hired to fix the failing locations, yet their recommendations completely missed the true root cause.</p>
+             <div class="callout gold">
+               <strong>The Lesson for Every Sr Consultant:</strong><br>
+               A consultant can be experienced, well known, and busy, and still miss the real problem. What separates the consultant who finds it is how they think. The Meta Skills name that way of thinking so it can be taught, practiced, and verified.
+             </div>`
+          );
+        });
+      }
+
+      // Animate the branch boxes simulation
+      const boxes = document.querySelectorAll(".branch-box");
+      setTimeout(() => {
+        [3, 4, 5, 6, 7, 8].forEach((idx, i) => {
+          setTimeout(() => {
+            if (boxes[idx]) boxes[idx].classList.add("closed");
+          }, (i + 1) * 300);
+        });
+      }, 500);
+
+      // 5. Interactive Station Popover & Avatar System
+      const stationData = {
+        1: { badge: "WEEK 1 · SESSIONS 1 & 2 (5 HOURS)", title: "Week 1: The Meta Skills", outcome: "Master the 13 habits of thought, analyze Dino Crew turnaround, and audit unverified client assumptions.", link: "why-meta-skills.html" },
+        2: { badge: "WEEK 2 · SESSIONS 3, 4, 5 (12 HOURS)", title: "Week 2: Goals + Blueprint", outcome: "Build Mode 1 CapEx and Mode 2 P&L, calculate break-even by hand, and write Cards 1.1 through 6.9.", link: "financial-goals.html" },
+        3: { badge: "WEEK 3 · SESSIONS 6 & 7 (5 HOURS)", title: "Week 3: Problem-Solving Loop", outcome: "Execute the 60-minute 8-step Loop, break recurring failure chains, and conduct the hard client conversation.", link: "problem-solving-loop.html" },
+        4: { badge: "WEEK 4 · SESSIONS 8 & 9 (5 HOURS)", title: "Week 4: Capstone Advisory", outcome: "Present Part 5 Advisory to lead Sr as owner, fix check tables to 100% Pass, and commit to the 90-day plan.", link: "capstone-gate.html" },
+        5: { badge: "MONTHS 2 TO 4 · 90 DAYS IMPLEMENTATION", title: "Months 2–4: Live Client Proof", outcome: "Own Part 5 and 6 on a client account, submit weekly reflection logs, and log Learning Dividends.", link: "capstone-gate.html" },
+        6: { badge: "THE FINAL THRESHOLD · 60-MIN REVIEW", title: "Sr Certification Gate", outcome: "Formal certification granted when documented written evidence satisfies all six gate requirements.", link: "capstone-gate.html" }
+      };
+
+      const popover = document.getElementById("stationPopover");
+      const popBadge = document.getElementById("popoverBadge");
+      const popTitle = document.getElementById("popoverTitle");
+      const popOutcome = document.getElementById("popoverOutcome");
+      const popLink = document.getElementById("popoverLink");
+      const roadmapBox = document.getElementById("roadmapBox");
+      const nodes = document.querySelectorAll(".roadmap-node-group");
+
+      function showStation(stationId, targetNode) {
+        const data = stationData[stationId];
+        if (!data || !popover) return;
+
+        nodes.forEach(n => n.classList.remove("active"));
+        targetNode.classList.add("active");
+
+        popBadge.innerText = data.badge;
+        popTitle.innerText = data.title;
+        popOutcome.innerText = data.outcome;
+        popLink.href = data.link;
+
+        // Position popover relative to roadmap container
+        const boxRect = roadmapBox.getBoundingClientRect();
+        const nodeRect = targetNode.getBoundingClientRect();
+        const xPos = (nodeRect.left + nodeRect.width / 2) - boxRect.left;
+        const yPos = nodeRect.top - boxRect.top;
+
+        popover.style.left = `${xPos}px`;
+        popover.style.top = `${yPos}px`;
+        popover.classList.add("visible");
+      }
+
+      nodes.forEach(node => {
+        const sId = node.dataset.station;
+        node.addEventListener("mouseenter", () => showStation(sId, node));
+        node.addEventListener("click", (e) => {
+          e.stopPropagation();
+          showStation(sId, node);
+        });
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".roadmap-node-group") && !e.target.closest(".station-popover")) {
+          popover.classList.remove("visible");
+          nodes.forEach(n => n.classList.remove("active"));
+        }
+      });
+
+      // Position "You are here" Avatar Dot based on current progress
+      function updateAvatarPosition() {
+        const readKeys = Object.keys(progress.read || {});
+        let currentStation = 1;
+        if (readKeys.includes("M13")) currentStation = 6;
+        else if (readKeys.some(k => ["M11", "M12"].includes(k))) currentStation = 4;
+        else if (readKeys.some(k => ["M6", "M7", "M8", "M9", "M10"].includes(k))) currentStation = 3;
+        else if (readKeys.some(k => ["M3", "M4", "M5"].includes(k))) currentStation = 2;
+        else if (readKeys.some(k => ["M1", "M2"].includes(k))) currentStation = 2;
+
+        const targetNode = document.querySelector(`.roadmap-node-group[data-station="${currentStation}"]`);
+        const avatar = document.getElementById("userAvatarDot");
+        if (targetNode && avatar && roadmapBox) {
+          const boxRect = roadmapBox.getBoundingClientRect();
+          const nodeRect = targetNode.getBoundingClientRect();
+          const xPos = (nodeRect.left + nodeRect.width / 2) - boxRect.left;
+          const yPos = (nodeRect.top + nodeRect.height / 2) - boxRect.top;
+          avatar.style.left = `${xPos}px`;
+          avatar.style.top = `${yPos}px`;
+          avatar.style.display = "flex";
+        }
+      }
+
+      setTimeout(updateAvatarPosition, 300);
+      window.addEventListener("resize", updateAvatarPosition);
+
+      // 6. Interactive 6 Gate Items Checklist
+      const gateContainer = document.getElementById("gateChecklistContainer");
+      const gateItems = [
+        "Level 4 on at least five of the seven Sr focus Meta Skills; Level 3 or higher on the rest (Score sheet Appendix C)",
+        "At least three Problem Cards accepted into Part 5 Advisory, across at least two brands",
+        "Owned Part 5 and Part 6 on one full client Blueprint through to the owner's signature",
+        "Led one client Blueprint discussion and delivered at least one hard truth, observed by the lead Sr",
+        "Coached another consultant through one Blueprint section to a passing check",
+        "Capstone passed (Session 8 check tables with zero unaddressed 'Revise' marks)"
+      ];
+
+      if (gateContainer) {
+        gateContainer.innerHTML = gateItems.map((item, idx) => {
+          const isDone = !!(progress.gates && progress.gates[idx]);
+          return `
+            <div style="display:flex; align-items:flex-start; gap:12px; padding:12px; border-radius:var(--radius-md); background:${isDone ? 'var(--nf-success-bg)' : 'var(--nf-cream)'}; border:1px solid ${isDone ? 'var(--nf-success)' : 'var(--nf-border)'};">
+              <input type="checkbox" id="gateCheck_${idx}" data-idx="${idx}" ${isDone ? 'checked' : ''} style="accent-color:var(--nf-gold); margin-top:4px; width:18px; height:18px; cursor:pointer;">
+              <label for="gateCheck_${idx}" style="font-size:var(--text-sm); color:var(--nf-navy); cursor:pointer; flex:1;">
+                <strong>Gate #${idx + 1}:</strong> ${item}
+              </label>
+            </div>
+          `;
+        }).join('');
+
+        gateContainer.querySelectorAll("input[type='checkbox']").forEach(cb => {
+          cb.addEventListener("change", () => {
+            NFStore.toggleGate(cb.dataset.idx);
+            cb.closest("div").style.background = cb.checked ? 'var(--nf-success-bg)' : 'var(--nf-cream)';
+            cb.closest("div").style.borderColor = cb.checked ? 'var(--nf-success)' : 'var(--nf-border)';
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

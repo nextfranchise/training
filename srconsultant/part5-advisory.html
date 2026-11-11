@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>M9: Blueprint Part 5 &amp; Appendices · Next Franchise Sr Training</title>
+  
+  <link rel="icon" type="image/png" href="https://nextfranchise.github.io/nextfranchise/assets/NF%20ICON.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .sales-path-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin: var(--space-lg) 0;
+    }
+    .sales-step-card {
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-md);
+      padding: 12px;
+      position: relative;
+    }
+    .sales-step-num {
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: var(--nf-gold-dark);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .upgrade-critique-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--nf-border);
+      background: var(--nf-surface);
+    }
+    .upgrade-critique-row:first-child {
+      border-radius: var(--radius-md) var(--radius-md) 0 0;
+    }
+    .upgrade-critique-row:last-child {
+      border-radius: 0 0 var(--radius-md) var(--radius-md);
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-shell">
+    <main class="main-content">
+
+      <!-- HERO -->
+      <section class="hero-band bg-navy-pattern">
+        <div class="container">
+          <div class="hero-eyebrow">BLUEPRINT ARCHITECTURE · PART 5</div>
+          <h1 class="hero-headline">Part 5: Blueprint Advisory &amp; Appendices</h1>
+          <p class="hero-subline">
+            This is the Sr Consultant’s section. Document what NF changed before launch, structure the 6-step sales path, and anchor every claim in Appendix A.
+          </p>
+          
+          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:var(--space-md);">
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Taught in: Session 5
+            </span>
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Est. Read Time: 30 mins
+            </span>
+            <div style="display:flex; gap:6px;">
+              <span class="chip" onclick="NFModal.open('Radical Candor', 'Part 5 shows what NF fixed that the owner did not see.')">Radical Candor</span>
+              <span class="chip" onclick="NFModal.open('Learning Acuity', 'Every Foundation Upgrade row records what was altered and why.')">Learning Acuity</span>
+              <span class="chip" onclick="NFModal.open('Relentless Execution', 'Every open item in Appendix B has a named owner: Client, Legal Counsel, or NF.')">Relentless Execution</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUTCOMES -->
+      <section class="content-section white" style="padding:var(--space-2xl) 0;">
+        <div class="container">
+          <div class="nf-card gold-edge">
+            <h3 style="font-size:var(--text-xl); margin-bottom:var(--space-md); color:var(--nf-navy);">
+              By the end of this module, you can:
+            </h3>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:var(--space-md);">
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Write Foundation Upgrades that alter decisions, numbers, or risks (not mere rewording).
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Map the 6-step Franchise Sales Path ensuring Readiness Checks happen before money transfers.
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Categorize evidence into Appendix A and assign actionable owners in Appendix B.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LEARN IT: FOUNDATION UPGRADES CLINIC -->
+      <section class="content-section cream" id="upgrades">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">Card 5.1 Quality Check</div>
+            <h2 class="section-title">Foundation Upgrades: Real Change vs. Rewording</h2>
+            <p class="section-lead">
+              Every upgrade must change a decision, a number, or a business risk. If it only rewrites the owner’s copy, it fails.
+            </p>
+          </div>
+
+          <div style="border:1px solid var(--nf-border); border-radius:var(--radius-lg); overflow:hidden;">
+            <div class="upgrade-critique-row">
+              <div>
+                <strong>Snaxxville Contract Term:</strong> Extended from 2 years to 5 years.
+                <p style="font-size:var(--text-xs); color:var(--nf-muted); margin:2px 0 0;">At 2 years, a slower store would barely recover its CapEx before renewal fees hit.</p>
+              </div>
+              <span class="status-badge confirmed">Changes Decision</span>
+            </div>
+
+            <div class="upgrade-critique-row">
+              <div>
+                <strong>K-Street Payback Disclosure:</strong> Stated payback restated from 9 mos to 27 mos at Target.
+                <p style="font-size:var(--text-xs); color:var(--nf-muted); margin:2px 0 0;">Counted from contract signing against total cash of ₱3.03M rather than the ₱799k package.</p>
+              </div>
+              <span class="status-badge confirmed">Changes Number</span>
+            </div>
+
+            <div class="upgrade-critique-row">
+              <div>
+                <strong>Marketing Claim Dropped:</strong> Removed '90% franchising success rate' claim.
+                <p style="font-size:var(--text-xs); color:var(--nf-muted); margin:2px 0 0;">The company's own historical record of 30 closures contradicted the cited statistic.</p>
+              </div>
+              <span class="status-badge confirmed">Changes Risk</span>
+            </div>
+
+            <div class="upgrade-critique-row" style="background:#FFF9F8;">
+              <div>
+                <strong>Weak Example:</strong> 'Improved the brand messaging to resonate with Gen Z customers.'
+                <p style="font-size:var(--text-xs); color:var(--nf-danger); margin:2px 0 0;">Failed check: Rewording only. Does not change an operating decision or financial metric.</p>
+              </div>
+              <span class="status-badge" style="background:var(--nf-danger-bg); color:var(--nf-danger); border:1px solid var(--nf-danger);">Rewording Only</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LEARN IT: 6-STEP FRANCHISE SALES PATH -->
+      <section class="content-section white" id="sales-path">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">Card 5.3 Flow</div>
+            <h2 class="section-title">The 6-Step Franchise Sales Path</h2>
+            <p class="section-lead">
+              A transparent sequence keeping unfit buyers out early and ensuring the Readiness Check occurs before money changes hands.
+            </p>
+          </div>
+
+          <div class="sales-path-steps">
+            <div class="sales-step-card">
+              <div class="sales-step-num">Step 1</div>
+              <strong style="font-size:0.85rem; color:var(--nf-navy);">Discovery</strong>
+              <p style="font-size:0.7rem; color:var(--nf-muted); margin-top:4px;">Readiness scoring; verify fund proofs.</p>
+            </div>
+
+            <div class="sales-step-card">
+              <div class="sales-step-num">Step 2</div>
+              <strong style="font-size:0.85rem; color:var(--nf-navy);">Pre-FA Review</strong>
+              <p style="font-size:0.7rem; color:var(--nf-muted); margin-top:4px;">Review contract terms with Legal Counsel.</p>
+            </div>
+
+            <div class="sales-step-card">
+              <div class="sales-step-num">Step 3</div>
+              <strong style="font-size:0.85rem; color:var(--nf-navy);">Letter of Intent</strong>
+              <p style="font-size:0.7rem; color:var(--nf-muted); margin-top:4px;">Mutual terms and target town identified.</p>
+            </div>
+
+            <div class="sales-step-card">
+              <div class="sales-step-num">Step 4</div>
+              <strong style="font-size:0.85rem; color:var(--nf-navy);">Site Reservation</strong>
+              <p style="font-size:0.7rem; color:var(--nf-muted); margin-top:4px;">₱15k down payment secures territory.</p>
+            </div>
+
+            <div class="sales-step-card">
+              <div class="sales-step-num">Step 5</div>
+              <strong style="font-size:0.85rem; color:var(--nf-navy);">Sign &amp; Build</strong>
+              <p style="font-size:0.7rem; color:var(--nf-muted); margin-top:4px;">Sign FA, release CapEx, begin fit-out.</p>
+            </div>
+
+            <div class="sales-step-card">
+              <div class="sales-step-num">Step 6</div>
+              <strong style="font-size:0.85rem; color:var(--nf-navy);">Open Store</strong>
+              <p style="font-size:0.7rem; color:var(--nf-muted); margin-top:4px;">Crew certified; opening support arrives.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KEY TAKEAWAYS -->
+      <section class="content-section cream">
+        <div class="container">
+          <div class="nf-card gold-edge" style="background:#FDFBF7;">
+            <h4 style="font-size:var(--text-lg); margin-bottom:var(--space-sm); color:var(--nf-navy);">
+              Key Takeaways for Module 9
+            </h4>
+            <ul style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
+              <li><strong>1. Part 5 is the Sr's Proof:</strong> It records what Next Franchise solved that the owner did not see, proving we solved problems rather than formatted slides.</li>
+              <li><strong>2. Appendix B Responsibility:</strong> Every unresolved item must sit in Appendix B with an assigned owner: the Client, Legal Counsel, or Next Franchise.</li>
+              <li><strong>3. Separate Approvals:</strong> Parts 1 to 5 and Appendices are signed as the foundation. Part 6 The Offer is approved separately.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- BRAIN TRAIN -->
+      <section class="content-section white" id="quiz-block">
+        <div class="container">
+          <div id="quizContainer"></div>
+        </div>
+      </section>
+
+      <!-- NAVIGATION -->
+      <section class="content-section cream" style="border-top:1px solid var(--nf-border);">
+        <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+          <a href="part4-shared-value.html" class="btn btn-secondary" style="color:var(--nf-navy); border-color:var(--nf-border);">
+            &larr; Prev: M8 · Part 4: Shared Value
+          </a>
+          <button class="btn btn-navy" id="markCompleteBtn" onclick="markCurrentComplete()">
+            Mark Module 9 as Complete
+          </button>
+          <a href="part6-offer.html" class="btn btn-primary">
+            Next: M10 · Part 6: The Offer &rarr;
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- QUIZ DATA JSON -->
+  <script type="application/json" id="brain-train-data">
+  [
+    {
+      "type": "sort",
+      "q": "Sort the Foundation Upgrade items into 'Changes a Decision/Risk' vs 'Only Rewording':",
+      "buckets": ["Changes Decision / Risk", "Only Rewording (Weak)"],
+      "items": [
+        { "t": "Contract term moved from 2 to 5 years", "b": 0 },
+        { "t": "Enhanced product descriptions for menu", "b": 1 },
+        { "t": "Payback restated from 9 mos to 27 mos against total cash", "b": 0 },
+        { "t": "Polished mission statement text", "b": 1 }
+      ],
+      "why": "A valid Foundation Upgrade changes a contractual term, a mathematical projection, or an operational risk."
+    },
+    {
+      "type": "mcq",
+      "q": "Why was Snaxxville's franchise contract term extended from 2 years to 5 years?",
+      "options": [
+        "Philippine franchise law mandates a minimum 5-year term",
+        "At 2 years, a slower store would barely recover its CapEx before facing renewal fees",
+        "The franchisor wanted to lock in supply purchases longer",
+        "To match competitor fast-food brands"
+      ],
+      "answer": 1,
+      "why": "A 2-year term is punitive for slower stores recovering their initial investment. A 5-year term ensures the franchisee enjoys profitable steady-state cash flow."
+    },
+    {
+      "type": "mcq",
+      "q": "Why did K-Street remove the claim 'Filipinos eat Korean food 2 to 3 times a month' from its market evidence?",
+      "options": [
+        "Korean food demand dropped in Metro Manila",
+        "The cited research source did not support the claim upon verification",
+        "Legal Counsel advised that food frequency is intellectual property",
+        "The franchisor decided to pivot to Japanese snacks"
+      ],
+      "answer": 1,
+      "why": "Under Appendix A standards, claims that cannot be corroborated by their cited sources are removed from the Blueprint body."
+    },
+    {
+      "type": "order",
+      "q": "Place the 6 steps of the Franchise Sales Path in their correct chronological order:",
+      "items": [
+        "Discovery (Readiness scoring)",
+        "Pre-onboarding FA review",
+        "Letter of Intent (LOI)",
+        "Site evaluation & reservation",
+        "Sign agreement & build unit",
+        "Open store & certify crew"
+      ],
+      "why": "The sales path qualifies readiness, reviews legal terms, and evaluates sites before any construction or opening occurs."
+    },
+    {
+      "type": "mcq",
+      "q": "At what stage in the Franchise Sales Path must the Card 3.7 Readiness Check occur?",
+      "options": [
+        "After the franchisee signs the Franchise Agreement",
+        "Before any money changes hands",
+        "During opening week on site",
+        "At the 6-month quarterly audit"
+      ],
+      "answer": 1,
+      "why": "The Readiness Check happens in Step 1 Discovery, before any down payment or contract signing takes place."
+    }
+  ]
+  </script>
+
+  <!-- SCRIPTS -->
+  <script src="js/modules.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/layout.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      new BrainTrain("quizContainer", "brain-train-data", "M9");
+      checkReadStatus();
+    });
+
+    function markCurrentComplete() {
+      NFStore.markRead("M9");
+      const btn = document.getElementById("markCompleteBtn");
+      btn.innerText = "Module 9 Completed ✓";
+      btn.style.background = "var(--nf-success)";
+      btn.disabled = true;
+    }
+
+    function checkReadStatus() {
+      const state = NFStore.get();
+      if (state.read && state.read["M9"]) {
+        const btn = document.getElementById("markCompleteBtn");
+        btn.innerText = "Module 9 Completed ✓";
+        btn.style.background = "var(--nf-success)";
+      }
+    }
+  </script>
+</body>
+</html>

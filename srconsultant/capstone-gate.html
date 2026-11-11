@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>M13: Capstone &amp; Certification Gate · Next Franchise Sr Training</title>
+  
+  <link rel="icon" type="image/png" href="https://nextfranchise.github.io/nextfranchise/assets/NF%20ICON.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .rubric-ladder {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin: var(--space-lg) 0;
+    }
+    .rubric-step {
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      position: relative;
+    }
+    .rubric-step.level4 {
+      border-color: var(--nf-gold);
+      background: #FDFBF7;
+    }
+    .rubric-num {
+      font-size: 0.7rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--nf-gold-dark);
+      margin-bottom: 4px;
+    }
+    .eval-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-md) 0;
+      background: var(--nf-surface);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--nf-border);
+    }
+    .eval-table th, .eval-table td {
+      padding: 10px 14px;
+      font-size: var(--text-xs);
+      border-bottom: 1px solid var(--nf-border);
+    }
+    .eval-table th {
+      background: #EFECE1;
+      font-family: var(--font-heading);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-shell">
+    <main class="main-content">
+
+      <!-- HERO -->
+      <section class="hero-band bg-navy-pattern">
+        <div class="container">
+          <div class="hero-eyebrow">WEEK 4 &amp; MONTHS 2 TO 4 · CERTIFICATION</div>
+          <h1 class="hero-headline">Capstone, Implementation &amp; The Gate</h1>
+          <p class="hero-subline">
+            Session 8 presentations, Session 9 scoring, and the 6-item Sr Certification Gate. Certification is awarded when written evidence exists, never on a fixed date.
+          </p>
+          
+          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:var(--space-md);">
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Taught in: Sessions 8 &amp; 9 + Gate
+            </span>
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Est. Read Time: 35 mins
+            </span>
+            <div style="display:flex; gap:6px;">
+              <span class="chip" onclick="NFModal.open('Rubric Standard', 'Level 4 on at least five of the seven Sr focus skills; Level 3 or higher on the rest.')">Gate Rubric</span>
+              <span class="chip" onclick="NFModal.open('Evidence Rule', '\'No evidence, no score.\' Every point must trace to an artifact, quote, or client outcome.')">No Evidence, No Score</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUTCOMES -->
+      <section class="content-section white" style="padding:var(--space-2xl) 0;">
+        <div class="container">
+          <div class="nf-card gold-edge">
+            <h3 style="font-size:var(--text-xl); margin-bottom:var(--space-md); color:var(--nf-navy);">
+              By the end of this module, you can:
+            </h3>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:var(--space-md);">
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Deliver a passing Capstone Advisory presentation and execute fixes until 100% Pass.
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Execute the weekly routines of Months 2 to 4 (co-leads, peer checks, reflection logs).
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Assemble documented evidence for all 6 items of the Sr Certification Gate.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LEARN IT: 4 RUBRIC LEVELS -->
+      <section class="content-section cream" id="rubric">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">Appendix C Standard</div>
+            <h2 class="section-title">The Four Rubric Proficiency Levels</h2>
+            <p class="section-lead">
+              Every score requires documented behavioral evidence: an artifact, a direct quote, or a verified client outcome. No evidence, no score.
+            </p>
+          </div>
+
+          <div class="rubric-ladder">
+            <div class="rubric-step">
+              <div class="rubric-num">Level 1</div>
+              <strong style="font-size:var(--text-base); color:var(--nf-navy);">Unaware</strong>
+              <p style="font-size:var(--text-xs); color:var(--nf-muted); margin-top:6px;">
+                Does not show the habit; cannot identify when it is missing from a draft section.
+              </p>
+            </div>
+
+            <div class="rubric-step">
+              <div class="rubric-num">Level 2</div>
+              <strong style="font-size:var(--text-base); color:var(--nf-navy);">Aware</strong>
+              <p style="font-size:var(--text-xs); color:var(--nf-muted); margin-top:6px;">
+                Spots it missing in peers' work; inconsistent in applying it to own deliverables.
+              </p>
+            </div>
+
+            <div class="rubric-step">
+              <div class="rubric-num">Level 3</div>
+              <strong style="font-size:var(--text-base); color:var(--nf-navy);">Practicing</strong>
+              <p style="font-size:var(--text-xs); color:var(--nf-muted); margin-top:6px;">
+                Applies it when prompted; deliverables reliably pass the Meta Skills check.
+              </p>
+            </div>
+
+            <div class="rubric-step level4">
+              <div class="rubric-num" style="color:var(--nf-gold-dark);">Level 4 · Sr Target</div>
+              <strong style="font-size:var(--text-base); color:var(--nf-navy);">Embodied</strong>
+              <p style="font-size:var(--text-xs); color:var(--nf-muted); margin-top:6px;">
+                Applies it unprompted; coaches others; catches omissions in client framing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TRY IT: GATE RUBRIC SIMULATOR -->
+      <section class="content-section white" id="gate-calc">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">Gate Item 1 Evaluation</div>
+            <h2 class="section-title">Sr Focus Skills Score Simulator</h2>
+            <p class="section-lead">
+              Gate Item 1 Requirement: Level 4 on at least <strong>five of the seven Sr focus skills</strong>, and Level 3 or higher on all remaining skills.
+            </p>
+          </div>
+
+          <div class="nf-card">
+            <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:var(--space-md);">
+              <h4 style="font-size:var(--text-base); margin:0;">Interactive 13-Skill Evaluator</h4>
+              <button class="btn btn-sm btn-navy" onclick="setDefaultPassingScores()">
+                Load Sample Passing Profile
+              </button>
+            </div>
+
+            <table class="eval-table">
+              <thead>
+                <tr>
+                  <th>Meta Skill</th>
+                  <th>Category</th>
+                  <th>Required Target</th>
+                  <th>Your Current Score</th>
+                </tr>
+              </thead>
+              <tbody id="evalTableBody"></tbody>
+            </table>
+
+            <div id="gate1VerdictBox" class="callout amber" style="margin-top:var(--space-md);">
+              <strong>Status:</strong> Not yet meeting Gate 1 standard. Adjust scores above.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KEY TAKEAWAYS -->
+      <section class="content-section cream">
+        <div class="container">
+          <div class="nf-card gold-edge" style="background:#FDFBF7;">
+            <h4 style="font-size:var(--text-lg); margin-bottom:var(--space-sm); color:var(--nf-navy);">
+              Key Takeaways for Module 13
+            </h4>
+            <ul style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
+              <li><strong>1. Evidence-Based Gate:</strong> Promotion to Sr Consultant occurs only when tangible evidence fulfills all six gate items, never on a calendar milestone.</li>
+              <li><strong>2. Three Problem Cards:</strong> Must have at least 3 Problem Cards accepted into Part 5 across at least two distinct client brands.</li>
+              <li><strong>3. One-Page 90-Day Plan:</strong> Focuses on Brands, Blueprint Ownership, Client Discussions, Focus Meta Skills, Gate Targets, and Next Proof.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- BRAIN TRAIN -->
+      <section class="content-section white" id="quiz-block">
+        <div class="container">
+          <div id="quizContainer"></div>
+        </div>
+      </section>
+
+      <!-- NAVIGATION -->
+      <section class="content-section cream" style="border-top:1px solid var(--nf-border);">
+        <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+          <a href="hard-conversation.html" class="btn btn-secondary" style="color:var(--nf-navy); border-color:var(--nf-border);">
+            &larr; Prev: M12 · Hard Conversation
+          </a>
+          <button class="btn btn-navy" id="markCompleteBtn" onclick="markCurrentComplete()">
+            Mark Module 13 as Complete
+          </button>
+          <a href="toolkit.html" class="btn btn-primary">
+            Next: Toolkit &amp; Templates &rarr;
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- QUIZ DATA JSON -->
+  <script type="application/json" id="brain-train-data">
+  [
+    {
+      "type": "mcq",
+      "q": "What exact threshold must be achieved to satisfy Gate Item 1 on the rubric?",
+      "options": [
+        "Level 4 across all 13 Meta Skills",
+        "Level 4 on at least five of the seven Sr focus Meta Skills, and Level 3 or higher on all the rest",
+        "Level 3 across all 13 skills plus a client recommendation",
+        "Average score of 3.5 across the entire cohort"
+      ],
+      "answer": 1,
+      "why": "Gate Item 1 mandates Level 4 (Embodied) on at least 5 of the 7 Sr focus skills, with no skill below Level 3 (Practicing)."
+    },
+    {
+      "type": "sort",
+      "q": "Sort the Meta Skills into 'Sr Focus Skill (Target: Level 4)' vs 'Foundational (Target: Level 3+)':",
+      "buckets": ["Sr Focus Skill (Level 4 Target)", "Foundational (Level 3+ Target)"],
+      "items": [
+        { "t": "Systems Thinking", "b": 0 },
+        { "t": "Customer Obsession", "b": 1 },
+        { "t": "Radical Candor", "b": 0 },
+        { "t": "AI Integration", "b": 1 },
+        { "t": "Power Law", "b": 0 },
+        { "t": "First Principles", "b": 1 }
+      ],
+      "why": "The seven Sr focus skills are Systems Thinking, Power Law, Radical Candor, Radical Outcomes, Follow the Good, Learning Acuity, and Deeply Personal Leadership."
+    },
+    {
+      "type": "mcq",
+      "q": "Complete the manual's fundamental scoring rule: 'No evidence, no ____.'",
+      "options": ["certificate", "promotion", "score", "pass"],
+      "answer": 2,
+      "why": "Every single rubric score must point to documented behavioral evidence: an artifact, quote, or verified client outcome. No evidence, no score."
+    },
+    {
+      "type": "mcq",
+      "q": "How many Problem Cards must be accepted into Part 5 Advisory, and across how many brands, to satisfy Gate Item 2?",
+      "options": [
+        "At least one Problem Card on any client",
+        "At least three Problem Cards accepted, across at least two distinct brands",
+        "Five Problem Cards on a single flagship brand",
+        "Two Problem Cards approved by Legal Counsel"
+      ],
+      "answer": 1,
+      "why": "Gate Item 2 requires at least three Problem Cards accepted into Part 5 Advisory across at least two different client accounts."
+    },
+    {
+      "type": "truefalse",
+      "q": "Sr Consultant certification automatically occurs on a fixed calendar date at the end of Month 4.",
+      "answer": false,
+      "why": "False. Certification is granted only when documented written evidence satisfies all six gate criteria."
+    }
+  ]
+  </script>
+
+  <!-- SCRIPTS -->
+  <script src="js/modules.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/layout.js"></script>
+
+  <script>
+    const ALL_SKILLS = [
+      { name: "Systems Thinking", isSr: true },
+      { name: "Power Law", isSr: true },
+      { name: "Radical Candor", isSr: true },
+      { name: "Radical Outcomes", isSr: true },
+      { name: "Follow the Good", isSr: true },
+      { name: "Learning Acuity", isSr: true },
+      { name: "Deeply Personal Leadership", isSr: true },
+      { name: "Customer Obsession", isSr: false },
+      { name: "First Principles", isSr: false },
+      { name: "Ground Commando", isSr: false },
+      { name: "Relentless Execution", isSr: false },
+      { name: "AI Integration", isSr: false },
+      { name: "Whole Person", isSr: false }
+    ];
+
+    let currentScores = {};
+
+    document.addEventListener("DOMContentLoaded", () => {
+      new BrainTrain("quizContainer", "brain-train-data", "M13");
+      checkReadStatus();
+      buildEvalTable();
+      evaluateGate1();
+    });
+
+    function buildEvalTable() {
+      const tbody = document.getElementById("evalTableBody");
+      tbody.innerHTML = ALL_SKILLS.map((s, i) => {
+        currentScores[s.name] = currentScores[s.name] || 2;
+        return `
+          <tr style="${s.isSr ? 'background:#FDFBF7;' : ''}">
+            <td><strong>${s.name}</strong></td>
+            <td>${s.isSr ? '<span class="status-badge" style="background:var(--nf-gold-light); color:var(--nf-gold-dark);">Sr Focus Skill</span>' : '<span style="color:var(--nf-muted);">Foundational</span>'}</td>
+            <td><strong>${s.isSr ? 'Level 4' : 'Level 3+'}</strong></td>
+            <td>
+              <select onchange="updateSkillScore('${s.name}', this.value)" style="padding:4px 8px; border:1px solid var(--nf-border); border-radius:4px; font-size:0.75rem;">
+                <option value="1" ${currentScores[s.name] === 1 ? 'selected' : ''}>1 - Unaware</option>
+                <option value="2" ${currentScores[s.name] === 2 ? 'selected' : ''}>2 - Aware</option>
+                <option value="3" ${currentScores[s.name] === 3 ? 'selected' : ''}>3 - Practicing</option>
+                <option value="4" ${currentScores[s.name] === 4 ? 'selected' : ''}>4 - Embodied</option>
+              </select>
+            </td>
+          </tr>
+        `;
+      }).join('');
+    }
+
+    function updateSkillScore(name, val) {
+      currentScores[name] = parseInt(val, 10);
+      evaluateGate1();
+    }
+
+    function setDefaultPassingScores() {
+      ALL_SKILLS.forEach(s => {
+        currentScores[s.name] = s.isSr ? 4 : 3;
+      });
+      buildEvalTable();
+      evaluateGate1();
+    }
+
+    function evaluateGate1() {
+      const srSkills = ALL_SKILLS.filter(s => s.isSr);
+      const otherSkills = ALL_SKILLS.filter(s => !s.isSr);
+
+      const srLevel4Count = srSkills.filter(s => currentScores[s.name] >= 4).length;
+      const allAtLeast3 = ALL_SKILLS.every(s => currentScores[s.name] >= 3);
+
+      const pass = (srLevel4Count >= 5) && allAtLeast3;
+      const box = document.getElementById("gate1VerdictBox");
+
+      if (pass) {
+        box.className = "callout green";
+        box.innerHTML = `<strong>PASSING STANDARD ACHIEVED:</strong> Level 4 attained on ${srLevel4Count} of 7 Sr Focus Skills (min 5 needed), and all 13 skills are at Level 3 or higher.`;
+      } else {
+        box.className = "callout amber";
+        box.innerHTML = `<strong>NOT YET MET:</strong> Level 4 attained on ${srLevel4Count} of 7 Sr Focus Skills (5 required), and all skills must be at least Level 3.`;
+      }
+    }
+
+    function markCurrentComplete() {
+      NFStore.markRead("M13");
+      const btn = document.getElementById("markCompleteBtn");
+      btn.innerText = "Module 13 Completed ✓";
+      btn.style.background = "var(--nf-success)";
+      btn.disabled = true;
+    }
+
+    function checkReadStatus() {
+      const state = NFStore.get();
+      if (state.read && state.read["M13"]) {
+        const btn = document.getElementById("markCompleteBtn");
+        btn.innerText = "Module 13 Completed ✓";
+        btn.style.background = "var(--nf-success)";
+      }
+    }
+  </script>
+</body>
+</html>

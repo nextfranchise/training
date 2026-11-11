@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>M12: The Hard Conversation · Next Franchise Sr Training</title>
+  
+  <link rel="icon" type="image/png" href="https://nextfranchise.github.io/nextfranchise/assets/NF%20ICON.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .chevron-chain {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+      margin: var(--space-lg) 0;
+    }
+    .chevron-card {
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-left: 5px solid var(--nf-gold);
+      border-radius: var(--radius-md);
+      padding: var(--space-md);
+    }
+    .dialogue-sim-box {
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-xl);
+      margin: var(--space-lg) 0;
+    }
+    .dialogue-bubble {
+      padding: 14px 18px;
+      border-radius: var(--radius-lg);
+      margin-bottom: var(--space-md);
+      max-width: 680px;
+      font-size: var(--text-sm);
+    }
+    .dialogue-owner {
+      background: #EFECE1;
+      color: var(--nf-navy);
+      border-bottom-left-radius: 2px;
+    }
+    .dialogue-reply-btn {
+      width: 100%;
+      text-align: left;
+      padding: 12px 16px;
+      margin-bottom: 8px;
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-md);
+      background: var(--nf-surface);
+      font-size: var(--text-xs);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+    .dialogue-reply-btn:hover {
+      border-color: var(--nf-gold);
+      background: #FDFBF7;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-shell">
+    <main class="main-content">
+
+      <!-- HERO -->
+      <section class="hero-band bg-navy-pattern">
+        <div class="container">
+          <div class="hero-eyebrow">WEEK 3 · SESSION 7</div>
+          <h1 class="hero-headline">The Hard Conversation</h1>
+          <p class="hero-subline">
+            Practice telling a franchise owner what they do not want to hear, with care, without softening findings into nothing or destroying trust.
+          </p>
+          
+          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:var(--space-md);">
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Taught in: Session 7
+            </span>
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Est. Read Time: 25 mins
+            </span>
+            <div style="display:flex; gap:6px;">
+              <span class="chip" onclick="NFModal.open('Radical Candor', 'Candor is not harshness. It is saying the uncomfortable truth because you care about the outcome.')">Radical Candor</span>
+              <span class="chip" onclick="NFModal.open('Whole Person', 'The owner has their life savings, family pride, and reputation invested.')">Whole Person</span>
+              <span class="chip" onclick="NFModal.open('Customer Obsession', 'Keep the prospective franchisee in the room when an owner pushes to sell.')">Customer Obsession</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- OUTCOMES -->
+      <section class="content-section white" style="padding:var(--space-2xl) 0;">
+        <div class="container">
+          <div class="nf-card gold-edge">
+            <h3 style="font-size:var(--text-xl); margin-bottom:var(--space-md); color:var(--nf-navy);">
+              By the end of this module, you can:
+            </h3>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:var(--space-md);">
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Facilitate an owner by asking before telling ('Tell me about the last time...').
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Deliver hard truths using the 3 Moves of Candor (Weak Point, Why it Matters, Next Step).
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Execute the 3 Role-Plays: unready territories, unmanageable guarantees, and unqualified buyers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LEARN IT: 3 MOVES OF CANDOR -->
+      <section class="content-section cream" id="candor-moves">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">Facilitation Framework</div>
+            <h2 class="section-title">The Three Moves of Candor</h2>
+            <p class="section-lead">
+              Never present bad news without a constructive next step. Radical Candor maintains high challenge alongside deep personal care.
+            </p>
+          </div>
+
+          <div class="chevron-chain">
+            <div class="chevron-card">
+              <span style="font-size:0.7rem; font-weight:800; color:var(--nf-gold-dark); text-transform:uppercase;">Move 1</span>
+              <h4 style="margin:4px 0 6px; font-size:var(--text-base);">Name the Weak Point</h4>
+              <p style="font-size:var(--text-xs); color:var(--nf-muted);">
+                Say it plainly without diplomatic fluff or softening it into nothing.
+              </p>
+            </div>
+
+            <div class="chevron-card">
+              <span style="font-size:0.7rem; font-weight:800; color:var(--nf-gold-dark); text-transform:uppercase;">Move 2</span>
+              <h4 style="margin:4px 0 6px; font-size:var(--text-base);">Say Why It Matters</h4>
+              <p style="font-size:var(--text-xs); color:var(--nf-muted);">
+                Focus on the franchisee or customer's life, backed by primary evidence.
+              </p>
+            </div>
+
+            <div class="chevron-card">
+              <span style="font-size:0.7rem; font-weight:800; color:var(--nf-gold-dark); text-transform:uppercase;">Move 3</span>
+              <h4 style="margin:4px 0 6px; font-size:var(--text-base);">Offer the Next Step</h4>
+              <p style="font-size:var(--text-xs); color:var(--nf-muted);">
+                A tangible, respectful way forward that the owner can actually say yes to.
+              </p>
+            </div>
+          </div>
+
+          <div class="callout gold">
+            <strong>Facilitator Rule #3:</strong> Name a Meta Skill to an owner <em>only after</em> the owner has used it organically. Never lecture clients on consulting terminology.
+          </div>
+        </div>
+      </section>
+
+      <!-- TRY IT: BRANCHING DIALOGUE SIMULATOR -->
+      <section class="content-section white" id="dialogue-sim">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">Interactive Simulation</div>
+            <h2 class="section-title">Role-Play 1: The Territory That Isn't Ready</h2>
+            <p class="section-lead">
+              The owner wants to sell a franchise in a 15,000-catchment town to repay a loan, but the territory demand score is 5/10. Choose your response:
+            </p>
+          </div>
+
+          <div class="dialogue-sim-box">
+            <div class="dialogue-bubble dialogue-owner">
+              <strong>Owner:</strong> "Look, I need this franchise fee right now because my bank loan is due next month. My food is delicious; it can beat any demographic rule. If we don't sell this town, someone else will open there!"
+            </div>
+
+            <div id="replyChoiceBlock">
+              <button class="dialogue-reply-btn" onclick="chooseDialogueReply('soft')">
+                <strong>Choice A (Too Soft / Gives In):</strong><br>
+                "I understand your loan pressure. Since you feel confident about your food, let's proceed with the sale and hope local foot traffic beats the census."
+              </button>
+
+              <button class="dialogue-reply-btn" onclick="chooseDialogueReply('candor')">
+                <strong>Choice B (Radical Candor with Care):</strong><br>
+                "I hear the urgency with the bank loan, and that pressure is real. But at 15,000 residents, that franchisee misses break-even by 40 transactions a day. If they fail in six months, your brand pays for it in reputation and refunds. Let's reserve a stronger town (25k+) for them, or test a smaller ₱350k kiosk format that breaks even at 35 orders a day."
+              </button>
+
+              <button class="dialogue-reply-btn" onclick="chooseDialogueReply('harsh')">
+                <strong>Choice C (Too Harsh / Destroys Trust):</strong><br>
+                "You are ignoring basic mathematics and being irresponsible with a buyer's life savings just to pay your own personal debts. That violates our principles."
+              </button>
+            </div>
+
+            <div id="simFeedbackArea" style="display:none; margin-top:var(--space-md);"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KEY TAKEAWAYS -->
+      <section class="content-section cream">
+        <div class="container">
+          <div class="nf-card gold-edge" style="background:#FDFBF7;">
+            <h4 style="font-size:var(--text-lg); margin-bottom:var(--space-sm); color:var(--nf-navy);">
+              Key Takeaways for Module 12
+            </h4>
+            <ul style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
+              <li><strong>1. Candor is Not Harshness:</strong> Harshness attacks the person; candor evaluates the work with deep personal respect for the owner.</li>
+              <li><strong>2. Keep the Buyer in the Room:</strong> When owners push to sell to unqualified prospects, remind them of the family savings at risk.</li>
+              <li><strong>3. Respectful 'Not Yet':</strong> Turn down unfit candidates with clear, constructive criteria rather than a flat, insulting refusal.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- BRAIN TRAIN -->
+      <section class="content-section white" id="quiz-block">
+        <div class="container">
+          <div id="quizContainer"></div>
+        </div>
+      </section>
+
+      <!-- NAVIGATION -->
+      <section class="content-section cream" style="border-top:1px solid var(--nf-border);">
+        <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+          <a href="problem-solving-loop.html" class="btn btn-secondary" style="color:var(--nf-navy); border-color:var(--nf-border);">
+            &larr; Prev: M11 · Problem Loop
+          </a>
+          <button class="btn btn-navy" id="markCompleteBtn" onclick="markCurrentComplete()">
+            Mark Module 12 as Complete
+          </button>
+          <a href="capstone-gate.html" class="btn btn-primary">
+            Next: M13 · Capstone &amp; Gate &rarr;
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- QUIZ DATA JSON -->
+  <script type="application/json" id="brain-train-data">
+  [
+    {
+      "type": "order",
+      "q": "Place the Three Moves of Candor in their proper order:",
+      "items": [
+        "Name the weak point plainly",
+        "Say why it matters for customer or franchisee",
+        "Offer the constructive next step"
+      ],
+      "why": "Candor first identifies the operational deficiency, grounds the impact in human stakes, and closes with a practical path forward."
+    },
+    {
+      "type": "sort",
+      "q": "Classify the consulting response style into 'Radical Candor' vs 'Too Soft / Giving In':",
+      "buckets": ["Radical Candor", "Too Soft / Giving In"],
+      "items": [
+        { "t": "At Conservative, payback takes 30 months; let's show both levels to protect trust", "b": 0 },
+        { "t": "Since you prefer 12-month payback, we will show only Target in the deck", "b": 1 },
+        { "t": "The site misses our rent ratio; let's test a kiosk format instead of signing", "b": 0 },
+        { "t": "The owner insisted, so we left the unqualified territory on the list", "b": 1 }
+      ],
+      "why": "Radical Candor holds firm on evidence while offering alternatives. Giving in protects the meeting but sacrifices the future franchisee."
+    },
+    {
+      "type": "mcq",
+      "q": "When is it appropriate to name a Meta Skill explicitly to a franchise owner?",
+      "options": [
+        "In the opening minute of Session 1 to set an intellectual tone",
+        "Only after the owner has used that way of thinking organically in conversation",
+        "Never; Meta Skills are strictly secret internal jargon",
+        "Whenever the owner disagrees with a workbook calculation"
+      ],
+      "answer": 1,
+      "why": "The manual instructs consultants to name a Meta Skill only after the client has demonstrated the behavior: 'what you just did is First Principles'."
+    },
+    {
+      "type": "mcq",
+      "q": "In Role-Play 3, a prospect scores 5 out of 10 on readiness, but the owner desperately wants the sale. What is the best path?",
+      "options": [
+        "Sign the prospect immediately but charge a higher training fee",
+        "Offer a respectful 'not yet' with clear operational conditions, rather than a flat no",
+        "Threaten to resign from the engagement immediately in front of the team",
+        "Allow the prospect to sign if they waive all legal rights"
+      ],
+      "answer": 1,
+      "why": "A respectful 'not yet' provides tangible milestones (e.g. visiting a branch, finding a viable site) that protect both the buyer and brand."
+    },
+    {
+      "type": "truefalse",
+      "q": "Radical Candor is synonymous with aggressive bluntness and brutal criticism.",
+      "answer": false,
+      "why": "False. Candor is telling the truth plainly because you care deeply about the client and franchisee, avoiding personal criticism."
+    }
+  ]
+  </script>
+
+  <!-- SCRIPTS -->
+  <script src="js/modules.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/layout.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      new BrainTrain("quizContainer", "brain-train-data", "M12");
+      checkReadStatus();
+    });
+
+    function chooseDialogueReply(type) {
+      const fb = document.getElementById("simFeedbackArea");
+      fb.style.display = "block";
+
+      if (type === "soft") {
+        fb.innerHTML = `
+          <div class="callout red">
+            <strong>Outcome: Trust Collapsed Downstream.</strong> The franchisee opened, defaulted in month 5, and the owner lost ₱400,000 defending legal arbitration. Giving in preserved the meeting but damaged the network.
+          </div>
+        `;
+      } else if (type === "harsh") {
+        fb.innerHTML = `
+          <div class="callout red">
+            <strong>Outcome: Owner Defensive.</strong> The client ended the meeting, feeling personally insulted and judged. Your advice was rejected completely.
+          </div>
+        `;
+      } else if (type === "candor") {
+        fb.innerHTML = `
+          <div class="callout green">
+            <strong>Outcome: Constructive Agreement.</strong> The owner felt heard on their cash constraint, acknowledged the 40-order deficit, and agreed to pitch the kiosk format for ₱350k. You protected both family savings and the client relationship.
+          </div>
+        `;
+      }
+    }
+
+    function markCurrentComplete() {
+      NFStore.markRead("M12");
+      const btn = document.getElementById("markCompleteBtn");
+      btn.innerText = "Module 12 Completed ✓";
+      btn.style.background = "var(--nf-success)";
+      btn.disabled = true;
+    }
+
+    function checkReadStatus() {
+      const state = NFStore.get();
+      if (state.read && state.read["M12"]) {
+        const btn = document.getElementById("markCompleteBtn");
+        btn.innerText = "Module 12 Completed ✓";
+        btn.style.background = "var(--nf-success)";
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>M2: The 13 Meta Skills · Next Franchise Sr Training</title>
+  
+  <link rel="icon" type="image/png" href="https://nextfranchise.github.io/nextfranchise/assets/NF%20ICON.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .skills-navigator {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 10px;
+      margin: var(--space-lg) 0;
+    }
+    .skill-selector-btn {
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-md);
+      padding: 10px 14px;
+      text-align: left;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--nf-navy);
+      transition: all var(--transition-fast);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .skill-selector-btn:hover, .skill-selector-btn.active {
+      border-color: var(--nf-gold);
+      background: var(--nf-navy);
+      color: #FFFFFF;
+    }
+    .skill-selector-btn .group-tag {
+      font-size: 0.65rem;
+      color: var(--nf-gold-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .skill-selector-btn:hover .group-tag, .skill-selector-btn.active .group-tag {
+      color: var(--nf-gold-light);
+    }
+    .skill-card-pane {
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-xl);
+      margin-top: var(--space-md);
+      border-top: 4px solid var(--nf-gold);
+    }
+    .status-stamp-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--space-md);
+      margin: var(--space-lg) 0;
+    }
+    .status-stamp-card {
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      cursor: pointer;
+      transition: transform var(--transition-fast);
+    }
+    .status-stamp-card:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-shell">
+    <div class="app-body">
+      <main class="main-content">
+
+        <!-- MODULE HERO -->
+        <section class="hero-band bg-navy-pattern">
+          <div class="container">
+            <div class="hero-eyebrow">WEEK 1 · SESSIONS 1 &amp; 2</div>
+            <h1 class="hero-headline">The 13 Meta Skills in Depth</h1>
+            <p class="hero-subline">
+              Master the core habits of thought, key diagnostic questions, field drills, and the 4 status stamps.
+            </p>
+            
+            <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:var(--space-md);">
+              <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+                Taught in: Sessions 1 &amp; 2
+              </span>
+              <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+                Est. Read Time: 40 mins
+              </span>
+              <span class="chip" style="background:var(--nf-gold); color:var(--nf-navy-deep); font-weight:800;">
+                All 13 Skills Covered
+              </span>
+            </div>
+          </div>
+        </section>
+
+        <!-- BY THE END -->
+        <section class="content-section white" style="padding:var(--space-2xl) 0;">
+          <div class="container">
+            <div class="nf-card gold-edge">
+              <h3 style="font-size:var(--text-xl); margin-bottom:var(--space-md); color:var(--nf-navy);">
+                By the end of this module, you can:
+              </h3>
+              <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:var(--space-md);">
+                <div style="display:flex; gap:10px;">
+                  <div style="color:var(--nf-success); flex-shrink:0;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <p style="font-size:var(--text-sm); margin:0;">
+                    State the defining question and practical drill for all 13 Meta Skills.
+                  </p>
+                </div>
+                <div style="display:flex; gap:10px;">
+                  <div style="color:var(--nf-success); flex-shrink:0;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <p style="font-size:var(--text-sm); margin:0;">
+                    Categorize claims under the 4 Status Stamps (Heard, Inferred, Client-said, Confirmed).
+                  </p>
+                </div>
+                <div style="display:flex; gap:10px;">
+                  <div style="color:var(--nf-success); flex-shrink:0;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                  </div>
+                  <p style="font-size:var(--text-sm); margin:0;">
+                    Spot whether a Meta Skill is present or missing in live Blueprint deliverables.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- LEARN IT: STATUS STAMPS -->
+        <section class="content-section cream" id="status-stamps">
+          <div class="container">
+            <div class="section-head">
+              <div class="section-eyebrow">First Principles Rigor</div>
+              <h2 class="section-title">The 4 Evidence Status Stamps</h2>
+              <p class="section-lead">
+                Every single claim, number, and belief in Next Franchise must bear one of these four stamps:
+              </p>
+            </div>
+
+            <div class="status-stamp-grid">
+              <div class="status-stamp-card" onclick="NFModal.open('Confirmed Status', 'Highest rigor. Validated through audited books, government records, or direct consultant measurement on site.')">
+                <span class="status-badge confirmed">Confirmed</span>
+                <p style="font-size:var(--text-xs); color:var(--nf-muted); margin-top:8px;">
+                  Directly verified from POS data, government statistics (PSA), or primary receipts.
+                </p>
+              </div>
+
+              <div class="status-stamp-card" onclick="NFModal.open('Client-Said Status', 'The owner or executive claimed this in an interview, but no independent proof was reviewed.')">
+                <span class="status-badge client-said">Client-Said</span>
+                <p style="font-size:var(--text-xs); color:var(--nf-muted); margin-top:8px;">
+                  What the owner claims about margins, foot traffic, or ticket size. Stays yellow until verified.
+                </p>
+              </div>
+
+              <div class="status-stamp-card" onclick="NFModal.open('Inferred Status', 'Reasonable deduction or Smart Fill default. Never treated as truth until corroborated.')">
+                <span class="status-badge inferred">Inferred</span>
+                <p style="font-size:var(--text-xs); color:var(--nf-muted); margin-top:8px;">
+                  An assumption drafted by AI or modeled from industry averages. Must be validated.
+                </p>
+              </div>
+
+              <div class="status-stamp-card" onclick="NFModal.open('Heard Status', 'Heard in a casual conversation or single anecdote. Requires systematic investigation.')">
+                <span class="status-badge heard">Heard</span>
+                <p style="font-size:var(--text-xs); color:var(--nf-muted); margin-top:8px;">
+                  An informal crew comment or customer remark heard during a branch visit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- INTERACTIVE: ALL 13 SKILLS EXPLORER -->
+        <section class="content-section white" id="skills-explorer">
+          <div class="container">
+            <div class="section-head">
+              <div class="section-eyebrow">Master Directory</div>
+              <h2 class="section-title">The 13 Meta Skills Explorer</h2>
+              <p class="section-lead">
+                Select any Meta Skill below to load its exact diagnostic question, practical drill, and Blueprint footprint.
+              </p>
+            </div>
+
+            <!-- Skill Selector Buttons -->
+            <div class="skills-navigator" id="skillButtonsList"></div>
+
+            <!-- Active Skill Card Display -->
+            <div class="skill-card-pane" id="skillDetailsArea"></div>
+          </div>
+        </section>
+
+        <!-- KEY TAKEAWAYS -->
+        <section class="content-section white">
+          <div class="container">
+            <div class="nf-card gold-edge" style="background:#FDFBF7;">
+              <h4 style="font-size:var(--text-lg); margin-bottom:var(--space-sm); color:var(--nf-navy);">
+                Key Takeaways for Module 2
+              </h4>
+              <ul style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
+                <li><strong>1. Radical Outcomes is the Glowing Bar:</strong> Better, faster, cheaper gets you 2 to 3X; reaching 10X demands the emotional layer (what they feel in their life).</li>
+                <li><strong>2. Label Every Line:</strong> Mark every AI or client claim as Inferred or Client-said until primary documents or visits verify it.</li>
+                <li><strong>3. Practice the Drill:</strong> You do not understand a Meta Skill until you can execute its practical field drill on a live client.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- BRAIN TRAIN -->
+        <section class="content-section cream" id="quiz-block">
+          <div class="container">
+            <div id="quizContainer"></div>
+          </div>
+        </section>
+
+        <!-- MODULE COMPLETION & NAVIGATION -->
+        <section class="content-section white" style="border-top:1px solid var(--nf-border);">
+          <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+            <a href="why-meta-skills.html" class="btn btn-secondary" style="color:var(--nf-navy); border-color:var(--nf-border);">
+              &larr; Prev: M1 · Why Meta Skills Matter
+            </a>
+            <button class="btn btn-navy" id="markCompleteBtn" onclick="markCurrentComplete()">
+              Mark Module 2 as Complete
+            </button>
+            <a href="financial-goals.html" class="btn btn-primary">
+              Next: M3 · Financial Goals Workbook &rarr;
+            </a>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- QUIZ DATA JSON -->
+  <script type="application/json" id="brain-train-data">
+  [
+    {
+      "type": "sort",
+      "q": "Sort the Meta Skills into their correct grouping:",
+      "buckets": ["Set Direction", "Sharpen Focus"],
+      "items": [
+        { "t": "Customer Obsession", "b": 0 },
+        { "t": "First Principles", "b": 0 },
+        { "t": "Power Law", "b": 1 },
+        { "t": "Systems Thinking", "b": 1 }
+      ],
+      "why": "Customer Obsession and First Principles set the fundamental direction. Power Law and Systems Thinking sharpen focus on the root drivers."
+    },
+    {
+      "type": "match",
+      "q": "Match the client scenario to the Meta Skill required to address it:",
+      "pairs": [
+        ["Bakery says every branch needs a mall", "First Principles"],
+        ["AI draft claims strong coffee demand without source", "AI Integration"],
+        ["14 problems on board, one priority chosen", "Power Law"],
+        ["Owner 12-month payback holds only at Target", "Radical Candor"],
+        ["'Only 5 slots left' with no real physical limit", "Follow the Good"]
+      ],
+      "why": "Each scenario illustrates a core test from the manual where a specific Meta Skill prevents an ungrounded claim from entering the Blueprint."
+    },
+    {
+      "type": "mcq",
+      "q": "Complete the manual's rule on Radical Outcomes: 'Better, faster and cheaper get you ____; 10X also needs the emotional layer.'",
+      "options": ["5 to 10X", "2 to 3X", "15 to 20X", "1.5X"],
+      "answer": 1,
+      "why": "The manual states: 'Better, faster and cheaper get you 2 to 3X. 10X also needs the emotional layer — what the franchisee or customer feels in their life.'"
+    },
+    {
+      "type": "order",
+      "q": "Place the 3 steps of the First Principles drill in order:",
+      "items": [
+        "List every single assumption",
+        "Mark each one Heard, Inferred, Client-said, or Confirmed",
+        "Rebuild using only the Confirmed ones"
+      ],
+      "why": "The drill for First Principles requires listing every assumption, stamping its status, and reconstructing the deliverable from confirmed truths alone."
+    },
+    {
+      "type": "mcq",
+      "q": "Which Meta Skill asks the defining question: 'What did reality teach us, and what will we now do differently?'",
+      "options": ["Learning Acuity", "Relentless Execution", "Deeply Personal Leadership", "Whole Person"],
+      "answer": 0,
+      "why": "Learning Acuity is the discipline of rapid ego-free adaptation, codified in every Learning Dividend."
+    }
+  ]
+  </script>
+
+  <!-- SCRIPTS -->
+  <script src="js/modules.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/layout.js"></script>
+
+  <script>
+    const SKILLS_DATA = [
+      {
+        name: "Customer Obsession",
+        group: "Set Direction",
+        question: "Whose life changes, and how would they describe it in their own words?",
+        drill: "Rewrite the opening of any deliverable as 'I am [the customer]…', in first person.",
+        what: "Everything starts and ends with the customer's real life, not our product, the client's targets or our convenience.",
+        present: "Blueprint opens in the customer's voice. Exact words and Taglish kept intact.",
+        missing: "'Our target market is Gen Z 18-35'. Personas copied directly from client decks.",
+        blueprint: "1.1 Power Customer, 3.1 Power Franchisee, 1.2 Power Substitutes"
+      },
+      {
+        name: "First Principles",
+        group: "Set Direction",
+        question: "Why do we believe this? What have we actually seen? What are we assuming because it's convenient?",
+        drill: "List every assumption, mark each status stamp, and rebuild using only Confirmed ones.",
+        what: "Strip defaults and inherited assumptions, and rebuild solely from what is undeniably true.",
+        present: "Assumptions table with source and status. Defaults vigorously challenged by name.",
+        missing: "'That's how it's done.' 'The client said so.' Copying numbers without tracing sources.",
+        blueprint: "1.2 Substitutes, 1.3 Territory, 1.4 Market Evidence, 2.3 Proof, 3.9–3.10 Economics"
+      },
+      {
+        name: "Radical Outcomes",
+        group: "The Bar",
+        question: "What would make this 10X better for them, not just faster or cheaper? What would they feel?",
+        drill: "Write the outcome twice: the 2X version, then the 10X version. Keep the second.",
+        what: "Aim for a 5 to 10X change in what the customer or franchisee cares about, not an incremental 10% gain.",
+        present: "A before-and-after the person would notice in their home life; named feelings (kampante, peace of mind).",
+        missing: "Vague terms like 'optimize', 'streamline', or outcomes that only measure higher sales.",
+        blueprint: "3.2 Power Outcome, 3.6 Delta 10X, Part 6 The Offer"
+      },
+      {
+        name: "Systems Thinking",
+        group: "Sharpen Focus",
+        question: "Why does this keep happening? What does a change here ripple into?",
+        drill: "Draw the causal chain until it loops back on itself. Attack the link that breaks the loop.",
+        what: "See causes, loops, and ripple effects rather than isolated branch events.",
+        present: "Causal chains drawn in loops; checking how fee structures land on the weakest store.",
+        missing: "Fixing symptoms at the branch that complained; disconnected lists of friction points.",
+        blueprint: "3.4 Power Pain DNA, 3.5 Solution DNA, Part 4 Shared Value"
+      },
+      {
+        name: "Power Law",
+        group: "Sharpen Focus",
+        question: "If we could do only one thing, which would move the most? What can we stop doing?",
+        drill: "Rank the list, then cut everything below the top two into an explicit 'not yet' list.",
+        what: "A few vital drivers dictate 80% of outcomes. Prioritize ruthlessly and shelf the rest.",
+        present: "One or two critical priorities and an explicit, signed 'not yet' list for the owner.",
+        missing: "Ten equal priorities; packages trying to accommodate every conceivable franchisee.",
+        blueprint: "3.4 Pain DNA, 3.7 Readiness Check, Part 5 Advisory"
+      },
+      {
+        name: "Radical Candor",
+        group: "Keep It Honest",
+        question: "What am I not saying because it's uncomfortable?",
+        drill: "Add one section to every single review titled 'What's weak here', and fill it honestly.",
+        what: "Say the hard thing plainly, to the client, the team, and yourself, because you genuinely care.",
+        present: "'What's weak here' in every version; voicing pushback on ungrounded targets respectfully.",
+        missing: "Findings softened to preserve feelings; agreeing in the meeting then complaining after.",
+        blueprint: "2.3 Proof, 3.7 Readiness, 3.9–3.10 Economics, Part 6 The Offer"
+      },
+      {
+        name: "Ground Commando",
+        group: "Turn Into Evidence",
+        question: "Have I seen or heard this myself? When did I last talk to the customer or crew?",
+        drill: "Before finalizing any recommendation, talk to at least two people who live the problem.",
+        what: "Go directly to the ground. First-hand contact beats slide decks and second-hand summaries.",
+        present: "Branch visits, interviews, and shadowing with names, dates, and direct quotes.",
+        missing: "Working purely from the owner's deck or an executive summary without visiting branches.",
+        blueprint: "1.1 Power Customer, 3.1 Power Franchisee, 1.4 Market Evidence"
+      },
+      {
+        name: "Relentless Execution",
+        group: "Turn Into Evidence",
+        question: "What is the next proof, by when, and who owns it?",
+        drill: "End every session with one next proof, one owner, and one definite date.",
+        what: "Insight is worthless until converted into tangible action and verified proof.",
+        present: "Dated actions in every meeting note; follow-through on open items in Appendix B.",
+        missing: "'Next steps: TBD'; meetings that produce documents but no actual operational movement.",
+        blueprint: "Update Blueprint, Appendix B, Part 5 Advisory"
+      },
+      {
+        name: "Learning Acuity",
+        group: "Turn Into Evidence",
+        question: "What did reality teach us, and what will we now do differently?",
+        drill: "After each milestone, write a Learning Dividend: what we learned, cost, and will do differently.",
+        what: "Learn rapidly from reality and change direction without ego so each version improves.",
+        present: "Documented version log of what changed and why; Learning Dividends shared across team.",
+        missing: "Defending a discredited assumption after data moved; repeating the same flaw on next client.",
+        blueprint: "Update Blueprint, Version History, Appendix B"
+      },
+      {
+        name: "AI Integration",
+        group: "Speed It Up",
+        question: "What did AI draft, and what did a human actually verify or hear?",
+        drill: "Mark every AI-drafted line Inferred until verified by primary source.",
+        what: "Use AI to multiply speed and structure without handing it judgment or factual authority.",
+        present: "AI used to scaffold and challenge; every external figure backed by primary source in Appendix A.",
+        missing: "AI-written stories presented as field research; unverified statistics in body text.",
+        blueprint: "1.3 Territory, 1.4 Market Evidence, Appendix A"
+      },
+      {
+        name: "Follow the Good",
+        group: "Keep It Human",
+        question: "Is this good for the customer, franchisee and community, or only for our fee?",
+        drill: "Before recommending, ask: 'Would I recommend this if Next Franchise earned nothing from it?'",
+        what: "Build what authentically enhances people's lives, and allow financial value to follow.",
+        present: "Advice that holds up if read by the franchisee; turning away unfit prospects.",
+        missing: "Selling packages the client doesn't need; false scarcity; guarantees on unmanageable metrics.",
+        blueprint: "3.7 Readiness, Part 4 Shared Value, Part 6 The Offer"
+      },
+      {
+        name: "Whole Person",
+        group: "Keep It Human",
+        question: "What else is going on in this person's life that shapes this decision?",
+        drill: "Write the 'In my life' line: busy with, happy with, biggest worry, and needed most.",
+        what: "View clients, franchisees, and crew as whole human beings with families, fears, and fatigue.",
+        present: "Family finances, separation anxiety of OFWs, and pride explicitly accounted for.",
+        missing: "Treating owners as 'accounts', prospective franchisees as 'leads', and crew as 'headcount'.",
+        blueprint: "3.1 Power Franchisee, 3.2 Power Outcome, 2.1 Founder Story"
+      },
+      {
+        name: "Deeply Personal Leadership",
+        group: "Keep It Human",
+        question: "Why do I care about this problem? What in my own life makes it mine?",
+        drill: "Write why the problem matters to you personally, in 100 words, without the word 'passionate'.",
+        what: "Lead from your genuine personal story, values, and conviction rather than a corporate script.",
+        present: "Consultant tells the honest reason behind their commitment; actions mirror stated values.",
+        missing: "Generic buzzwords; motivation borrowed from the boss; relying on corporate jargon.",
+        blueprint: "2.1 Founder Story, Part 5 Advisory Presentation"
+      }
+    ];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      new BrainTrain("quizContainer", "brain-train-data", "M2");
+      renderSkillButtons();
+      selectSkill(0);
+      checkReadStatus();
+    });
+
+    function renderSkillButtons() {
+      const container = document.getElementById("skillButtonsList");
+      container.innerHTML = SKILLS_DATA.map((s, idx) => `
+        <button class="skill-selector-btn ${idx === 0 ? 'active' : ''}" onclick="selectSkill(${idx})" id="skillBtn_${idx}">
+          <span class="group-tag">${s.group}</span>
+          <span>${s.name}</span>
+        </button>
+      `).join('');
+    }
+
+    function selectSkill(idx) {
+      document.querySelectorAll(".skill-selector-btn").forEach((btn, i) => {
+        btn.classList.toggle("active", i === idx);
+      });
+
+      const s = SKILLS_DATA[idx];
+      const area = document.getElementById("skillDetailsArea");
+      area.innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:10px; margin-bottom:var(--space-md);">
+          <div>
+            <span class="chip" style="margin-bottom:6px;">${s.group}</span>
+            <h3 style="font-size:var(--text-2xl); color:var(--nf-navy);">${s.name}</h3>
+          </div>
+          <div style="font-size:var(--text-xs); color:var(--nf-muted);">
+            <strong>Blueprint Impact:</strong> ${s.blueprint}
+          </div>
+        </div>
+
+        <p style="font-size:var(--text-base); color:var(--nf-text); margin-bottom:var(--space-lg); max-width:800px;">
+          ${s.what}
+        </p>
+
+        <div class="callout gold" style="margin-bottom:var(--space-lg);">
+          <div style="font-size:var(--text-xs); font-weight:800; text-transform:uppercase; color:var(--nf-gold-dark); margin-bottom:4px;">
+            The Diagnostic Question to Ask
+          </div>
+          <strong style="font-size:var(--text-base); color:var(--nf-navy);">${s.question}</strong>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:var(--space-md); margin-bottom:var(--space-lg);">
+          <div class="nf-card" style="border-top:3px solid var(--nf-success); padding:var(--space-md);">
+            <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--nf-success); margin-bottom:6px;">When Present</div>
+            <p style="font-size:var(--text-xs); color:var(--nf-text); margin:0;">${s.present}</p>
+          </div>
+          <div class="nf-card" style="border-top:3px solid var(--nf-danger); padding:var(--space-md);">
+            <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--nf-danger); margin-bottom:6px;">When Missing</div>
+            <p style="font-size:var(--text-xs); color:var(--nf-text); margin:0;">${s.missing}</p>
+          </div>
+        </div>
+
+        <div class="callout green" style="margin:0;">
+          <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; margin-bottom:4px;">Practical Field Drill</div>
+          <div style="font-size:var(--text-sm);">${s.drill}</div>
+        </div>
+      `;
+    }
+
+    function markCurrentComplete() {
+      NFStore.markRead("M2");
+      const btn = document.getElementById("markCompleteBtn");
+      btn.innerText = "Module 2 Completed ✓";
+      btn.style.background = "var(--nf-success)";
+      btn.disabled = true;
+    }
+
+    function checkReadStatus() {
+      const state = NFStore.get();
+      if (state.read && state.read["M2"]) {
+        const btn = document.getElementById("markCompleteBtn");
+        btn.innerText = "Module 2 Completed ✓";
+        btn.style.background = "var(--nf-success)";
+      }
+    }
+  </script>
+</body>
+</html>

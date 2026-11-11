@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>M3: Financial Goals Workbook · Next Franchise Sr Training</title>
+  
+  <link rel="icon" type="image/png" href="https://nextfranchise.github.io/nextfranchise/assets/NF%20ICON.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/components.css">
+  <style>
+    .cell-legend {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin: var(--space-md) 0;
+    }
+    .cell-pill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-mono);
+      font-size: 0.8125rem;
+      font-weight: 700;
+      border: 1px solid var(--nf-border);
+      background: var(--nf-surface);
+    }
+    .cell-color-swatch {
+      width: 18px;
+      height: 18px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+    .swatch-blue { background: #2563EB; }
+    .swatch-black { background: #1F2733; }
+    .swatch-green { background: #16A34A; }
+    .swatch-yellow { background: #FACC15; }
+
+    /* Red flag board */
+    .flag-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: var(--space-md);
+      margin: var(--space-lg) 0;
+    }
+    .flag-card {
+      background: var(--nf-surface);
+      border: 1px solid var(--nf-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-md);
+      cursor: pointer;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .flag-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .flag-indicator {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .dot-green { color: var(--nf-success); }
+    .dot-amber { color: var(--nf-amber); }
+    .dot-red { color: var(--nf-danger); }
+  </style>
+</head>
+<body>
+
+  <div class="app-shell">
+    <main class="main-content">
+
+      <!-- MODULE HERO -->
+      <section class="hero-band bg-navy-pattern">
+        <div class="container">
+          <div class="hero-eyebrow">WEEK 2 · SESSION 3 (4 HOURS)</div>
+          <h1 class="hero-headline">The Financial Goals Workbook</h1>
+          <p class="hero-subline">
+            The single numerical source of truth. Master Mode 1 CapEx, Mode 2 P&amp;L, break-even math, and red flag diagnostics.
+          </p>
+          
+          <div style="display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-top:var(--space-md);">
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Taught in: Session 3 (4 hrs)
+            </span>
+            <span class="chip" style="background:rgba(255,255,255,0.1); color:#FFFFFF; border-color:rgba(255,255,255,0.2);">
+              Est. Read Time: 35 mins
+            </span>
+            <div style="display:flex; gap:6px;">
+              <span class="chip" onclick="NFModal.open('First Principles', 'Every number must trace to a primary source document or real POS transaction report.')">First Principles</span>
+              <span class="chip" onclick="NFModal.open('Radical Candor', 'When Conservative payback fails, challenge package fees and site selection directly.')">Radical Candor</span>
+              <span class="chip" onclick="NFModal.open('Follow the Good', 'Never quote steady-state payback alone; quote payback from signing.')">Follow the Good</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BY THE END YOU CAN -->
+      <section class="content-section white" style="padding:var(--space-2xl) 0;">
+        <div class="container">
+          <div class="nf-card gold-edge">
+            <h3 style="font-size:var(--text-xl); margin-bottom:var(--space-md); color:var(--nf-navy);">
+              By the end of this module, you can:
+            </h3>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:var(--space-md);">
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Build Mode 1 CapEx across lowest, typical, and highest site condition tiers.
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Compute break-even sales and daily transactions by hand using contribution margin formulas.
+                </p>
+              </div>
+              <div style="display:flex; gap:10px;">
+                <div style="color:var(--nf-success); flex-shrink:0;">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <p style="font-size:var(--text-sm); margin:0;">
+                  Distinguish steady-state payback from payback from signing, and audit red flags.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- LEARN IT: THE IRON RULE & 4 STEPS -->
+      <section class="content-section cream" id="iron-rule">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">The Standard of Truth</div>
+            <h2 class="section-title">The Source of Every Number</h2>
+            <p class="section-lead">
+              The Financial Goals workbook is created after owner interviews and before the Blueprint. It is the sole numerical source of truth.
+            </p>
+          </div>
+
+          <div class="callout gold">
+            <strong style="font-size:var(--text-base); color:var(--nf-navy);">The Iron Rule of Numbers:</strong><br>
+            "No number goes into the workbook without a source, and no workbook figure goes to the client without the Sr being able to explain where it came from."
+          </div>
+
+          <!-- Cell Colour Code Legend -->
+          <h4 style="font-size:var(--text-lg); margin-top:var(--space-xl); margin-bottom:var(--space-xs);">The Universal Cell Palette</h4>
+          <p style="font-size:var(--text-sm); color:var(--nf-muted);">
+            Every tab adheres strictly to standard financial modeling color coding:
+          </p>
+
+          <div class="cell-legend">
+            <div class="cell-pill">
+              <span class="cell-color-swatch swatch-blue"></span>
+              <span style="color:#2563EB;">Blue Text: Input</span>
+            </div>
+            <div class="cell-pill">
+              <span class="cell-color-swatch swatch-black"></span>
+              <span style="color:#1F2733;">Black Text: Formula</span>
+            </div>
+            <div class="cell-pill">
+              <span class="cell-color-swatch swatch-green"></span>
+              <span style="color:#16A34A;">Green Text: Tab Link</span>
+            </div>
+            <div class="cell-pill">
+              <span class="cell-color-swatch swatch-yellow"></span>
+              <span style="color:#CA8A04;">Yellow Cell: Estimate</span>
+            </div>
+          </div>
+          <p style="font-size:var(--text-xs); color:var(--nf-muted); margin-top:6px;">
+            A workbook with yellow cells is a draft. The clarification round exists to convert every yellow estimate to blue input.
+          </p>
+        </div>
+      </section>
+
+      <!-- TRY IT: LIVE BREAK-EVEN CALCULATOR -->
+      <section class="content-section white" id="calculator">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">Live Math Simulator</div>
+            <h2 class="section-title">Break-Even Engine (Snaxxville Benchmark)</h2>
+            <p class="section-lead">
+              Do the math by hand once. Snaxxville fixed costs are ₱116,217/mo. Direct costs take 48% and variable expenses take 15%.
+            </p>
+          </div>
+
+          <div class="calc-box">
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:var(--space-xl);">
+              
+              <div>
+                <div class="calc-control-group">
+                  <div class="calc-label-row">
+                    <span>Monthly Fixed Costs (Rent + Payroll + System Fee)</span>
+                    <strong id="fixedValLabel">₱116,217</strong>
+                  </div>
+                  <input type="range" class="calc-slider" id="fixedCostsInput" min="60000" max="250000" step="1000" value="116217">
+                </div>
+
+                <div class="calc-control-group">
+                  <div class="calc-label-row">
+                    <span>Direct Cost (Ingredients + Packaging %)</span>
+                    <strong id="directValLabel">48%</strong>
+                  </div>
+                  <input type="range" class="calc-slider" id="directCostInput" min="30" max="60" step="1" value="48">
+                </div>
+
+                <div class="calc-control-group">
+                  <div class="calc-label-row">
+                    <span>Variable Costs (Utilities + Mktg + Taxes %)</span>
+                    <strong id="varValLabel">15%</strong>
+                  </div>
+                  <input type="range" class="calc-slider" id="varCostInput" min="5" max="25" step="1" value="15">
+                </div>
+
+                <div class="calc-control-group">
+                  <div class="calc-label-row">
+                    <span>Average Ticket Price</span>
+                    <strong id="ticketValLabel">₱225</strong>
+                  </div>
+                  <input type="range" class="calc-slider" id="ticketInput" min="100" max="500" step="5" value="225">
+                </div>
+              </div>
+
+              <div style="display:flex; flex-direction:column; justify-content:center;">
+                <div class="nf-card" style="background:var(--nf-navy); color:#FFFFFF; padding:var(--space-lg);">
+                  <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--nf-gold); margin-bottom:4px;">
+                    Monthly Break-Even Sales
+                  </div>
+                  <div class="calc-result-num" id="calcSalesResult">₱314,099</div>
+                  
+                  <div class="gold-line" style="margin:12px 0;"></div>
+
+                  <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:var(--nf-gold); margin-bottom:4px;">
+                    Required Daily Volume (30 Days)
+                  </div>
+                  <div style="font-family:var(--font-heading); font-size:var(--text-2xl); font-weight:800; color:#FFFFFF;" id="calcTransResult">
+                    46.5 transactions / day
+                  </div>
+
+                  <div style="font-size:0.7rem; color:#8C96A5; margin-top:8px;">
+                    Contribution Margin: <strong id="marginLabel" style="color:#FFFFFF;">37%</strong> (Leaves 37¢ per ₱1 to cover fixed overhead).
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEE IT: MODE 1 CAPEX & RED FLAGS -->
+      <section class="content-section cream" id="red-flags">
+        <div class="container">
+          <div class="section-head">
+            <div class="section-eyebrow">Executive Diagnostics</div>
+            <h2 class="section-title">The 8 Critical Red Flags</h2>
+            <p class="section-lead">
+              A red flag is never a reason to bury a number; it is an immediate Radical Candor conversation with the owner. Click any card to inspect.
+            </p>
+          </div>
+
+          <div class="flag-grid">
+            <div class="flag-card" onclick="NFModal.open('Gross Margin Check', 'Food standard is 50-55%. Snaxxville is at 52% (Amber). Shakes are not yet fully costed on supplier variance.')">
+              <div class="flag-indicator dot-amber">● Amber Flag</div>
+              <h4 style="font-size:var(--text-base); margin-bottom:4px;">Gross Margin (Food)</h4>
+              <p style="font-size:var(--text-xs); color:var(--nf-muted);">Target: 50% to 55%. Check supplier raw item contracts.</p>
+            </div>
+
+            <div class="flag-card" onclick="NFModal.open('Payback from Signing', 'Healthy: 12-18 mos. Snaxxville is 13 mos (Green). K-Street Evo City is 27 mos at Target and 53 mos at Conservative (Red Blocker).')">
+              <div class="flag-indicator dot-red">● Critical Red</div>
+              <h4 style="font-size:var(--text-base); margin-bottom:4px;">Payback from Signing</h4>
+              <p style="font-size:var(--text-xs); color:var(--nf-muted);">Never raise targets to fix this; adjust package or site tier.</p>
+            </div>
+
+            <div class="flag-card" onclick="NFModal.open('Payback vs Lease Duration', 'Payback must be recovered well inside the initial 5-year lease. K-Street Conservative missed lease expiration date (April 2029).')">
+              <div class="flag-indicator dot-red">● Critical Red</div>
+              <h4 style="font-size:var(--text-base); margin-bottom:4px;">Payback vs. Lease</h4>
+              <p style="font-size:var(--text-xs); color:var(--nf-muted);">Capital must be recouped before lease renewal renegotiation.</p>
+            </div>
+
+            <div class="flag-card" onclick="NFModal.open('Fees at Break-Even', 'Royalty should take 5-8% of sales. Snaxxville fixed ₱30k fee takes 3.7% at Target, but surges to 9.6% at break-even.')">
+              <div class="flag-indicator dot-amber">● Amber Flag</div>
+              <h4 style="font-size:var(--text-base); margin-bottom:4px;">Fees at Break-Even</h4>
+              <p style="font-size:var(--text-xs); color:var(--nf-muted);">Check whether fixed fees crush struggling stores.</p>
+            </div>
+
+            <div class="flag-card" onclick="NFModal.open('Mall Rent Ceiling', 'Rent must not exceed 12% of sales. K-Street Evo City reached 12.9% at Target and breached mall minimum quota at Conservative.')">
+              <div class="flag-indicator dot-amber">● Amber Flag</div>
+              <h4 style="font-size:var(--text-base); margin-bottom:4px;">Mall Occupancy Cost</h4>
+              <p style="font-size:var(--text-xs); color:var(--nf-muted);">Ceiling is 12% of gross sales for high-traffic mall formats.</p>
+            </div>
+
+            <div class="flag-card" onclick="NFModal.open('Source Recipe Math', 'Snaxxville recipe card had two formulas overwritten. Recomputed, the burger cost ₱22.67 instead of ₱19.62.')">
+              <div class="flag-indicator dot-green">● Green (Verified)</div>
+              <h4 style="font-size:var(--text-base); margin-bottom:4px;">Recomputed Costings</h4>
+              <p style="font-size:var(--text-xs); color:var(--nf-muted);">Never trust typed numbers; recompute ingredients via formula.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KEY TAKEAWAYS -->
+      <section class="content-section white">
+        <div class="container">
+          <div class="nf-card gold-edge" style="background:#FDFBF7;">
+            <h4 style="font-size:var(--text-lg); margin-bottom:var(--space-sm); color:var(--nf-navy);">
+              Key Takeaways for Module 3
+            </h4>
+            <ul style="display:flex; flex-direction:column; gap:8px; font-size:var(--text-sm);">
+              <li><strong>1. Package vs. Total Cash:</strong> The franchise package is never the total cash required to open; working capital (3 months fixed costs) and site fit-out must be budgeted.</li>
+              <li><strong>2. Payback from Signing:</strong> Steady-state payback ignores construction and ramp-up. Always quote payback from signing day.</li>
+              <li><strong>3. Tax Switch at ₱3M:</strong> Models must programmatically toggle from 3% percentage tax to VAT above ₱3,000,000 annual sales.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- BRAIN TRAIN -->
+      <section class="content-section cream" id="quiz-block">
+        <div class="container">
+          <div id="quizContainer"></div>
+        </div>
+      </section>
+
+      <!-- NAVIGATION -->
+      <section class="content-section white" style="border-top:1px solid var(--nf-border);">
+        <div class="container" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px;">
+          <a href="meta-skills-13.html" class="btn btn-secondary" style="color:var(--nf-navy); border-color:var(--nf-border);">
+            &larr; Prev: M2 · The 13 Meta Skills
+          </a>
+          <button class="btn btn-navy" id="markCompleteBtn" onclick="markCurrentComplete()">
+            Mark Module 3 as Complete
+          </button>
+          <a href="blueprint-system.html" class="btn btn-primary">
+            Next: M4 · How Blueprint Works &rarr;
+          </a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- QUIZ DATA JSON -->
+  <script type="application/json" id="brain-train-data">
+  [
+    {
+      "type": "calc",
+      "q": "Snaxxville fixed costs are ₱116,217. Direct costs are 48% and variable costs are 15% (leaving 37 centavos per peso). What are the exact monthly break-even sales?",
+      "answer": 314099,
+      "tolerance": 0.01,
+      "unit": "₱",
+      "why": "Fixed costs divided by contribution margin: ₱116,217 ÷ 0.37 = ₱314,099 a month (or 46.5 transactions a day at ₱225 ticket)."
+    },
+    {
+      "type": "mcq",
+      "q": "Which payback figure is honest and ethical to quote to a prospective franchise buyer?",
+      "options": [
+        "Steady-state payback, because it reflects normal operating speed",
+        "Payback from signing, because the buyer's money leaves their account on signing day",
+        "First profitable month, because it shows immediate viability",
+        "EBITDA payback, because income taxes depend on individual legal structure"
+      ],
+      "answer": 1,
+      "why": "Payback from signing accounts for pre-opening fit-out months and the operational ramp-up curve. The buyer's capital is at risk from the day the contract is signed."
+    },
+    {
+      "type": "sort",
+      "q": "Sort the workbook cell colors into their proper modeling definition:",
+      "buckets": ["Client Input (Blue)", "Smart Fill Estimate (Yellow)"],
+      "items": [
+        { "t": "Package price agreed in interview", "b": 0 },
+        { "t": "Permit costs estimated at ₱30,000", "b": 1 },
+        { "t": "Audited payroll of ₱64,000", "b": 0 },
+        { "t": "Assumed utility cost ratio (6%)", "b": 1 }
+      ],
+      "why": "Blue cells represent verified inputs from documents or interviews. Yellow cells represent Smart Fill defaults that must be confirmed during clarification."
+    },
+    {
+      "type": "mcq",
+      "q": "A franchise unit sells ₱260,000 per month. Which Philippine tax framework must the model apply?",
+      "options": [
+        "3% percentage tax, because monthly revenue is below ₱500,000",
+        "VAT registration, because annual sales of ₱3.12M exceed the ₱3.0M statutory threshold",
+        "Zero tax, because of the Barangay Micro Business Enterprise (BMBE) exemption",
+        "Flat 8% income tax option"
+      ],
+      "answer": 1,
+      "why": "At ₱260,000 a month, annual gross sales equal ₱3.12M, breaching the Philippine ₱3M VAT threshold and requiring 12% VAT calculations."
+    },
+    {
+      "type": "truefalse",
+      "q": "The franchise package price represents the total cash a franchisee requires in the bank before opening.",
+      "answer": false,
+      "why": "False. Third-party fit-out, rental advances, opening inventory, and 3 months of working capital regularly double or triple the total cash required."
+    }
+  ]
+  </script>
+
+  <!-- SCRIPTS -->
+  <script src="js/modules.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/layout.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      new BrainTrain("quizContainer", "brain-train-data", "M3");
+      initBreakEvenCalculator();
+      checkReadStatus();
+    });
+
+    function initBreakEvenCalculator() {
+      const fixedInput = document.getElementById("fixedCostsInput");
+      const directInput = document.getElementById("directCostInput");
+      const varInput = document.getElementById("varCostInput");
+      const ticketInput = document.getElementById("ticketInput");
+
+      function recalc() {
+        const fixed = parseFloat(fixedInput.value);
+        const direct = parseFloat(directInput.value) / 100;
+        const variable = parseFloat(varInput.value) / 100;
+        const ticket = parseFloat(ticketInput.value);
+
+        document.getElementById("fixedValLabel").innerText = `₱${fixed.toLocaleString()}`;
+        document.getElementById("directValLabel").innerText = `${directInput.value}%`;
+        document.getElementById("varValLabel").innerText = `${varInput.value}%`;
+        document.getElementById("ticketValLabel").innerText = `₱${ticket.toLocaleString()}`;
+
+        const margin = 1 - (direct + variable);
+        document.getElementById("marginLabel").innerText = `${Math.round(margin * 100)}%`;
+
+        if (margin <= 0) {
+          document.getElementById("calcSalesResult").innerText = "Deficit";
+          document.getElementById("calcTransResult").innerText = "Impossible";
+          return;
+        }
+
+        const breakEvenSales = Math.round(fixed / margin);
+        const breakEvenTransDay = (breakEvenSales / ticket / 30).toFixed(1);
+
+        document.getElementById("calcSalesResult").innerText = `₱${breakEvenSales.toLocaleString()}`;
+        document.getElementById("calcTransResult").innerText = `${breakEvenTransDay} trans / day`;
+      }
+
+      [fixedInput, directInput, varInput, ticketInput].forEach(el => el.addEventListener("input", recalc));
+    }
+
+    function markCurrentComplete() {
+      NFStore.markRead("M3");
+      const btn = document.getElementById("markCompleteBtn");
+      btn.innerText = "Module 3 Completed ✓";
+      btn.style.background = "var(--nf-success)";
+      btn.disabled = true;
+    }
+
+    function checkReadStatus() {
+      const state = NFStore.get();
+      if (state.read && state.read["M3"]) {
+        const btn = document.getElementById("markCompleteBtn");
+        btn.innerText = "Module 3 Completed ✓";
+        btn.style.background = "var(--nf-success)";
+      }
+    }
+  </script>
+</body>
+</html>
